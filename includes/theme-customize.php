@@ -260,7 +260,7 @@ function hopeareunus_customize_register_logo( $wp_customize ) {
 	$wp_customize->add_setting(
 		'icon_size',
 		array(
-			'default'           => 'normal',
+			'default'           => 'icon-large',
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
 			'sanitize_callback' => 'sanitize_html_class',
@@ -278,11 +278,11 @@ function hopeareunus_customize_register_logo( $wp_customize ) {
 			'type'     => 'radio',
 			'priority' => 80,
 			'choices'  => array(
-				'normal'  => esc_html__( 'Normal', 'hopeareunus' ),
+				'normal'     => esc_html__( 'Normal', 'hopeareunus' ),
 				'icon-large' => esc_html__( 'Icon large', 'hopeareunus' ),
-				'icon-2x' => esc_html__( 'Icon 2x', 'hopeareunus' ),
-				'icon-3x' => esc_html__( 'Icon 3x', 'hopeareunus' ),
-				'icon-4x' => esc_html__( 'Icon 4x', 'hopeareunus' )
+				'icon-2x'    => esc_html__( 'Icon 2x', 'hopeareunus' ),
+				'icon-3x'    => esc_html__( 'Icon 3x', 'hopeareunus' ),
+				'icon-4x'    => esc_html__( 'Icon 4x', 'hopeareunus' )
 			)
 		)
 	);

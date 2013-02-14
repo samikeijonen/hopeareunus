@@ -31,11 +31,13 @@
 
 			<?php do_atomic( 'open_footer' ); // hopeareunus_open_footer ?>
 
-			<div class="wrap">
+			<div class="wrap<?php if ( has_nav_menu( 'subsidiary' ) ) echo ' hopeareunus-have-subsidiary-menu'; ?>">
 
 				<div class="footer-content">
 					<?php hybrid_footer_content(); ?>
 				</div>
+				
+				<?php get_template_part( 'menu', 'subsidiary' ); // Loads the menu-subsidiary.php template. ?>
 
 				<?php do_atomic( 'footer' ); // hopeareunus_footer ?>
 
@@ -46,8 +48,6 @@
 		</footer><!-- #footer -->
 
 		<?php do_atomic( 'after_footer' ); // hopeareunus_after_footer ?>
-		
-		<?php get_template_part( 'menu', 'subsidiary' ); // Loads the menu-subsidiary.php template. ?>
 
 	</div><!-- #container -->
 

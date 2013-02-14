@@ -660,6 +660,7 @@ div.menu li, nav.menu li {
 	width: 100%
 }
 #site-description {
+	color: #777777;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	font-size: 1rem;
@@ -1189,16 +1190,9 @@ ol.comment-list dl dl {
 
 /* Subsidiary menu. */
 #menu-subsidiary {
-	background: #363d40;
-	-moz-box-shadow: inset 0 2px 4px -4px #000;
-	-webkit-box-shadow: inset 0 2px 4px -4px #000;
-	box-shadow: inset 0 2px 4px -4px #000;
-	border-top: 4px solid #b94d19;
-	padding: 0 4%;
 	position: relative;
 	margin: 0;
-	overflow: hidden;
-	width: 92%;
+	width: 100%;
 	z-index: 98;
 }
 #menu-subsidiary .wrap {
@@ -1216,13 +1210,8 @@ ol.comment-list dl dl {
 #menu-subsidiary li {
 	float: none;
 	display: inline-block;
-	*display: inline; /* hack for IE */
-	*zoom: 1; /* hack for IE */
 }
 #menu-subsidiary li a {
-	color: #fff;
-	font-size: 12px;
-	font-size: 0.857142857rem;
 	padding: 14px;
 	padding: 1rem;
 }
@@ -1465,6 +1454,7 @@ div.menu ul,nav.menu ul{margin:0;padding:0;list-style:none;line-height:1.0}div.m
 #site-description {
 	float: left;
 	width: 66%;
+	text-align: left;
 }
 
 /* Social links. */
@@ -1638,8 +1628,30 @@ div.menu ul,nav.menu ul{margin:0;padding:0;list-style:none;line-height:1.0}div.m
 #footer .credit {
 	float: right;
 }
+#footer .hopeareunus-have-subsidiary-menu .footer-content {
+	float: left;
+	margin-right: 4%;
+	width: 46%;
+}
+#footer .hopeareunus-have-subsidiary-menu .copyright,
+#footer .hopeareunus-have-subsidiary-menu .credit {
+	float: none;
+	text-align: left;
+}
 
-/* Paddings. */
+/* Menu subsidiary. */
+#menu-subsidiary {
+	padding-top: 10px;
+	float: left;
+	width: 50%;
+}
+#menu-subsidiary ul {
+    text-align: right;
+}
+#menu-subsidiary li a {
+	padding: 7px;
+	padding: 0.5rem;
+}
 
 #comments-number {
 	padding-bottom: 14px;
