@@ -167,6 +167,9 @@ function hopeareunus_theme_setup() {
 	
 	/* Testing out some early Hybrid Core 1.6 proposed HTML5 changes. */
 	add_filter( "{$prefix}_sidebar_defaults", 'hopeareunus_sidebar_defaults' );
+	
+	/* Add new body class if there is attachments. */
+	add_filter( 'body_class', 'hopeareunus_add_body_attachments' );
 
 }
 
@@ -250,6 +253,7 @@ function hopeareunus_add_image_sizes() {
 
 	add_image_size( 'hopeareunus-thumbnail-portfolio-4', 220, 156, true );
 	add_image_size( 'hopeareunus-thumbnail-portfolio-3', 296, 210, true );
+	add_image_size( 'hopeareunus-portfolio', 600, 369, true );
 	
 }
 
@@ -275,7 +279,16 @@ function hopeareunus_scripts_styles() {
 		/* Add Font Awesome fonts. */
 		wp_enqueue_style( 'font-awesome-fonts', trailingslashit( get_template_directory_uri() ) . 'css/fontawesome/font-awesome.min.css', false, '20130212', 'all' );
 		
-	}
+		/* Add flexslider js and css to singular portfolio page. */
+		if ( is_singular( 'portfolio_item' ) ) {
+			
+			wp_enqueue_script( 'hopeareunus-flexslider',  trailingslashit( get_template_directory_uri() ) . 'js/flexslider/jquery.flexslider-min.js', array( 'jquery' ), '20130215', true );
+			wp_enqueue_script( 'hopeareunus-flexslider-settings', trailingslashit( get_template_directory_uri() ) . 'js/flexslider/settings.flexslider.js', array( 'hopeareunus-flexslider' ), '20130215', true );
+			wp_enqueue_style( 'hopeareunus-flexslider-styles', trailingslashit( get_template_directory_uri() ) . 'css/flexslider/flexslider.css', false, '20130215', 'all' );
+	
+		}
+	}	
+	
 }
 
 /**
@@ -320,7 +333,8 @@ function hopeareunus_one_column() {
 
 	elseif ( is_page_template( 'page-templates/front-page.php' ) )
 		add_filter( 'theme_mod_theme_layout', 'hopeareunus_theme_layout_one_column' );
-
+	elseif ( hopeareunus_check_attachments() )
+		add_filter( 'theme_mod_theme_layout', 'hopeareunus_theme_layout_one_column' );
 }
 
 
@@ -511,13 +525,98 @@ function hopeareunus_sidebar_defaults( $defaults ) {
 *
 * @since  0.1.0
 */
-	function hopeareunus_get_portfolio_item_link() {
+function hopeareunus_get_portfolio_item_link() {
 
-		$hopeareunus_portfolio_url = get_post_meta( get_the_ID(), 'portfolio_item_url', true );
+	$hopeareunus_portfolio_url = get_post_meta( get_the_ID(), 'portfolio_item_url', true );
 
-		if ( !empty( $url ) )
-			return '<span class="hopeareunus-project-url"><a class="hopeareunus-portfolio-item-link" href="' . esc_url( $hopeareunus_portfolio_url ) . '">' . __( 'Visit site', 'hopeareunus' ) . '</a></span>';
+	if ( !empty( $hopeareunus_portfolio_url ) )
+		return '<span class="hopeareunus-project-url"><a class="hopeareunus-portfolio-item-link" href="' . esc_url( $hopeareunus_portfolio_url ) . '">' . __( 'Visit site <i class="' . esc_attr( apply_filters( 'hopeareunus_link', 'icon-hand-right' ) ) . '"></i>', 'hopeareunus' ) . '</a></span>';
+	
+}
+
+/**
+* Get attachment images in flexslider and show it in singular portfolio_item page.
+*
+* @since  0.1.0
+*/
+function hopeareunus_display_slides() {
+
+	if ( is_singular( 'portfolio_item' ) ) {
+
+			$defaults = array(
+			'order'          => 'ASC',
+			'post_type'      => 'attachment',
+			'post_parent'    => get_the_ID(),
+			'post_mime_type' => 'image',
+			'post_status'    => null,
+			'numberposts'    => -1,
+		);
+
+		$attachments = get_posts( apply_filters( 'hopeareunus_slides_args', $defaults ) );
+				
+		$output = '';
+
+		if ( $attachments ) {
+
+			$output .= '<div class="flexslider">';
+				$output .= '<ul class="slides">';
+			
+					foreach ( $attachments as $attachment ) {
+					$output .= '<li>';
+						$output .= wp_get_attachment_image( $attachment->ID, 'hopeareunus-portfolio', false, false );
+					$output .= '</li>';
+				}
+
+				$output .= '</ul>';
+			$output .= '</div><!-- .flexslider -->';
+
+		}
+		
+	return $output;
 	
 	}
+
+}
+
+/**
+* Add new body class if there is attachments in singular portfolio item.
+*
+* @since  0.1.0
+*/
+function hopeareunus_add_body_attachments( $classes ) {
+
+	if ( hopeareunus_check_attachments() )
+		$classes[] = 'hopeareunus-portfolio-1';
+
+	return $classes;
+	
+}
+
+/**
+* Check if there is attachment in portfolio item.
+*
+* @since  0.1.0
+*/
+function hopeareunus_check_attachments() {
+
+	if ( is_singular( 'portfolio_item' ) ) {
+
+		$args = array(
+			'post_type'      => 'attachment',
+			'post_parent'    => get_the_ID(),
+			'post_mime_type' => 'image',
+			'post_status'    => null
+		);
+
+		$attachments = get_posts( $args );
+
+		if ( $attachments )
+			return true;
+		else
+			return false;
+
+	}
+	
+}
 
 ?>
