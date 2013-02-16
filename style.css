@@ -98,7 +98,7 @@ img {
 }
 #content img,
 .widget img {
-	padding: 3px;
+	padding: 5px;
 	background: #fff;
 	box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
 }
@@ -505,7 +505,7 @@ img.wp-smiley {
 
 /* Header image. */
 #hopeareunus-header-image {
-	background: #f3f3f3;
+	background: #d9531e;
 	position: relative;
 	min-height: 3px;
 }
@@ -834,9 +834,7 @@ div.menu li, nav.menu li {
 .pagination .page-numbers,
 .page-links a,
 a.more-link,
-.bbp-pagination-links a, 
-.bbp-pagination-links a.next,
-.bbp-pagination-links a.prev {
+a.hopeareunus-portfolio-item-link {
 	background: #d0551a;
 	-moz-box-shadow: 0 2px 0 #f2f2f2;
 	-webkit-box-shadow: 0 2px 0 #f2f2f2;
@@ -848,7 +846,8 @@ a.more-link,
 	padding: 8px 19px;
 	padding: 0.571428571rem 1.35714286rem;
 }
-a.more-link {
+a.more-link,
+a.hopeareunus-portfolio-item-link {
 	margin-left: 0;
 }
 .loop-nav a {
@@ -858,7 +857,8 @@ a.more-link {
 .loop-nav a:hover,
 .page-links a:hover ,
 .pagination  a.page-numbers:hover,
-a.more-link:hover {
+a.more-link:hover,
+a.hopeareunus-portfolio-item-link:hover {
 	background: #b94d19;
 	text-decoration: none;
 }
@@ -868,8 +868,7 @@ a.more-link:hover {
 .loop-nav rel.next {
 	float: right;
 }
-
-					
+				
 .pagination .current {
 	background: #b94d19;
 	color: #fff;
@@ -1642,6 +1641,7 @@ div.menu ul,nav.menu ul{margin:0;padding:0;list-style:none;line-height:1.0}div.m
 /* Menu subsidiary. */
 #menu-subsidiary {
 	padding-top: 10px;
+	padding-top: 0.71428571428rem;
 	float: left;
 	width: 50%;
 }
@@ -1736,6 +1736,12 @@ div.menu ul,nav.menu ul{margin:0;padding:0;list-style:none;line-height:1.0}div.m
 .archive-portfolio_item .hopeareunus-portfolio-layout-4,
 .taxonomy-portfolio .hopeareunus-portfolio-layout-4 {
 	width: 25%;
+}
+
+.hopeareunus-portfolio-1 .hopeareunus-portfolio-gallery {
+	float: left;
+	width: 66%;
+	margin-right: 4%;
 }
 
 .archive-download .kultalusikka-archive-clear-two,
@@ -1879,6 +1885,24 @@ div.menu ul,nav.menu ul{margin:0;padding:0;list-style:none;line-height:1.0}div.m
 /* Comments. */
 .comment-list ol.children {
 	margin-left: 4%;
+}
+
+}
+
+/* Minimum width of 1512 pixels. */
+@media screen and (min-width: 108em) {
+
+html {
+    font-size: 100%;
+}
+
+}
+
+/* Minimum width of 1932 pixels. */
+@media screen and (min-width: 138em) {
+
+html {
+    font-size: 110%;
 }
 
 }
