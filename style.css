@@ -1,7 +1,7 @@
 /**
  * Theme Name: Hopeareunus
  * Theme URI: http://foxnet-themes.fi/downloads/hopeareunus
- * Description: Kultalusikka is for designed for business and portfolio sites. But blogging features are pretty cool too.
+ * Description: Hopeareunus is designed for business and portfolio sites. But blogging features are pretty cool too.
  * Version: 0.0.1
  * Author: Sami Keijonen
  * Author URI: http://foxnet-themes.fi
@@ -98,9 +98,7 @@ img {
 }
 #content img,
 .widget img {
-	padding: 5px;
-	background: #fff;
-	box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+
 }
 
 /* Override the Twitter embed fixed width to make tweet responsive. */
@@ -462,7 +460,8 @@ img.wp-smiley {
 #sidebar-subsidiary .wrap:after,
 #sidebar-front-page:after,
 .hentry:after,
-#footer .wrap:after {
+#footer .wrap:after,
+.hopeareunus-latest-wrap:after {
 	content: "";
 	display: table;
 	clear: both;
@@ -523,6 +522,9 @@ img.wp-smiley {
 	padding: 1rem 0;
 	width: 100%;
 }
+.page-template-front-page #hopeareunus-header-image #hopeareunus-header-title {
+	text-align: center;
+}
 .custom-header #hopeareunus-header-image #hopeareunus-header-title {
 	margin-top: -7px;
 }
@@ -546,9 +548,6 @@ input[type="submit"],
 #respond #submit {
 	background: #d0551a;
 	border: none;
-	-moz-box-shadow: 0 2px 0 #f2f2f2;
-	-webkit-box-shadow: 0 2px 0 #f2f2f2;
-	box-shadow: 0 2px 0 #f2f2f2;
 	color: #fff;
 	padding: 14px 20px;
 	padding: 1rem 1.42857143rem;
@@ -834,11 +833,9 @@ div.menu li, nav.menu li {
 .pagination .page-numbers,
 .page-links a,
 a.more-link,
-a.hopeareunus-portfolio-item-link {
+a.hopeareunus-portfolio-item-link,
+a.hopeareunus-button {
 	background: #d0551a;
-	-moz-box-shadow: 0 2px 0 #f2f2f2;
-	-webkit-box-shadow: 0 2px 0 #f2f2f2;
-	box-shadow: 0 2px 0 #f2f2f2;
 	color: #fff;
 	display: inline-block;
 	margin: 0 5px 18px;
@@ -850,6 +847,17 @@ a.more-link,
 a.hopeareunus-portfolio-item-link {
 	margin-left: 0;
 }
+a.hopeareunus-button {
+	color: #d7f6fc;
+	background: #31424e;
+	margin: 0;
+}
+a.hopeareunus-button:hover,
+a.hopeareunus-button:focus {
+	background: #253038;
+	text-decoration: none;
+}
+
 .loop-nav a {
 	width: 100px;
 	width: 7.14285714rem;
@@ -886,8 +894,7 @@ a.hopeareunus-portfolio-item-link:hover {
 	padding: 1rem 4%;
 }
 #sidebar-front-page,
-#sidebar-front-page-callout,
-#sidebar-after-singular-download {
+#sidebar-front-page-callout {
 	margin-bottom: 14px;
 	margin-bottom: 1rem;
 }
@@ -907,8 +914,7 @@ a.hopeareunus-portfolio-item-link:hover {
 #sidebar-header .widget,
 #sidebar-primary .widget,
 #sidebar-subsidiary .widget,
-#sidebar-front-page .widget,
-#sidebar-after-singular-download .widget {
+#sidebar-front-page .widget {
 	color: #777;
 	margin: 0 0 14px 0;
 	margin: 0 0 1rem 0;
@@ -1037,10 +1043,7 @@ ol.comment-list dl dl {
 .comment-list .avatar,
 .format-status  .avatar,
 .loop-description .avatar {
-	background: #fff;
 	float: none;
-	padding: 4px;
-	padding: 0.28571428571rem;
 	margin: 6px 20px 20px 4px;
 	margin: 0.428571429rem 1.42857143rem 1.42857143rem 0.28571428571rem;
 	width: 80px;
@@ -1048,9 +1051,9 @@ ol.comment-list dl dl {
 	-webkit-border-radius: 40px;
 	-moz-border-radius: 40px;
 	border-radius: 40px;
-	-moz-box-shadow: 0 0 4px rgba(0,0,0,0.20);
-	-webkit-box-shadow: 0 0 4px rgba(0,0,0,0.20);
-	box-shadow: 0 0 4px rgba(0,0,0,0.20);
+	-moz-box-shadow: 0 0 3px rgba(0,0,0,0.30);
+	-webkit-box-shadow: 0 0 3px rgba(0,0,0,0.30);
+	box-shadow: 0 0 3px rgba(0,0,0,0.30);
 }
 .format-status  .avatar,
 .loop-description .avatar {
@@ -1349,19 +1352,29 @@ body #ui-datepicker-div {
 }
 
 
-/* =Portfolio Layouts
+/* =Portfolio and Front Page Layouts
 -------------------------------------------------------------- */
 
 .archive-portfolio_item .hopeareunus-portfolio .hentry,
-.taxonomy-portfolio .hopeareunus-portfolio .hentry {
+.taxonomy-portfolio .hopeareunus-portfolio .hentry,
+.page-template-front-page .hentry {
 	text-align: center;
 }
 
 .archive-portfolio_item .hopeareunus-portfolio .hentry,
-.taxonomy-portfolio .hopeareunus-portfolio .hentry {
+.taxonomy-portfolio .hopeareunus-portfolio .hentry,
+.page-template-front-page .hentry {
 	border-bottom: none;
 	padding-bottom: 0;
 	position: relative;
+}
+.page-template-front-page .hentry  .entry-title {
+	font-size: 16px;
+	font-size: 1.14285714286rem;
+	text-shadow: none;
+}
+.page-template-front-page .hentry  .entry-title  a {
+	text-shadow: none;
 }
 .archive-portfolio_item .hopeareunus-portfolio .hentry  .entry-title,
 .taxonomy-portfolio .hopeareunus-portfolio .hentry  .entry-title {
@@ -1370,6 +1383,7 @@ body #ui-datepicker-div {
 	font-size: 1rem;
 	text-shadow: none;
 }
+
 .archive-portfolio_item .hopeareunus-portfolio .hentry .hopeareunus-portfolio-image-info,
 .taxonomy-portfolio .hopeareunus-portfolio .hentry .hopeareunus-portfolio-image-info {
 	padding: 0 4%;
@@ -1408,25 +1422,29 @@ body #ui-datepicker-div {
 @media screen and (min-width: 35em) {
 
 
-/* =Portfolio Layouts
+/* =Portfolio and Front Page Layouts
 -------------------------------------------------------------- */
 
 .archive-portfolio_item .hfeed,
-.taxonomy-portfolio .hfeed   {
+.taxonomy-portfolio .hfeed,
+.page-template-front-page .hopeareunus-latest-wrap {
 	margin-left: -3%;
 }
 .archive-portfolio_item .hopeareunus-portfolio,
-.taxonomy-portfolio .hopeareunus-portfolio {
+.taxonomy-portfolio .hopeareunus-portfolio,
+.page-template-front-page .hopeareunus-front-page-latest {
 	float: left;
 	padding-left: 3%;
 }
 .archive-portfolio_item .hopeareunus-portfolio-layout-4,
-.taxonomy-portfolio .hopeareunus-portfolio-layout-4 {
+.taxonomy-portfolio .hopeareunus-portfolio-layout-4,
+.page-template-front-page .hopeareunus-latest-layout-4 {
 	width: 50%;
 }
 
 .archive-portfolio_item .hopeareunus-portfolio-layout-3,
-.taxonomy-portfolio .hopeareunus-portfolio-layout-3 {
+.taxonomy-portfolio .hopeareunus-portfolio-layout-3,
+.page-template-front-page .hopeareunus-latest-layout-3 {
 	width: 33.33333333333%;
 }
 	
@@ -1659,7 +1677,8 @@ div.menu ul,nav.menu ul{margin:0;padding:0;list-style:none;line-height:1.0}div.m
 }
 
 /* Sidebars. */
-#sidebar-subsidiary .wrap-inside {
+#sidebar-subsidiary .wrap-inside,
+#sidebar-front-page {
 	margin-left: -3%;
 }
 #sidebar-subsidiary .widget,
@@ -1725,8 +1744,27 @@ div.menu ul,nav.menu ul{margin:0;padding:0;list-style:none;line-height:1.0}div.m
 }
 
 
-/* =Portfolio Layouts
+/* =Portfolio and Front Page Layouts
 -------------------------------------------------------------- */
+
+.page-template-front-page .hentry .entry-summary {
+	background: #363d40;
+	background: rgba(0,0,0,0.4);
+	padding: 7px 4%;
+	padding: 0.5rem 4%;
+	position: absolute;
+	bottom: 7px;
+	bottom: 0.5rem;
+	text-align: center;
+	width: 91%;
+}
+.page-template-front-page .hentry.hopeareunus-front-page-latest.hopeareunus-latest-layout-4 .entry-summary {
+	width: 88%;
+}
+
+.page-template-front-page .hentry  .entry-title a {
+	color: #fff;
+}
 
 .archive-portfolio_item .hopeareunus-portfolio .hentry,
 .taxonomy-portfolio .hopeareunus-portfolio .hentry {
@@ -1734,7 +1772,8 @@ div.menu ul,nav.menu ul{margin:0;padding:0;list-style:none;line-height:1.0}div.m
 }
 
 .archive-portfolio_item .hopeareunus-portfolio-layout-4,
-.taxonomy-portfolio .hopeareunus-portfolio-layout-4 {
+.taxonomy-portfolio .hopeareunus-portfolio-layout-4,
+.page-template-front-page .hopeareunus-latest-layout-4 {
 	width: 25%;
 }
 
@@ -1742,14 +1781,6 @@ div.menu ul,nav.menu ul{margin:0;padding:0;list-style:none;line-height:1.0}div.m
 	float: left;
 	width: 66%;
 	margin-right: 4%;
-}
-
-.archive-download .kultalusikka-archive-clear-two,
-.taxonomy-download_category  .kultalusikka-archive-clear-two,
-.taxonomy-download_tag .kultalusikka-archive-clear-two,
-.taxonomy-edd_download_info_feature .kultalusikka-archive-clear-two,
-.page-template-front-page .kultalusikka-archive-clear-two {
-	clear: left;
 }
 
 }
@@ -1818,62 +1849,24 @@ div.menu ul,nav.menu ul{margin:0;padding:0;list-style:none;line-height:1.0}div.m
 	overflow: hidden;
 }
 
-
-/* =Downloads Layouts
--------------------------------------------------------------- */
-
-.archive-download .kultalusikka-download,
-.taxonomy-download_category .kultalusikka-download,
-.taxonomy-download_tag .kultalusikka-download,
-.taxonomy-edd_download_info_feature .kultalusikka-download,
-.page-template-front-page .kultalusikka-download {
-	width: 33.333333333%;
+/* Button. */
+.hopeareunus-callout-text.hopeareunus-callout-text-link {
+	float: left;
+	width: 66%;
 }
-
-.archive-download .kultalusikka-archive-clear-two,
-.taxonomy-download_category  .kultalusikka-archive-clear-two,
-.taxonomy-download_tag  .kultalusikka-archive-clear-two,
-.taxonomy-edd_download_info_feature .kultalusikka-archive-clear-two,
-.page-template-front-page .kultalusikka-archive-clear-two {
-	clear: none;
+.hopeareunus-callout-link {
+	float: right;
+	padding-left: 7px;
+	padding-left: 0.5rem;
+	text-align: right;
+	width: 30%;
 }
-.archive-download .kultalusikka-archive-clear-three,
-.taxonomy-download_category  .kultalusikka-archive-clear-three,
-.taxonomy-download_tag  .kultalusikka-archive-clear-three,
-.taxonomy-edd_download_info_feature .kultalusikka-archive-clear-three,
-.page-template-front-page .kultalusikka-archive-clear-three {
-	clear: left;
+.hopeareunus-callout-text-link {
+	padding-top: 8px;
+	padding-top: 0.571428571rem;
 }
-.archive-download .kultalusikka-all-downloads,
-.taxonomy-download_category .kultalusikka-all-downloads,
-.taxonomy-download_tag .kultalusikka-all-downloads,
-.taxonomy-edd_download_info_feature .kultalusikka-all-downloads,
-.page-template-front-page .kultalusikka-all-downloads,
-#sidebar-front-page {
-	margin-left: -28px;
-	margin-left: -2rem;
-}
-.archive-download .kultalusikka-download,
-.taxonomy-download_category .kultalusikka-download,
-.taxonomy-download_tag .kultalusikka-download,
-.taxonomy-edd_download_info_feature .kultalusikka-download ,
-.page-template-front-page .kultalusikka-download {
-	padding-left: 28px;
-	padding-left: 2rem;
-}
-.archive-download .entry-header,
-.taxonomy-download_category .entry-header,
-.taxonomy-download_tag .entry-header,
-.taxonomy-edd_download_info_feature .entry-header,
-.page-template-front-page .entry-header {
-	padding: 0;
-}
-.archive-download .hentry,
-.taxonomy-download_category .hentry,
-.taxonomy-download_tag .hentry,
-.taxonomy-edd_download_info_feature .hentry,
-.page-template-front-page .hentry {
-	padding-top: 0;
+.page-template-front-page #hopeareunus-header-image #hopeareunus-header-title {
+		text-align: left;
 }
 
 }

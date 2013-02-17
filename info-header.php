@@ -19,6 +19,15 @@
 					<?php the_excerpt(); ?>
 				</div><!-- .wrap -->
 			</div><!-- #hopeareunus-header-title -->
+		<?php } elseif ( is_page_template( 'page-templates/front-page.php' ) && get_theme_mod( 'callout_text' ) ) { ?>
+			<div id="hopeareunus-header-title">
+				<div class="wrap"> 
+					<span class="hopeareunus-callout-text<?php if ( get_theme_mod( 'callout_url' ) && get_theme_mod( 'callout_url_text' ) ) echo ' hopeareunus-callout-text-link'; ?>"><?php echo esc_attr( get_theme_mod( 'callout_text' ) ); ?></span>
+					<?php if ( get_theme_mod( 'callout_url' ) && get_theme_mod( 'callout_url_text' ) )
+						echo '<span class="hopeareunus-callout-link"><a class="hopeareunus-button" href="' . esc_url( get_theme_mod( 'callout_url' ) ) . '">' . esc_attr( get_theme_mod( 'callout_url_text' ) ) . '</a></span>'; ?>
+				</div><!-- .wrap -->
+			</div><!-- #hopeareunus-header-title -->
+		
 		<?php } else {
 					get_template_part( 'loop-meta' ); // Loads the loop-meta.php template.
 				}

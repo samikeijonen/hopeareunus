@@ -286,6 +286,88 @@ function hopeareunus_customize_register_logo( $wp_customize ) {
 			)
 		)
 	);
+	
+	/* Add front page callout section. */
+	$wp_customize->add_section(
+		'front-page-callout',
+		array(
+			'title'      => esc_html__( 'Front Page Callout', 'hopeareunus' ),
+			'priority'   => 210,
+			'capability' => 'edit_theme_options'
+		)
+	);
+	
+	/* Add the callout text setting. */
+	$wp_customize->add_setting(
+		'callout_text',
+		array(
+			'default'           => '',
+			'type'              => 'theme_mod',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'sanitize_text_field',
+			//'transport'         => 'postMessage'
+		)
+	);
+	
+	/* Add the callout text control. */
+	$wp_customize->add_control(
+		'callout-text',
+		array(
+			'label'    => esc_html__( 'Callout text', 'hopeareunus' ),
+			'section'  => 'front-page-callout',
+			'settings' => 'callout_text',
+			'priority' => 10,
+			'type'     => 'text'
+		)
+	);
+	
+	/* Add the callout link setting. */
+	$wp_customize->add_setting(
+		'callout_url',
+		array(
+			'default'           => '',
+			'type'              => 'theme_mod',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'esc_url',
+			//'transport'         => 'postMessage'
+		)
+	);
+	
+	/* Add the callout link control. */
+	$wp_customize->add_control(
+		'callout-url',
+		array(
+			'label'    => esc_html__( 'Callout URL', 'hopeareunus' ),
+			'section'  => 'front-page-callout',
+			'settings' => 'callout_url',
+			'priority' => 20,
+			'type'     => 'text'
+		)
+	);
+	
+	/* Add the callout url text setting. */
+	$wp_customize->add_setting(
+		'callout_url_text',
+		array(
+			'default'           => '',
+			'type'              => 'theme_mod',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'sanitize_text_field',
+			//'transport'         => 'postMessage'
+		)
+	);
+	
+	/* Add the callout url text control. */
+	$wp_customize->add_control(
+		'callout-url-text',
+		array(
+			'label'    => esc_html__( 'Callout URL text', 'hopeareunus' ),
+			'section'  => 'front-page-callout',
+			'settings' => 'callout_url_text',
+			'priority' => 30,
+			'type'     => 'text'
+		)
+	);
 
 }
 

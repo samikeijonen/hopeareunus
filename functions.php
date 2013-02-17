@@ -274,7 +274,7 @@ function hopeareunus_scripts_styles() {
 		wp_enqueue_script( 'hopeareunus-fitvids-settings', trailingslashit( get_template_directory_uri() ) . 'js/fitvids/fitvids.js', array( 'hopeareunus-fitvids' ), '20130209', true );
 		
 		/* Add google font. */
-		wp_enqueue_style( 'hopeareunus-fonts', 'http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700|Roboto+Condensed:400,700', false, '20130212', 'all' );
+		wp_enqueue_style( 'hopeareunus-fonts', 'http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700', false, '20130212', 'all' );
 		
 		/* Add Font Awesome fonts. */
 		wp_enqueue_style( 'font-awesome-fonts', trailingslashit( get_template_directory_uri() ) . 'css/fontawesome/font-awesome.min.css', false, '20130212', 'all' );
@@ -328,7 +328,7 @@ function hopeareunus_one_column() {
 	elseif ( is_tax( 'portfolio' ) )
 		add_filter( 'theme_mod_theme_layout', 'hopeareunus_theme_layout_one_column' );
 	
-	elseif ( is_attachment() && 'layout-default' == theme_layouts_get_layout() )
+	elseif ( is_attachment() )
 		add_filter( 'theme_mod_theme_layout', 'hopeareunus_theme_layout_one_column' );
 
 	elseif ( is_page_template( 'page-templates/front-page.php' ) )
@@ -478,19 +478,6 @@ function hopeareunus_register_sidebars() {
 			'id' => 'front-page',
 			'name' => __( 'Front Page', 'hopeareunus' ),
 			'description' => __( 'Front Page widget area.', 'hopeareunus' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s widget-%2$s">',
-			'after_widget' => '</section>',
-			'before_title' => '<h3 class="widget-title">',
-			'after_title' => '</h3>'
-		)
-	);
-	
-	/* Register the 'front-page-callout' sidebar. */
-	register_sidebar(
-		array(
-			'id' => 'front-page-callout',
-			'name' => __( 'Front Page Callout', 'hopeareunus' ),
-			'description' => __( 'Front Page Callout widget area. This is meant to used for short text area.', 'hopeareunus' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s widget-%2$s">',
 			'after_widget' => '</section>',
 			'before_title' => '<h3 class="widget-title">',
