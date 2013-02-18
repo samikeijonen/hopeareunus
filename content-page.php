@@ -31,9 +31,11 @@ do_atomic( 'before_entry' ); // hopeareunus_before_entry ?>
 		<?php wp_link_pages( array( 'before' => '<p class="page-links">' . __( 'Pages:', 'hopeareunus' ), 'after' => '</p>' ) ); ?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php echo apply_atomic_shortcode( 'entry_meta', '<div class="entry-meta">[entry-edit-link]</div>' ); ?>
-	</footer><!-- .entry-footer -->
+	<?php if ( is_user_logged_in() ) { ?>
+		<footer class="entry-footer">
+			<?php echo apply_atomic_shortcode( 'entry_meta', '<div class="entry-meta">[entry-edit-link]</div>' ); ?>
+		</footer><!-- .entry-footer -->
+	<?php } // End if. ?> 
 
 	<?php do_atomic( 'close_entry' ); // hopeareunus_close_entry ?>
 

@@ -1,15 +1,15 @@
 /**
  * Theme Name: Hopeareunus
- * Theme URI: http://foxnet-themes.fi/downloads/hopeareunus
+ * Theme URI: https://foxnet-themes.fi/downloads/hopeareunus
  * Description: Hopeareunus is designed for business and portfolio sites. But blogging features are pretty cool too.
  * Version: 0.0.1
  * Author: Sami Keijonen
- * Author URI: http://foxnet-themes.fi
+ * Author URI: https://foxnet-themes.fi
  * Tags: sticky-post, theme-options, threaded-comments, translation-ready, one-column, two-columns, flexible-width, left-sidebar, right-sidebar, custom-background, custom-header, featured-images, editor-style, orange, white, light
  * License: GNU General Public License v2.0
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * Copyright (c) Sami Keijonen. All rights reserved.
- * http://foxnet-themes.fi
+ * https://foxnet-themes.fi
  */
  
  
@@ -31,16 +31,6 @@ $line-height: 24;
 	font-size: 16px
 	font-size: 1.142857143rem; (16 / $rembase)
 	line-height: 1.5; ($line-height / 16)
-
----------- Vertical spacing
-
-Vertical spacing between most elements should use 24px or 48px
-to maintain vertical rhythm:
-
-.my-new-div {
-	margin: 24px 0;
-	margin: 1.714285714rem 0; ( 24 / $rembase )
-}
 
 ---------- Further reading
 
@@ -77,7 +67,7 @@ body {
 	font-size: 1rem;
 	line-height: 1.71428571;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    word-break: break-word;
+    word-wrap: break-word;
 }
 
 /* Images, embed, video. */
@@ -95,10 +85,6 @@ img {
 /* For IE 8. */
 .ie8 img {
 	width: auto;
-}
-#content img,
-.widget img {
-
 }
 
 /* Override the Twitter embed fixed width to make tweet responsive. */
@@ -317,9 +303,6 @@ tbody th {
 tr:hover td {
 	background: #f2f2f2;
 }
-tr:hover th {
-	background: #363d40;
-}
 thead th,
 tfoot th,
 thead tr:hover th,
@@ -337,7 +320,12 @@ tfoot tr:hover th {
 /* WP calendar. */
 #wp-calendar th,
 #wp-calendar td {
+	font-size: 13px;
+	font-size: 0.92857142857rem;
+	line-height: 1.84615385;
 	font-weight: normal;
+	padding: 4px 1%;
+	padding: 0.28571428571rem 1%;
 	text-align: center;
 }
 #wp-calendar tr:hover td {
@@ -398,17 +386,19 @@ hr {
 	font-size: 13px;
 	font-size: 0.928571429rem;
 	line-height: 1.84615385;
-	margin: -5px 0 0 0;
-	margin: -0.357142857rem 0 0 0;
+	margin: -6px 0 0 0;
+	margin: -0.42857142857rem 0 0 0;
 	max-width: 100%;
-	padding: 0.571428571em 0.714285714em;
+	padding: 7px 10px;
+	padding: 0.5rem 0.71428571428rem;
 	text-align: center;
 }
 
 /* Thumbnails. */
 .thumbnail {
 	float: left;
-	margin: 0 1.5em .5em 0;
+	margin: 0 21px 7px 0;
+	margin: 0 1.5rem 0.5rem 0;
 	max-width: 150px;
 	max-height: 150px;
 }
@@ -423,8 +413,10 @@ hr {
 }
 .gallery-caption {
 	color: #555;
-	font: normal normal normal 0.875em/1.4 "Helvetica Neue", Helvetica, sans-serif;
-	margin-bottom: 0.357142857em;
+	font-size: 12px;
+	font-size: 0.85714285714rem;
+	margin-bottom: 4px;
+	margin-bottom: 0.28571428571rem;
 }
 .singular-attachment .gallery-caption {
 	display: none; /* Hides gallery captions on singular-attachment views. */
@@ -543,8 +535,6 @@ img.wp-smiley {
 /* Buttons. */
 .menu-toggle,
 input[type="submit"],
-#bbpress-forums button[type="submit"],
-.bbp-submit-wrapper button[type="submit"],
 #respond #submit {
 	background: #d0551a;
 	border: none;
@@ -557,34 +547,23 @@ input[type="submit"],
 }
 .menu-toggle {
 	background: #d0551a;
-	-moz-box-shadow: none;
-	-webkit-box-shadow: none;
-	box-shadow: none;
 	font-size: 14px;
 	font-size: 1rem;
 	margin-bottom: 0;
 	width: 150px;
 }
-input[type="submit"],
-#bbpress-forums button[type="submit"],
-.bbp-submit-wrapper button[type="submit"] {
+input[type="submit"] {
 	display: inline-block;
 	margin: 14px 0 0 0;
 	margin: 1rem 0 0 0;
 }
 .menu-toggle,
 input[type="submit"],
-#bbpress-forums button[type="submit"],
-.bbp-submit-wrapper button[type="submit"],
 #respond #submit {
 	cursor: pointer;
 }
-.menu-toggle:hover {
-	background: #b94d19;
-}
+.menu-toggle:hover,
 input[type="submit"]:hover,
-#bbpress-forums button[type="submit"]:hover,
-.bbp-submit-wrapper button[type="submit"]:hover,
 #respond #submit:hover {
 	background: #b94d19;
 	text-decoration: none;
@@ -592,8 +571,6 @@ input[type="submit"]:hover,
 .menu-toggle:active,
 .menu-toggle.toggled-on,
 input[type="submit"]:active,
-#bbpress-forums button[type="submit"]:active,
-.bbp-submit-wrapper button[type="submit"]:active,
 input[type="submit"].toggled-on {
 	background: #b94d19;
 }
@@ -717,7 +694,6 @@ div.menu li, nav.menu li {
 
 .hentry,
 #comments-template {
-	background: #fff;
 	border-bottom: 2px solid #d0551a;
 	margin-bottom: 24px;
 	margin-bottom: 1.71428571rem;
@@ -754,7 +730,6 @@ div.menu li, nav.menu li {
 .entry-meta {
 	padding: 7px 0;
 	padding: 0.5rem 0;
-	clear: both;
 	color: #777;
 }
 .entry-meta .category,
@@ -785,9 +760,6 @@ div.menu li, nav.menu li {
 	margin-bottom: 14px;
 	margin-bottom: 1rem;
 }
-.format-image .hopeareunus-image {
-
-}
 .format-gallery .hopeareunus-gallery .gallery-caption  {
 	display: none;
 }
@@ -796,7 +768,7 @@ div.menu li, nav.menu li {
 	padding: 0;
 }
 .format-gallery .image-count {
-	color: #888;
+	color: #777;
 	font-style: italic;
 }
 .format-chat .chat-author {
@@ -809,6 +781,7 @@ div.menu li, nav.menu li {
 .format-chat .chat-text p {
 	margin-top: 0;
 }
+
 
 /* =Pagination and prev/next links
 -------------------------------------------------------------- */
@@ -876,7 +849,6 @@ a.hopeareunus-portfolio-item-link:hover {
 .loop-nav rel.next {
 	float: right;
 }
-				
 .pagination .current {
 	background: #b94d19;
 	color: #fff;
@@ -893,19 +865,10 @@ a.hopeareunus-portfolio-item-link:hover {
 	padding: 14px 4%;
 	padding: 1rem 4%;
 }
-#sidebar-front-page,
-#sidebar-front-page-callout {
+#sidebar-front-page {
 	margin-bottom: 14px;
 	margin-bottom: 1rem;
 }
-#sidebar-front-page-callout {
-	font-size: 18px;
-	font-size: 1.28571429rem;
-	font-style: italic;
-	line-height: 1.33333333;
-	text-align: center;
-}
-
 #sidebar-subsidiary {
 	background: #f3f3f3;
 	margin: 14px 0 0 0;
@@ -1217,8 +1180,9 @@ ol.comment-list dl dl {
 	padding: 14px;
 	padding: 1rem;
 }
-#menu-subsidiary li.current-menu-item a {
-	color: #d0551a; 
+#menu-subsidiary li.current-menu-item a,
+#menu-subsidiary li a:hover {
+	color: #5c6f7c; 
 }
 
 
@@ -1262,7 +1226,8 @@ body .gform_wrapper .gform_body .gform_fields .gfield input[type=tel],
 body .gform_wrapper .gform_body .gform_fields .gfield input[type=url],
 body .gform_wrapper .gform_body .gform_fields .gfield input[type=number],
 body .gform_wrapper .gform_body .gform_fields .gfield input[type=password],
-body .gform_wrapper .gform_body .gform_fields .gfield textarea {
+body .gform_wrapper .gform_body .gform_fields .gfield textarea,
+body .gform_wrapper .gform_body .gform_fields .gfield input.medium {
 	background: #f9f9f9;
 	border: 1px solid #e5e5e5;
 	-webkit-border-radius: 3px;
@@ -1285,9 +1250,6 @@ body .gform_wrapper .gform_body .gform_fields .gfield input[type=password]:focus
 body .gform_wrapper .gform_body .gform_fields .gfield textarea:focus {
 	background: #fff;
 	border: 1px solid #d0551a;
-	-moz-box-shadow: 0 0 3px rgba(131, 171, 35, 0.3);
-	-webkit-box-shadow: 0 0 rgba(131, 171, 35, 0.3);
-	box-shadow: 0 0 3px rgba(131, 171, 35, 0.3);
 } 
 body .gform_wrapper .gform_body .gform_fields .gfield select {
 	border: 1px solid #e5e5e5;
@@ -1316,9 +1278,6 @@ body .gform_wrapper .gform_body .gform_page_footer .gform_next_button,
 body .gform_wrapper .gform_body .gform_page_footer .gform_previous_button {
 	background: #d0551a;
 	border: none;
-	-moz-box-shadow: 0 2px 0 #f2f2f2;
-	-webkit-box-shadow: 0 2px 0 #f2f2f2;
-	box-shadow: 0 2px 0 #f2f2f2;
 	color: #fff;
 	padding: 14px 20px;
 	padding: 1rem 1.42857143rem;
@@ -1450,7 +1409,7 @@ body #ui-datepicker-div {
 	
 }
 
-/* Minimum width of 696 pixels. */
+/* Minimum width of 686 pixels. */
 @media screen and (min-width: 49em) {
 
 /* Drop-downs */
@@ -1866,13 +1825,13 @@ div.menu ul,nav.menu ul{margin:0;padding:0;list-style:none;line-height:1.0}div.m
 	padding-top: 0.571428571rem;
 }
 .page-template-front-page #hopeareunus-header-image #hopeareunus-header-title {
-		text-align: left;
+	text-align: left;
 }
 
 }
 
 
-/* Minimum width of 1030 pixels. */
+/* Minimum width of 1036 pixels. */
 @media screen and (min-width: 74em) {
 
 /* Comments. */
