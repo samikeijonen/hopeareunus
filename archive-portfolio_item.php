@@ -58,7 +58,7 @@ get_header(); // Loads the header.php template. ?>
 					<?php do_atomic( 'open_entry' ); // hopeareunus_open_entry ?>
 	
 					<?php if ( current_theme_supports( 'get-the-image' ) )
-						get_the_image( array( 'meta_key' => 'Thumbnail', 'size' => 'hopeareunus-thumbnail-portfolio-3', 'image_class' => 'featured', 'width' => 296, 'height' => 210, 'default_image' => trailingslashit( get_template_directory_uri() ) . 'images/archive_default.png' ) );
+						get_the_image( array( 'meta_key' => 'Thumbnail', 'size' => 'hopeareunus-thumbnail-portfolio-3', 'image_class' => 'featured', 'width' => 386, 'height' => 238, 'default_image' => trailingslashit( get_template_directory_uri() ) . 'images/archive_default.png' ) );
 					?>
 					
 					<div class="hopeareunus-portfolio-image-info">	

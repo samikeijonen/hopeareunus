@@ -252,8 +252,8 @@ function hopeareunus_respond_html5shiv() {
 function hopeareunus_add_image_sizes() {
 
 	add_image_size( 'hopeareunus-thumbnail-portfolio-4', 220, 156, true );
-	add_image_size( 'hopeareunus-thumbnail-portfolio-3', 296, 210, true );
-	add_image_size( 'hopeareunus-portfolio', 600, 369, true );
+	add_image_size( 'hopeareunus-thumbnail-portfolio-3', 386, 238, true );
+	add_image_size( 'hopeareunus-portfolio', 764, 472, true );
 	
 }
 
@@ -274,7 +274,7 @@ function hopeareunus_scripts_styles() {
 		wp_enqueue_script( 'hopeareunus-fitvids-settings', trailingslashit( get_template_directory_uri() ) . 'js/fitvids/fitvids.js', array( 'hopeareunus-fitvids' ), '20130209', true );
 		
 		/* Add google font. */
-		wp_enqueue_style( 'hopeareunus-fonts', 'http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700', false, '20130212', 'all' );
+		wp_enqueue_style( 'hopeareunus-fonts', 'http://fonts.googleapis.com/css?family=PT+Sans:400,700', false, '20130212', 'all' );
 		
 		/* Add Font Awesome fonts. */
 		wp_enqueue_style( 'font-awesome-fonts', trailingslashit( get_template_directory_uri() ) . 'css/fontawesome/font-awesome.min.css', false, '20130212', 'all' );
@@ -517,7 +517,7 @@ function hopeareunus_get_portfolio_item_link() {
 	$hopeareunus_portfolio_url = get_post_meta( get_the_ID(), 'portfolio_item_url', true );
 
 	if ( !empty( $hopeareunus_portfolio_url ) )
-		return '<span class="hopeareunus-project-url"><a class="hopeareunus-portfolio-item-link" href="' . esc_url( $hopeareunus_portfolio_url ) . '">' . __( 'Visit site <i class="' . esc_attr( apply_filters( 'hopeareunus_link', 'icon-hand-right' ) ) . '"></i>', 'hopeareunus' ) . '</a></span>';
+		return '<span class="hopeareunus-project-url"><a class="hopeareunus-portfolio-item-link" href="' . esc_url( $hopeareunus_portfolio_url ) . '" title="' . the_title( '','', false ) . '">' . __( 'Visit site', 'hopeareunus' ) . ' <i class="' . esc_attr( apply_filters( 'hopeareunus_link', 'icon-hand-right' ) ) . '"></i></a></span>';
 	
 }
 

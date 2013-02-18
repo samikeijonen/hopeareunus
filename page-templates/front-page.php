@@ -48,7 +48,7 @@ get_header(); // Loads the header.php template. ?>
 					<?php do_atomic( 'open_entry' ); // hopeareunus_open_entry ?>
 	
 						<header class="entry-header">
-							<?php if ( current_theme_supports( 'get-the-image' ) ) get_the_image( array( 'meta_key' => 'Thumbnail', 'size' => 'hopeareunus-thumbnail-portfolio-3', 'image_class' => 'hopeareunus-thumbnail-front-page', 'width' => 296, 'height' => 210, 'default_image' => trailingslashit( get_template_directory_uri() ) . 'images/archive_default.png' ) ); ?>
+							<?php if ( current_theme_supports( 'get-the-image' ) ) get_the_image( array( 'meta_key' => 'Thumbnail', 'size' => 'hopeareunus-thumbnail-portfolio-3', 'image_class' => 'hopeareunus-thumbnail-front-page', 'width' => 386, 'height' => 238, 'default_image' => trailingslashit( get_template_directory_uri() ) . 'images/archive_default.png' ) ); ?>
 						</header><!-- .entry-header -->
 		
 						<div class="entry-summary">
@@ -100,7 +100,7 @@ get_header(); // Loads the header.php template. ?>
 					<?php do_atomic( 'open_entry' ); // hopeareunus_open_entry ?>
 	
 						<header class="entry-header">
-							<?php if ( current_theme_supports( 'get-the-image' ) ) get_the_image( array( 'meta_key' => 'Thumbnail', 'size' => 'hopeareunus-thumbnail-portfolio-3', 'image_class' => 'hopeareunus-thumbnail-front-page', 'width' => 296, 'height' => 210, 'default_image' => trailingslashit( get_template_directory_uri() ) . 'images/archive_default.png' ) ); ?>
+							<?php if ( current_theme_supports( 'get-the-image' ) ) get_the_image( array( 'meta_key' => 'Thumbnail', 'size' => 'hopeareunus-thumbnail-portfolio-3', 'image_class' => 'hopeareunus-thumbnail-front-page', 'width' => 386, 'height' => 238, 'default_image' => trailingslashit( get_template_directory_uri() ) . 'images/archive_default.png' ) ); ?>
 						</header><!-- .entry-header -->
 		
 						<div class="entry-summary">

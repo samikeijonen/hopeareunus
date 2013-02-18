@@ -167,7 +167,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+	font-family: "PT Sans", "Helvetica Neue", Helvetica, Arial, Sans-serif;
     font-style: normal;
     font-weight: normal;
 	margin: 0 0 14px 0;
@@ -821,7 +821,7 @@ a.hopeareunus-portfolio-item-link {
 	margin-left: 0;
 }
 a.hopeareunus-button {
-	color: #d7f6fc;
+	color: #fff;
 	background: #31424e;
 	margin: 0;
 }
@@ -1330,6 +1330,8 @@ body #ui-datepicker-div {
 .page-template-front-page .hentry  .entry-title {
 	font-size: 16px;
 	font-size: 1.14285714286rem;
+	margin: 3px 0 7px;
+	margin: 0.21428571428rem 0 0.5rem;
 	text-shadow: none;
 }
 .page-template-front-page .hentry  .entry-title  a {
@@ -1709,8 +1711,8 @@ div.menu ul,nav.menu ul{margin:0;padding:0;list-style:none;line-height:1.0}div.m
 .page-template-front-page .hentry .entry-summary {
 	background: #363d40;
 	background: rgba(0,0,0,0.4);
-	padding: 7px 4%;
-	padding: 0.5rem 4%;
+	padding: 7px 3%;
+	padding: 0.5rem 3%;
 	position: absolute;
 	bottom: 7px;
 	bottom: 0.5rem;
