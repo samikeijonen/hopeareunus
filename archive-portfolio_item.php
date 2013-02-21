@@ -17,7 +17,7 @@ get_header(); // Loads the header.php template. ?>
 	
 	<?php
 	
-	/* Set up default column count (3 and 4). */
+	/* Set up default column count (3 and 4). Actually this is not in at the moment. */
 	$hopeareunus_archive_portfolio_columns_4 = apply_atomic( 'hopeareunus_archive_portfolio_columns_4', 4 );
 	$hopeareunus_archive_portfolio_columns_3 = apply_atomic( 'hopeareunus_archive_portfolio_columns_3', 3 );
 	$archive_iterator = 0;
@@ -51,22 +51,22 @@ get_header(); // Loads the header.php template. ?>
 				
 				?>
 				
-				<div class="hopeareunus-portfolio<?php if ( !empty( $hopeareunus_archive_clear_3 ) ) echo $hopeareunus_archive_clear_3; if ( !empty( $hopeareunus_archive_clear_4 ) ) echo $hopeareunus_archive_clear_4; if ( get_theme_mod( 'portfolio_layout' ) ) echo ' hopeareunus-portfolio-layout-' . get_theme_mod( 'portfolio_layout' ); ?>">
+				<div class="hopeareunus-portfolio<?php if ( !empty( $hopeareunus_archive_clear_3 ) ) echo $hopeareunus_archive_clear_3; if ( !empty( $hopeareunus_archive_clear_4 ) ) echo $hopeareunus_archive_clear_4; if ( get_theme_mod( 'portfolio_layout' ) ) echo ' hopeareunus-portfolio-layout-' . esc_attr( get_theme_mod( 'portfolio_layout' ) ); ?>">
 
 					<article id="post-<?php the_ID(); ?>" class="<?php hybrid_entry_class(); ?>">
 
 					<?php do_atomic( 'open_entry' ); // hopeareunus_open_entry ?>
 	
-					<?php if ( current_theme_supports( 'get-the-image' ) )
-						get_the_image( array( 'meta_key' => 'Thumbnail', 'size' => 'hopeareunus-thumbnail-portfolio-3', 'image_class' => 'featured', 'width' => 386, 'height' => 238, 'default_image' => trailingslashit( get_template_directory_uri() ) . 'images/archive_default.png' ) );
-					?>
+						<?php if ( current_theme_supports( 'get-the-image' ) )
+							get_the_image( array( 'meta_key' => 'Thumbnail', 'size' => 'hopeareunus-thumbnail-portfolio-3', 'image_class' => 'featured', 'width' => 386, 'height' => 238, 'default_image' => trailingslashit( get_template_directory_uri() ) . 'images/archive_default.png' ) );
+						?>
 					
-					<div class="hopeareunus-portfolio-image-info">	
+						<div class="hopeareunus-portfolio-image-info">	
 				
-						<?php echo apply_atomic_shortcode( 'entry_title', the_title( '<h2 class="post-title entry-title">', '</h2>', false ) ); ?>
-						<p><?php echo hybrid_entry_terms_shortcode( array( 'taxonomy' => 'portfolio' ) ); ?></p>
+							<?php echo apply_atomic_shortcode( 'entry_title', the_title( '<h2 class="post-title entry-title">', '</h2>', false ) ); ?>
+							<p><?php echo hybrid_entry_terms_shortcode( array( 'taxonomy' => 'portfolio' ) ); ?></p>
 						
-					</div>
+						</div>
 
 					<?php do_atomic( 'close_entry' ); // hopeareunus_close_entry ?>
 

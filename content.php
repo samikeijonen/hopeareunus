@@ -24,7 +24,7 @@ do_atomic( 'before_entry' ); // hopeareunus_before_entry ?>
 			echo apply_atomic_shortcode( 'entry_title', '[entry-title tag="h2"]' ); 
 		} 
 		?>
-		<?php echo apply_atomic_shortcode( 'byline', '<div class="byline">' . __( '[entry-published] by [entry-author] [entry-comments-link before=" | "] [entry-edit-link before=" | "]', 'kultalusikka' ) . '</div>' ); ?>
+		<?php echo apply_atomic_shortcode( 'byline', '<div class="byline">' . __( '<i class="icon-time"></i> [entry-published] <i class="icon-user"></i> [entry-author] [hopeareunus-comments-link] [entry-edit-link before=" | "]', 'kultalusikka' ) . '</div>' ); ?>
 	</header><!-- .entry-header -->
 		
 	<div class="entry-content">

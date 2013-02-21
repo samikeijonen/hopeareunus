@@ -28,7 +28,7 @@ do_atomic( 'before_entry' ); // hopeareunus_before_entry ?>
 		</div><!-- .entry-content -->
 
 		<footer class="entry-footer">
-			<?php echo apply_atomic_shortcode( 'entry_meta', '<div class="entry-meta">' . __( '[hopeareunus-post-format-link] updated on [entry-published] [entry-edit-link before="| "]<br />[entry-terms taxonomy="category" before="Posted in "] [entry-terms before="Tagged "]', 'hopeareunus' ) . '</div>' ); ?>
+			<?php echo apply_atomic_shortcode( 'entry_meta', '<div class="entry-meta">' . __( '[hopeareunus-post-format-link] [post-format-link] updated on [entry-published] [entry-edit-link before="| "]<br />[entry-terms taxonomy="category" before="Posted in "] [entry-terms before="Tagged "]', 'hopeareunus' ) . '</div>' ); ?>
 		</footer><!-- .entry-footer -->
 
 	<?php } else { ?>
@@ -43,7 +43,7 @@ do_atomic( 'before_entry' ); // hopeareunus_before_entry ?>
 		</div><!-- .entry-content -->
 
 		<footer class="entry-footer">
-			<?php echo apply_atomic_shortcode( 'entry_meta', '<div class="entry-meta">' . __( '[hopeareunus-post-format-link] updated on [entry-published] [entry-permalink before="| "] [entry-comments-link before="| " one="%s reply" more="%s replies" zero="Reply"] [entry-edit-link before="| "]', 'hopeareunus' ) . '</div>' ); ?>
+			<?php echo apply_atomic_shortcode( 'entry_meta', '<div class="entry-meta">' . __( '[hopeareunus-post-format-link] [post-format-link] updated on [entry-published] [entry-permalink before="| "] [entry-comments-link before="| " one="%s reply" more="%s replies" zero="Reply"] [entry-edit-link before="| "]', 'hopeareunus' ) . '</div>' ); ?>
 		</footer>
 
 	<?php } ?>

@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Hopeareunus WordPress Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-18 18:54+0200\n"
-"PO-Revision-Date: 2013-02-18 18:54+0200\n"
+"POT-Creation-Date: 2013-02-21 16:37+0200\n"
+"PO-Revision-Date: 2013-02-21 16:37+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Foxnet Themes <sami.keijonen@foxnet.fi>\n"
 "Language: fi\n"
@@ -32,7 +32,7 @@ msgstr ""
 "tai käyttää hakutoimintoa."
 
 #: attachment-image.php:40 content-aside.php:38 content-audio.php:50
-#: content-chat.php:50 content-portfolio_item.php:37 content-status.php:41
+#: content-chat.php:50 content-portfolio_item.php:41 content-status.php:41
 #: content-video.php:59 content.php:31
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Jatka lukemista <span class=\"meta-nav\">&rarr;</span>"
@@ -41,7 +41,7 @@ msgstr "Jatka lukemista <span class=\"meta-nav\">&rarr;</span>"
 #: content-audio.php:28 content-audio.php:51 content-chat.php:28
 #: content-chat.php:51 content-gallery.php:28 content-gallery.php:47
 #: content-image.php:28 content-link.php:28 content-link.php:48
-#: content-page.php:31 content-portfolio_item.php:38 content-quote.php:28
+#: content-page.php:31 content-portfolio_item.php:42 content-quote.php:28
 #: content-quote.php:39 content-status.php:27 content-status.php:42
 #: content-video.php:28 content-video.php:60 content.php:32
 msgid "Pages:"
@@ -101,11 +101,13 @@ msgstr "Kommentointi on suljettu."
 #: content-gallery.php:23 content-image.php:23 content-link.php:23
 #: content-video.php:23
 msgid ""
-"[hopeareunus-post-format-link] published on [entry-published] [entry-"
-"comments-link before=\" | \"] [entry-edit-link before=\" | \"]"
+"[hopeareunus-post-format-link] [post-format-link] published on [entry-"
+"published] [entry-comments-link before=\" | \"] [entry-edit-link before=\" | "
+"\"]"
 msgstr ""
-"[hopeareunus-post-format-link] julkaistu [entry-published] [entry-comments-"
-"link before=\" | \"] [entry-edit-link before=\" | \"]"
+"[hopeareunus-post-format-link] [post-format-link] published on [entry-"
+"published] [entry-comments-link before=\" | \"] [entry-edit-link before=\" | "
+"\"]"
 
 #: content-aside.php:32 content-audio.php:32 content-chat.php:32
 #: content-gallery.php:32 content-image.php:32 content-link.php:32
@@ -121,13 +123,13 @@ msgstr ""
 #: content-image.php:50 content-link.php:54 content-quote.php:43
 #: content-video.php:66
 msgid ""
-"[hopeareunus-post-format-link] published on [entry-published] [entry-"
-"permalink before=\"| \"] [entry-comments-link before=\"| \"] [entry-edit-"
-"link before=\"| \"]"
+"[hopeareunus-post-format-link] [post-format-link] published on [entry-"
+"published] [entry-permalink before=\"| \"] [entry-comments-link before=\"| "
+"\"] [entry-edit-link before=\"| \"]"
 msgstr ""
-"[hopeareunus-post-format-link] julkaistu [entry-published] [entry-permalink "
-"before=\"| \"] [entry-comments-link before=\"| \"] [entry-edit-link before="
-"\"| \"]"
+"[hopeareunus-post-format-link] [post-format-link] published on [entry-"
+"published] [entry-permalink before=\"| \"] [entry-comments-link before=\"| "
+"\"] [entry-edit-link before=\"| \"]"
 
 #: content-gallery.php:50
 #, php-format
@@ -136,17 +138,19 @@ msgid_plural "This gallery contains %s images."
 msgstr[0] "Tämä kuvagalleria sisältää %s kuvan."
 msgstr[1] "Tämä kuvagalleria sisältää %s kuvaa."
 
-#: content-portfolio_item.php:31
+#: content-portfolio_item.php:35
 msgid "Work:"
 msgstr "Tehdyt työt:"
 
 #: content-quote.php:23
 msgid ""
-"[hopeareunus-post-format-link] published on [entry-published] [entry-"
-"comments-link before=\" | \"] [entry-edit-link before=\"| \"]"
+"[hopeareunus-post-format-link] [post-format-link] published on [entry-"
+"published] [entry-comments-link before=\" | \"] [entry-edit-link before=\"| "
+"\"]"
 msgstr ""
-"[hopeareunus-post-format-link] julkaistu [entry-published] [entry-comments-"
-"link before=\" | \"] [entry-edit-link before=\"| \"]"
+"[hopeareunus-post-format-link] [post-format-link] published on [entry-"
+"published] [entry-comments-link before=\" | \"] [entry-edit-link before=\"| "
+"\"]"
 
 #: content-quote.php:38
 msgid "Read more &rarr;"
@@ -154,42 +158,46 @@ msgstr "Lue lisää &rarr;"
 
 #: content-status.php:31
 msgid ""
-"[hopeareunus-post-format-link] updated on [entry-published] [entry-edit-link "
-"before=\"| \"]<br />[entry-terms taxonomy=\"category\" before=\"Posted in "
-"\"] [entry-terms before=\"Tagged \"]"
+"[hopeareunus-post-format-link] [post-format-link] updated on [entry-"
+"published] [entry-edit-link before=\"| \"]<br />[entry-terms taxonomy="
+"\"category\" before=\"Posted in \"] [entry-terms before=\"Tagged \"]"
 msgstr ""
-"[hopeareunus-post-format-link] päivitetty [entry-published] [entry-edit-link "
-"before=\"| \"]<br />[entry-terms taxonomy=\"category\" before=\"Artikkeli "
-"kategoriassa \"] [entry-terms before=\"Avainsanat \"]"
+"[hopeareunus-post-format-link] [post-format-link] päivitetty [entry-"
+"published] [entry-edit-link before=\"| \"]<br />[entry-terms taxonomy="
+"\"category\" before=\"Posted in \"] [entry-terms before=\"Tagged \"]"
 
 #: content-status.php:46
 #, php-format
 msgid ""
-"[hopeareunus-post-format-link] updated on [entry-published] [entry-permalink "
-"before=\"| \"] [entry-comments-link before=\"| \" one=\"%s reply\" more=\"%s "
-"replies\" zero=\"Reply\"] [entry-edit-link before=\"| \"]"
+"[hopeareunus-post-format-link] [post-format-link] updated on [entry-"
+"published] [entry-permalink before=\"| \"] [entry-comments-link before=\"| "
+"\" one=\"%s reply\" more=\"%s replies\" zero=\"Reply\"] [entry-edit-link "
+"before=\"| \"]"
 msgstr ""
-"[hopeareunus-post-format-link] päivitetty [entry-published] [entry-permalink "
-"before=\"| \"] [entry-comments-link before=\"| \" one=\"%s kommentti\" more="
-"\"%s kommenttia\" zero=\"Kommentti\"] [entry-edit-link before=\"| \"]"
+"[hopeareunus-post-format-link] [post-format-link] päivitetty [entry-"
+"published] [entry-permalink before=\"| \"] [entry-comments-link before=\"| "
+"\" one=\"%s reply\" more=\"%s replies\" zero=\"Reply\"] [entry-edit-link "
+"before=\"| \"]"
 
 #: content.php:27
 msgid ""
-"[entry-published] by [entry-author] [entry-comments-link before=\" | \"] "
+"<i class=\"icon-time\"></i> [entry-published] <i class=\"icon-user\"></i> "
+"[entry-author] <i class=\"icon-comment-alt\"></i> [entry-comments-link] "
 "[entry-edit-link before=\" | \"]"
 msgstr ""
-"[entry-published]  [entry-author] [entry-comments-link before=\" | \"] "
+"<i class=\"icon-time\"></i> [entry-published] <i class=\"icon-user\"></i> "
+"[entry-author] <i class=\"icon-comment-alt\"></i> [entry-comments-link] "
 "[entry-edit-link before=\" | \"]"
 
-#: functions.php:479
+#: functions.php:483
 msgid "Front Page"
 msgstr "Etusivu"
 
-#: functions.php:480
+#: functions.php:484
 msgid "Front Page widget area."
 msgstr "Etusivun vimpainalue."
 
-#: functions.php:520
+#: functions.php:524
 msgid "Visit site"
 msgstr "Vieraile sivulla"
 
@@ -230,14 +238,6 @@ msgstr "Selaat sivun arkistoa."
 #: loop-nav.php:18
 msgid "<span class=\"meta-nav\">&larr;</span> Return to entry"
 msgstr "<span class=\"meta-nav\">&larr;</span> Palaa takaisin"
-
-#: loop-nav.php:24 loop-nav.php:28 loop-nav.php:30
-msgid "<span class=\"meta-nav\">&larr;</span> Previous"
-msgstr "<span class=\"meta-nav\">&larr;</span> Edellinen"
-
-#: loop-nav.php:25 loop-nav.php:28 loop-nav.php:30
-msgid "Next <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Seuraava <span class=\"meta-nav\">&rarr;</span>"
 
 #: menu-primary.php:19
 msgid "Skip to content"
@@ -309,11 +309,11 @@ msgstr "Kustomoi:"
 #: admin/functions-admin.php:139
 #, php-format
 msgid ""
-"Want to set Global layout, logo and other features? <a href=\"%s\">Go to "
-"Appearance &gt;&gt; Customize</a>. "
+"Want to set Global layout, logo, social links and other features? <a href="
+"\"%s\">Go to Appearance &gt;&gt; Customize</a>. "
 msgstr ""
-"Haluatko vaihtaa globaalia ulkoasua, logon ja muita asetuksia? <a href=\"%s"
-"\">Go to Appearance &gt;&gt; Kustomoi</a>. "
+"Haluatko asettaa globaalin ulkoasun, logon, sosiaalisen median linkkejä  ja "
+"muita asetuksia? <a href=\"%s\">Go to Appearance &gt;&gt; Kustomoi</a>. "
 
 #: admin/functions-admin.php:156
 msgid "Custom Header:"
@@ -328,11 +328,21 @@ msgstr ""
 "Halutatko vaihtaa tai poistaa oletuksena olevan yläpalkkikuvan? <a href=\"%s"
 "\">Mene kohtaan ulkoasu &gt;&gt; Otsake</a>. "
 
-#: admin/functions-admin.php:176
+#: admin/functions-admin.php:160
+msgid ""
+"Note! You can overwrite default header image in singular post/page by "
+"setting large enough featured image. Feature header size is 1920 x 379 "
+"pixels."
+msgstr ""
+"Huom! Voi vaihtaa yläpalkin kuvan yksittäisellä sivulla/artikkelilla, kun "
+"asetat riittävän ison artikkelikuvan. Yläpalkin kuvan koko on 1920 x 379 "
+"pikseliä."
+
+#: admin/functions-admin.php:177
 msgid "Custom background:"
 msgstr "Taustakuva:"
 
-#: admin/functions-admin.php:179
+#: admin/functions-admin.php:180
 #, php-format
 msgid ""
 "Want to replace or remove default Background? <a href=\"%s\">Go to "
@@ -394,8 +404,8 @@ msgid "Facebook URL"
 msgstr "Facebook URL"
 
 #: includes/theme-customize.php:155
-msgid "RSS  URL"
-msgstr "RSS  URL"
+msgid "RSS URL"
+msgstr "RSS URL"
 
 #: includes/theme-customize.php:179
 msgid "Linkedin URL"
@@ -1445,6 +1455,18 @@ msgstr "%1$s"
 #: page-templates/front-page.php:88
 msgid "Latest Portfolios"
 msgstr "Uusimmat referenssit"
+
+#~ msgid "Previous"
+#~ msgstr "Edellinen"
+
+#~ msgid "Next"
+#~ msgstr "Seuraava"
+
+#~ msgid "<span class=\"meta-nav\">&larr;</span> Previous"
+#~ msgstr "<span class=\"meta-nav\">&larr;</span> Edellinen"
+
+#~ msgid "Next <span class=\"meta-nav\">&rarr;</span>"
+#~ msgstr "Seuraava <span class=\"meta-nav\">&rarr;</span>"
 
 #~ msgid "Starting at: "
 #~ msgstr "Alkaen:"

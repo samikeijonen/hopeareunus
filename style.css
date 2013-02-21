@@ -2,7 +2,7 @@
  * Theme Name: Hopeareunus
  * Theme URI: https://foxnet-themes.fi/downloads/hopeareunus
  * Description: Hopeareunus is designed for business and portfolio sites. But blogging features are pretty cool too.
- * Version: 0.0.1
+ * Version: 0.0.5
  * Author: Sami Keijonen
  * Author URI: https://foxnet-themes.fi
  * Tags: sticky-post, theme-options, threaded-comments, translation-ready, one-column, two-columns, flexible-width, left-sidebar, right-sidebar, custom-background, custom-header, featured-images, editor-style, orange, white, light
@@ -82,6 +82,10 @@ img {
 	height: auto;
 }
 
+.page-template-front-page #content img:hover {
+	opacity: 0.7;
+}
+
 /* For IE 8. */
 .ie8 img {
 	width: auto;
@@ -114,6 +118,7 @@ input[type=submit],
 input[type=button],
 input[type=text],
 textarea,
+.page-template-front-page #content img,
 .archive-portfolio_item .hopeareunus-portfolio .hentry  img,
 .taxonomy-portfolio .hopeareunus-portfolio .hentry  img {
 	-webkit-transition: all 0.2s ease-out;
@@ -174,36 +179,36 @@ h6 {
 	margin: 0 0 1rem 0;
 }
 
-/* Note: line-height is 28px. */
+/* Note: line-height is 30px. */
 h1 {
 	font-size: 32px;
 	font-size: 2.28571429rem;
-	line-height: 0.875;
+	line-height: 0.9375;
 }
 h2 {
 	font-size: 28px;
 	font-size: 2rem;
-	line-height: 1;
+	line-height: 1.07142857143;
 }
 h3 {
 	font-size: 24px;
 	font-size: 1.71428571rem;
-	line-height: 1.16666667;
+	line-height: 1.25;
 }
 h4 {
 	font-size: 22px;
 	font-size: 1.57142857rem;
-	line-height: 1.27272727;
+	line-height: 1.36363636364;
 }
 h5 {
 	font-size: 20px;
 	font-size: 1.42857143rem;
-	line-height: 1.4;
+	line-height: 1.5;
 }
 h6 {
 	font-size: 18px;
 	font-size: 1.28571429rem;
-	line-height: 1.55555556;
+	line-height: 1.66666666667;
 }
 
 /* Lists. */
@@ -507,6 +512,10 @@ img.wp-smiley {
 	margin-bottom: 28px;
 	margin-bottom: 2rem;
 }
+.home.page-template-front-page #hopeareunus-header-image {
+	margin-bottom: 21px;
+	margin-bottom: 1.5rem;
+}
 #hopeareunus-header-image #hopeareunus-header-title {
 	background: #d9531e;
 	color: #fff;
@@ -581,9 +590,6 @@ h3.menu-toggle {
 /* select. */
 select {
 	border: 1px solid #e5e5e5;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
 	padding: 4px 0;
 	padding: 0.285714286rem 0;
 }
@@ -623,6 +629,9 @@ div.menu li, nav.menu li {
 #menu-primary ul.nav-menu.toggled-on,
 .menu-toggle {
 	display: inline-block;
+}
+#menu-primary .nav-menu.toggled-on .sub-indicator {
+	display: none;
 }
 
 /* Site description. */
@@ -771,6 +780,12 @@ div.menu li, nav.menu li {
 	color: #777;
 	font-style: italic;
 }
+a.post-format-link .hopeareunus-post-format-icon:hover {
+	text-decoration: none;
+} 
+.format-status .entry-footer {
+	clear: both;
+}
 .format-chat .chat-author {
 	font-weight: bold;
 }
@@ -782,6 +797,14 @@ div.menu li, nav.menu li {
 	margin-top: 0;
 }
 
+/* Icons. */
+.hentry  .entry-header .published,
+.hentry  .entry-header .author,
+.hentry .entry-header .comments-link,
+.hentry .entry-header .post-format-link {
+	margin-right: 14px;
+	margin-right: 1rem;
+}
 
 /* =Pagination and prev/next links
 -------------------------------------------------------------- */
@@ -832,8 +855,8 @@ a.hopeareunus-button:focus {
 }
 
 .loop-nav a {
-	width: 100px;
-	width: 7.14285714rem;
+	width: 44px;
+	width: 3.14285714286rem;
 }
 .loop-nav a:hover,
 .page-links a:hover ,
@@ -852,10 +875,6 @@ a.hopeareunus-portfolio-item-link:hover {
 .pagination .current {
 	background: #b94d19;
 	color: #fff;
-}
-.loop-nav span.meta-nav,
-.pagination span.meta-nav {
-	display: none;
 }
 
 /* Sidebars. */
@@ -909,9 +928,6 @@ input[type="password"],
 input[type="email"] {
 	background: #f9f9f9; 
 	border: 1px solid #e5e5e5;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
 	color: #555;
 	display: block;
 	padding: 7px;
@@ -1109,21 +1125,16 @@ ol.comment-list dl dl {
 
 /* Comment form inputs and textarea elements. */
 #respond input[type="text"],
-#respond textarea,
-#bbpress-forums textarea {
+#respond textarea {
 	background: #f9f9f9;
 	border: 1px solid #e5e5e5;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
 	color: #555;
 	display: block;
 	padding: 0.5em;
 	width: 100%;
 }
 #respond input[type="text"]:focus,
-#respond textarea:focus,
-#bbpress-forums textarea:focus {
+#respond textarea:focus {
 	background: #fff;
 	border: 1px solid #d0551a;
 	-moz-box-shadow: 0 0 3px rgba(131, 171, 35, 0.3);
@@ -1230,9 +1241,6 @@ body .gform_wrapper .gform_body .gform_fields .gfield textarea,
 body .gform_wrapper .gform_body .gform_fields .gfield input.medium {
 	background: #f9f9f9;
 	border: 1px solid #e5e5e5;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
 	color: #555;
 	display: block;
 	font-size: 13px;
@@ -1253,9 +1261,6 @@ body .gform_wrapper .gform_body .gform_fields .gfield textarea:focus {
 } 
 body .gform_wrapper .gform_body .gform_fields .gfield select {
 	border: 1px solid #e5e5e5;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
 	font-size: 13px;
 	font-size: 0.928571429rem;
 	padding: 4px 0;
@@ -1304,6 +1309,13 @@ body #gforms_confirmation_message {
 	border: 1px solid #e5e5e5;
 	padding: 3%;
 }
+body .gform_wrapper .gform_footer {
+	margin: 7px 0 0;
+	margin: 0.5rem 0 0;
+	padding: 7px 0;
+	padding: 0.5rem 0;
+}
+
 body .ui-datepicker-div,
 body .ui-datepicker-inline,
 body #ui-datepicker-div {
@@ -1414,9 +1426,6 @@ body #ui-datepicker-div {
 /* Minimum width of 686 pixels. */
 @media screen and (min-width: 49em) {
 
-/* Drop-downs */
-div.menu ul,nav.menu ul{margin:0;padding:0;list-style:none;line-height:1.0}div.menu ul ul,nav.menu ul ul{position:absolute;top:-999em;width:10em}div.menu ul ul li,nav.menu ul ul li{width:100%}div.menu li:hover,nav.menu li:hover{visibility:inherit}div.menu li,nav.menu li{float:left;position:relative}div.menu a,nav.menu a{display:block;position:relative}div.menu li:hover ul,div.menu li.sfHover ul,nav.menu li:hover ul,nav.menu li.sfHover ul{left:0;top:2em;z-index:99}div.menu li:hover li ul,div.menu li.sfHover li ul,nav.menu li:hover li ul,nav.menu li.sfHover li ul{top:-999em}div.menu li li:hover ul,div.menu li li.sfHover ul,nav.menu li li:hover ul,nav.menu li li.sfHover ul{left:10em;top:0}div.menu li li:hover li ul,div.menu li li.sfHover li ul,nav.menu li li:hover li ul,nav.menu li li.sfHover li ul{top:-999em}div.menu li li li:hover ul,div.menu li li li.sfHover ul,nav.menu li li li:hover ul,nav.menu li li li.sfHover ul{left:10em;top:0}
-
 /* Container max-width. */
 #site-description-social-wrap .wrap,
 #header .wrap,
@@ -1501,13 +1510,41 @@ div.menu ul,nav.menu ul{margin:0;padding:0;list-style:none;line-height:1.0}div.m
 	display: table;
 	margin: 0 auto;
 }
-#menu-primary ul {
+
+/*
+Original Author: Craig Erskine
+Description: Dynamic Menu System - Horizontal/Vertical
+http://qrayg.com/experiment/cssmenus/
+*/
+
+#menu-primary {
+	clear: both;
+	display: block;
+	width: 100%;
+	text-align: left;
+}
+#menu-primary .wrap {
+	margin: 0 auto;
 	padding: 0;
+	height: auto;
+	position: relative;
+	overflow: visible;
+}
+
+#menu-primary:after,
+#menu-primary .wrap:after {
+	content:".";
+	clear:both;
+	display:block;
+	height:0;
+	visibility:hidden;
 }
 #menu-primary li {
-	display: inline;
 	margin-left: 7px;
 	margin-left: 0.5rem;
+}
+#menu-primary li  li {
+	margin-left: 0;
 }
 #menu-primary li:first-child {
 	margin-left: 0;
@@ -1516,79 +1553,149 @@ div.menu ul,nav.menu ul{margin:0;padding:0;list-style:none;line-height:1.0}div.m
 	font-size: 12px;
 	font-size: 0.857142857rem;
 	line-height: 2.18181818;
-	color: #d0551a;
 	letter-spacing: 1px;
+}
+#menu-primary .sub-indicator {
+}
+#menu-primary li li .sub-indicator {
+	float: right;
+}
+
+#menu-primary ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: relative;
+}
+
+#menu-primary ul ul {
+	width: 180px; /* Sub Menu Width */
+	width: 12.8571428571rem;
+	margin: 0;
+	list-style: none;
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 99999;
+}
+
+#menu-primary ul ul ul,
+#menu-primary ul ul ul ul {
+	top: 0;
+	left: 100%;
+}
+
+#menu-primary ul li {
+	float: left;
+	display: inline;
+	position: relative;
+}
+
+#menu-primary ul ul li {
+	width: 100%;
+	display: block;
+}
+
+/* Root Menu. */
+#menu-primary ul a {
+	float: left;
+	display: block;
+	text-decoration: none;
 	padding: 6px 12px;
 	padding: 0.428571429rem 0.857142857rem;
+	height: 1%;
 }
-#menu-primary li li  a {
-	line-height: 2;
-}
-#menu-primary li li  {
-	margin-left: 0;
-}
+
+/* Root Menu Hover Persistence. */
+#menu-primary ul a:hover,
+#menu-primary ul li:hover a,
 #menu-primary li.current-menu-item a,
-#menu-primary li a:hover,
-#menu-primary li.sfHover a {
+#menu-primary ul li.iehover a {
 	background: #5c6F7c;
 	color: #fff;
-	text-decoration: none;
 }
-#menu-primary li.current-menu-item li a {
+
+/* 2nd Menu */
+#menu-primary ul li:hover li a,
+#menu-primary ul li.iehover li a {
+	float: none;
+	background: #fff;
+	border-bottom: 1px solid #f2f2f2;
+	color: #d0551a;
+}
+
+/* Current menu item in sub menu. */
+#menu-primary ul.sub-menu li.current-menu-item a,
+#menu-primary ul li.iehover li.current-menu-item a {
+	background: #5c6F7c;
+	color: #fff;
+}
+
+/* 2nd Menu Hover Persistence */
+#menu-primary ul li:hover li a:hover,
+#menu-primary ul li:hover li:hover a,
+#menu-primary ul li.iehover li a:hover,
+#menu-primary ul li.iehover li.iehover a {
+	background: #5c6F7c;
+	color: #fff;
+}
+
+/* 3rd Menu */
+#menu-primary ul li:hover li:hover li a,
+#menu-primary ul li.iehover li.iehover li a {
 	background: #fff;
 	color: #d0551a;
 }
-#menu-primary li li a,
-#menu-primary li.sfHover li a,
-#menu-primary li li.sfHover li a {
-	background: #fff;
-	border-bottom: 1px solid #f2f2f2;
-	padding-left: 12px;
-	padding-left: 0.857142857rem;
-}
-#menu-primary li li.current-menu-item a,
-#menu-primary li li.sfHover li.current-menu-item a ,
-#menu-primary li li a:hover,
-#menu-primary li li.sfHover a,
-#menu-primary li li.sfHover li a:hover {
+#menu-primary ul li:hover li:hover li.current-menu-item a,
+#menu-primary ul li.iehover li.iehover li.current-menu-item a {
 	background: #5c6F7c;
 	color: #fff;
 }
 
-/* Drop-down styles. */
-#menu-primary ul ul {
-	opacity: 0;
-	visibility: hidden;
-	-webkit-transition: all 0.4s ease-out;
-	-moz-transition: all 0.4s ease-out;
-	-o-transition: all 0.4s ease-out;
-	transition:  all 0.4s ease-out;
+/* 3rd Menu Hover Persistence */
+#menu-primary ul li:hover li:hover li a:hover,
+#menu-primary ul li:hover li:hover li:hover a,
+#menu-primary ul li.iehover li.iehover li a:hover,
+#menu-primary ul li.iehover li.iehover li.iehover a {
+	background: #5c6F7c;
+	color: #fff;
 }
 
-#menu-primary li:hover > ul {
-	opacity: 1;
-	visibility: visible;
-	-webkit-transition: all 0.35s ease-in;
-	-moz-transition: all 0.35s ease-in;
-	-o-transition: all 0.35s ease-in;
-	transition: all 0.35s ease-in;
-}
-#menu-primary li ul {
+/* 4th Menu */
+#menu-primary ul li:hover li:hover li:hover li a,
+#menu-primary ul li.iehover li.iehover li.iehover li a {
 	background: #fff;
+	color: #d0551a;
 }
-#menu-primary li:hover ul,
-#menu-primary li.sfHover ul {
-	top: 38px;
+#menu-primary ul li:hover li:hover li:hover li.current-menu-item a,
+#menu-primary ul li.iehover li.iehover li.iehover li.current-menu-item a {
+	background: #5c6F7c;
+	color: #fff;
 }
-#menu-primary li:hover li ul {
-	top: -999em;
+
+/* 4th Menu Hover */
+#menu-primary ul li:hover li:hover li:hover li a:hover,
+#menu-primary ul li.iehover li.iehover li.iehover li a:hover {
+	background: #5c6F7c;
+	color: #fff;
 }
-#menu-primary li.sfHover li ul {
+
+/* Hover Function - Do Not Move */
+#menu-primary ul li:hover ul ul,
+#menu-primary ul li:hover ul ul ul,
+#menu-primary ul li.iehover ul ul,
+#menu-primary ul li.iehover ul ul ul {
+	display: none;
 }
-#menu-primary li li:hover ul,
-#menu-primary li li.sfHover ul {
-	padding-bottom: 0;
-	top: 0px;
+
+#menu-primary ul li:hover ul,
+#menu-primary ul ul li:hover ul,
+#menu-primary ul ul ul li:hover ul,
+#menu-primary ul li.iehover ul,
+#menu-primary ul ul li.iehover ul,
+#menu-primary ul ul ul li.iehover ul {
+	display: block;
 }
 
 /* Primary sidebar. */

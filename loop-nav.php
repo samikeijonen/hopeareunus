@@ -18,16 +18,16 @@
 			<?php previous_post_link( '%link', '<span class="previous">' . __( '<span class="meta-nav">&larr;</span> Return to entry', 'hopeareunus' ) . '</span>' ); ?>
 		</div><!-- .loop-nav -->
 
-	<?php elseif ( is_singular( 'post' ) ) : ?>
+	<?php elseif ( is_singular( array( 'post', 'portfolio_item' ) ) ) : ?>
 
 		<div class="loop-nav">
-			<?php previous_post_link( '%link', '<span class="previous">' . __( '<span class="meta-nav">&larr;</span> Previous', 'hopeareunus' ) . '</span>' ); ?>
-			<?php next_post_link( '%link', '<span class="next">' . __( 'Next <span class="meta-nav">&rarr;</span>', 'hopeareunus' ) . '</span>' ); ?>
+			<?php previous_post_link( '%link', '<span class="previous"><i class="' . apply_filters( 'hopeareunus_icon_previous', 'icon-chevron-left' ) . '"></i></span>' ); ?>
+			<?php next_post_link( '%link', '<span class="next"><i class="' . apply_filters( 'hopeareunus_icon_next', 'icon-chevron-right' ) . '"></i></span>' ); ?>
 		</div><!-- .loop-nav -->
 
-	<?php elseif ( !is_singular() && current_theme_supports( 'loop-pagination' ) ) : loop_pagination( array( 'prev_text' => __( '<span class="meta-nav">&larr;</span> Previous', 'hopeareunus' ), 'next_text' => __( 'Next <span class="meta-nav">&rarr;</span>', 'hopeareunus' ) ) ); ?>
+	<?php elseif ( !is_singular() && current_theme_supports( 'loop-pagination' ) ) : loop_pagination( array( 'prev_text' => '<span class="meta-nav"><i class="' . apply_filters( 'hopeareunus_icon_previous', 'icon-chevron-left' ) . '"></i></span>', 'next_text' => '<span class="meta-nav"><i class="' . apply_filters( 'hopeareunus_icon_next', 'icon-chevron-right' ) . '"></i></span>' ) ); ?>
 
-	<?php elseif ( !is_singular() && $nav = get_posts_nav_link( array( 'sep' => '', 'prelabel' => '<span class="previous">' . __( '<span class="meta-nav">&larr;</span> Previous', 'hopeareunus' ) . '</span>', 'nxtlabel' => '<span class="next">' . __( 'Next <span class="meta-nav">&rarr;</span>', 'hopeareunus' ) . '</span>' ) ) ) : ?>
+	<?php elseif ( !is_singular() && $nav = get_posts_nav_link( array( 'sep' => '', 'prelabel' => '<span class="previous"><span class="meta-nav"><i class="' . apply_filters( 'hopeareunus_icon_previous', 'icon-chevron-left' ) . '"></i></span></span>', 'nxtlabel' => '<span class="next"><span class="meta-nav"><i class="' . apply_filters( 'hopeareunus_icon_next', 'icon-chevron-right' ) . '"></i></span></span>' ) ) ) : ?>
 
 		<div class="loop-nav">
 			<?php echo $nav; ?>

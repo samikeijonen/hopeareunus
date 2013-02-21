@@ -64,7 +64,7 @@ function hopeareunus_customize_register_logo( $wp_customize ) {
 	);
 	
 	/*Add the layout control. */
-		$wp_customize->add_control(
+	$wp_customize->add_control(
 		'portfolio-layout-control',
 		array(
 			'label'    => esc_html__( 'Portfolio Layout', 'hopeareunus' ),
@@ -152,7 +152,7 @@ function hopeareunus_customize_register_logo( $wp_customize ) {
 	$wp_customize->add_control(
 		'rss-link',
 		array(
-			'label'    => esc_html__( 'RSS  URL', 'hopeareunus' ),
+			'label'    => esc_html__( 'RSS URL', 'hopeareunus' ),
 			'section'  => 'social-links',
 			'settings' => 'rss_link',
 			'priority' => 30,

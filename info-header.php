@@ -9,9 +9,6 @@
  * @author     Sami Keijonen <sami.keijonen@foxnet.fi>
  * @since      0.1.0
  */
-?>
-				
-	<?php
 				
 		if( is_singular( apply_filters( 'hopeareunus_show_excerpt_header_1' , array( 'page', 'portfolio_item' ) ) ) && is_main_query() && has_excerpt( get_queried_object_id() ) ) { ?>
 			<div id="hopeareunus-header-title">

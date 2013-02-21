@@ -41,7 +41,7 @@
 		<div id="site-description-social-wrap">
 			<div class="wrap">
 				<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
-				<?php echo hopeareunus_social_links(); ?>
+				<?php echo hopeareunus_social_links(); // Echo social icons. ?>
 			</div>
 		</div>
 
@@ -56,7 +56,7 @@
 			<?php if ( get_theme_mod( 'logo_upload') ) { // Use logo if is set. Else use bloginfo name. ?>	
 					<h1 id="site-title">
 						<a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
-							<img class="hopeareumus-logo" src="<?php echo get_theme_mod( 'logo_upload'); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" />
+							<img class="hopeareumus-logo" src="<?php echo esc_url( get_theme_mod( 'logo_upload' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" />
 						</a>
 					</h1>
 			<?php } else { ?>

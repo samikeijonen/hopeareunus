@@ -107,7 +107,7 @@ function hopeareunus_theme_meta_box_license_key() {
 				<label for="<?php echo hybrid_settings_field_id( 'hopeareunus_activate_license' ); ?>"><?php _e( 'Activate License:', 'hopeareunus' ); ?></label>
 			</th>
 			<td>
-			<?php if( $hopeareunus_status !== false && $hopeareunus_status == 'valid' ) { ?>
+			<?php if( false !== $hopeareunus_status && 'valid' == $hopeareunus_status ) { ?>
 				<span style="color:green;"><?php _e( 'Active', 'hopeareunus' ); ?></span>
 				<?php wp_nonce_field( 'hopeareunus_license_nonce', 'hopeareunus_license_nonce' ); ?>
 				<input type="submit" class="button-secondary" name="hopeareunus_theme_license_deactivate" value="<?php esc_attr_e( 'Deactivate License', 'hopeareunus' ); ?>" />
@@ -136,7 +136,7 @@ function hopeareunus_theme_meta_box_customize() { ?>
 				<label for="<?php echo hybrid_settings_field_id( 'hopeareunus_customize' ); ?>"><?php _e( 'Customize:', 'hopeareunus' ); ?></label>
 			</th>
 			<td>
-				<p><?php printf( __( 'Want to set Global layout, logo and other features? <a href="%s">Go to Appearance &gt;&gt; Customize</a>. ', 'hopeareunus' ), admin_url( 'customize.php' ) ); ?></p>
+				<p><?php printf( __( 'Want to set Global layout, logo, social links and other features? <a href="%s">Go to Appearance &gt;&gt; Customize</a>. ', 'hopeareunus' ), admin_url( 'customize.php' ) ); ?></p>
 			</td>
 		</tr>
 
@@ -157,6 +157,7 @@ function hopeareunus_theme_meta_box_header() { ?>
 			</th>
 			<td>
 				<p><?php printf( __( 'Want to replace or remove default Header? <a href="%s">Go to Appearance &gt;&gt; Header</a>. ', 'hopeareunus' ), admin_url( 'themes.php?page=custom-header' ) ); ?></p>
+				<p><?php _e( 'Note! You can overwrite default header image in singular post/page by setting large enough featured image. Feature header size is 1920 x 379 pixels.', 'hopeareunus' ); ?></p>
 			</td>
 		</tr>
 
@@ -190,8 +191,6 @@ function hopeareunus_theme_validate_settings( $input ) {
 
 	$input['hopeareunus_license_key'] = wp_filter_nohtml_kses( $input['hopeareunus_license_key'] );
 	
-	$input['hopeareunus_custom_logo'] = esc_url_raw( $input['hopeareunus_custom_logo'] );
-	
 	/* If new license has been entered, license status must reactivate. */
 	$old = hybrid_get_setting( 'hopeareunus_license_key' );
 	if( $old && $old != $input['hopeareunus_license_key'] ) {
@@ -217,10 +216,10 @@ function hopeareunus_theme_activate_license() {
 		$api_params = array( 
 			'edd_action' => 'activate_license', 
 			'license' => $license, 
-			'item_name' => urlencode( hopeareunus_SL_THEME_NAME ) 
+			'item_name' => urlencode( HOPEAREUNUS_SL_THEME_NAME ) 
 		);
 		
-		$response = wp_remote_get( add_query_arg( $api_params, hopeareunus_SL_STORE_URL ), array( 'timeout' => 15, 'sslverify' => false ) );
+		$response = wp_remote_get( add_query_arg( $api_params, HOPEAREUNUS_SL_STORE_URL ), array( 'timeout' => 15, 'sslverify' => false ) );
 
 		if ( is_wp_error( $response ) )
 			return false;
@@ -248,10 +247,10 @@ function hopeareunus_theme_deactivate_license() {
 		$api_params = array( 
 			'edd_action' => 'deactivate_license', 
 			'license' => $license, 
-			'item_name' => urlencode( hopeareunus_SL_THEME_NAME ) 
+			'item_name' => urlencode( HOPEAREUNUS_SL_THEME_NAME ) 
 		);
 		
-		$response = wp_remote_get( add_query_arg( $api_params, hopeareunus_SL_STORE_URL ), array( 'timeout' => 15, 'sslverify' => false ) );
+		$response = wp_remote_get( add_query_arg( $api_params, HOPEAREUNUS_SL_STORE_URL ), array( 'timeout' => 15, 'sslverify' => false ) );
 
 		if ( is_wp_error( $response ) )
 			return false;

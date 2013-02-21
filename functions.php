@@ -107,11 +107,10 @@ function hopeareunus_theme_setup() {
 	if ( $hopeareunus_theme->exists() ) {
 		define( 'HOPEAREUNUS_VERSION', $hopeareunus_theme->Version ); // Get parent theme hopeareunus version
 	}
-
-	if( !class_exists( 'EDD_SL_Theme_Updater' ) ) {
+	
 	// load our custom theme updater
-	include( dirname( __FILE__ ) . '/includes/EDD_SL_Theme_Updater.php' );
-	}
+	if( !class_exists( 'EDD_SL_Theme_Updater' ) )
+		include( dirname( __FILE__ ) . '/includes/EDD_SL_Theme_Updater.php' );
 	
 	/* Get license key from database. */
 	$hopeareunus_get_license = get_option( $prefix . '_theme_settings' ); // This is array.
@@ -165,7 +164,7 @@ function hopeareunus_theme_setup() {
 	/* Register additional sidebar to 'front page' page template. */
 	add_action( 'widgets_init', 'hopeareunus_register_sidebars' );
 	
-	/* Testing out some early Hybrid Core 1.6 proposed HTML5 changes. */
+	/* Use some early Hybrid Core 1.6 proposed HTML5 changes. */
 	add_filter( "{$prefix}_sidebar_defaults", 'hopeareunus_sidebar_defaults' );
 	
 	/* Add new body class if there is attachments. */
@@ -267,24 +266,26 @@ function hopeareunus_scripts_styles() {
 	if ( !is_admin() ) {
 	
 		/* Adds JavaScript for handling the navigation menu hide-and-show behavior. */
-		wp_enqueue_script( 'hopeareunus-navigation',  trailingslashit( get_template_directory_uri() ) . 'js/navigation.js', array(), '20130209', true );
+		wp_enqueue_script( 'hopeareunus-navigation',  trailingslashit( get_template_directory_uri() ) . 'js/navigation/navigation.js', array(), '20130209', true );
 	
 		/* Enqueue FitVids. */
-		wp_enqueue_script( 'hopeareunus-fitvids', trailingslashit( get_template_directory_uri() ) . 'js/fitvids/jquery.fitvids.js', array( 'jquery' ), '20130209', true );
-		wp_enqueue_script( 'hopeareunus-fitvids-settings', trailingslashit( get_template_directory_uri() ) . 'js/fitvids/fitvids.js', array( 'hopeareunus-fitvids' ), '20130209', true );
+		wp_enqueue_script( 'hopeareunus-fitvids', trailingslashit( get_template_directory_uri() ) . 'js/fitvids/jquery.fitvids.min.js', array( 'jquery' ), '20130219', true );
 		
+		/* Enqueue Hopeareunus settings. */
+		wp_enqueue_script( 'hopeareunus-settings', trailingslashit( get_template_directory_uri() ) . 'js/settings/hopeareunus-settings.js', array( 'jquery', 'hopeareunus-fitvids' ), '20130219', true );
+	
 		/* Add google font. */
 		wp_enqueue_style( 'hopeareunus-fonts', 'http://fonts.googleapis.com/css?family=PT+Sans:400,700', false, '20130212', 'all' );
 		
 		/* Add Font Awesome fonts. */
-		wp_enqueue_style( 'font-awesome-fonts', trailingslashit( get_template_directory_uri() ) . 'css/fontawesome/font-awesome.min.css', false, '20130212', 'all' );
+		wp_enqueue_style( 'hopeareunus-font-awesome', trailingslashit( get_template_directory_uri() ) . 'css/fontawesome/font-awesome.min.css', false, '20130212', 'all' );
 		
 		/* Add flexslider js and css to singular portfolio page. */
 		if ( is_singular( 'portfolio_item' ) ) {
 			
 			wp_enqueue_script( 'hopeareunus-flexslider',  trailingslashit( get_template_directory_uri() ) . 'js/flexslider/jquery.flexslider-min.js', array( 'jquery' ), '20130215', true );
 			wp_enqueue_script( 'hopeareunus-flexslider-settings', trailingslashit( get_template_directory_uri() ) . 'js/flexslider/settings.flexslider.js', array( 'hopeareunus-flexslider' ), '20130215', true );
-			wp_enqueue_style( 'hopeareunus-flexslider-styles', trailingslashit( get_template_directory_uri() ) . 'css/flexslider/flexslider.css', false, '20130215', 'all' );
+			wp_enqueue_style( 'hopeareunus-flexslider-styles', trailingslashit( get_template_directory_uri() ) . 'css/flexslider/flexslider.min.css', false, '20130215', 'all' );
 	
 		}
 	}	
@@ -303,7 +304,7 @@ function hopeareunus_disable_sidebars( $sidebars_widgets ) {
 
 	if ( current_theme_supports( 'theme-layouts' ) && !is_admin() ) {
 		if ( ! isset( $wp_customize ) ) {
-			if ( 'layout-1c' == theme_layouts_get_layout() ) {
+			if ( '1c' == get_theme_mod( 'theme_layout' ) ) {
 				$sidebars_widgets['primary'] = false;
 			}
 		}
@@ -328,11 +329,12 @@ function hopeareunus_one_column() {
 	elseif ( is_tax( 'portfolio' ) )
 		add_filter( 'theme_mod_theme_layout', 'hopeareunus_theme_layout_one_column' );
 	
-	elseif ( is_attachment() )
+	elseif ( is_attachment() && wp_attachment_is_image() && 'default' == get_post_layout( get_queried_object_id() ) )
 		add_filter( 'theme_mod_theme_layout', 'hopeareunus_theme_layout_one_column' );
 
 	elseif ( is_page_template( 'page-templates/front-page.php' ) )
 		add_filter( 'theme_mod_theme_layout', 'hopeareunus_theme_layout_one_column' );
+		
 	elseif ( hopeareunus_check_attachments() )
 		add_filter( 'theme_mod_theme_layout', 'hopeareunus_theme_layout_one_column' );
 }
@@ -421,7 +423,9 @@ function hopeareunus_aside_infinity( $content ) {
  */
 function hopeareunus_customize_register( $wp_customize ) {
 	
-	$wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
+	if ( ! get_theme_mod( 'logo_upload' ) )
+		$wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
+		
 	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
 	
 }

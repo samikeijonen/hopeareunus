@@ -18,7 +18,11 @@ do_atomic( 'before_entry' ); // hopeareunus_before_entry ?>
 	
 		<header class="entry-header">
 			<?php if ( is_singular() && is_main_query() ) {
-				echo '<figure class="hopeareunus-portfolio-gallery">' . hopeareunus_display_slides() . '</figure>';
+				
+				/* Check if there is attachments. */
+				if ( hopeareunus_check_attachments() )
+					echo '<figure class="hopeareunus-portfolio-gallery">' . hopeareunus_display_slides() . '</figure>';
+						
 				echo apply_atomic_shortcode( 'entry_title', '[entry-title]' );
 			}
 			else {
