@@ -51,7 +51,7 @@ get_header(); // Loads the header.php template. ?>
 				
 				?>
 				
-				<div class="hopeareunus-portfolio<?php if ( !empty( $hopeareunus_archive_clear_3 ) ) echo $hopeareunus_archive_clear_3; if ( !empty( $hopeareunus_archive_clear_4 ) ) echo $hopeareunus_archive_clear_4; if ( get_theme_mod( 'portfolio_layout' ) ) echo ' hopeareunus-portfolio-layout-' . esc_attr( get_theme_mod( 'portfolio_layout' ) ); ?>">
+				<div class="hopeareunus-portfolio<?php if ( !empty( $hopeareunus_archive_clear_3 ) ) echo $hopeareunus_archive_clear_3; if ( !empty( $hopeareunus_archive_clear_4 ) ) echo $hopeareunus_archive_clear_4; echo ' hopeareunus-portfolio-layout-', ( get_theme_mod( 'portfolio_layout' ) ? esc_attr( get_theme_mod( 'portfolio_layout' ) ) : '3' ); ?>">
 
 					<article id="post-<?php the_ID(); ?>" class="<?php hybrid_entry_class(); ?>">
 

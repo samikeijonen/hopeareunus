@@ -43,7 +43,7 @@ get_header(); // Loads the header.php template. ?>
 
 				<?php while ( $hopeareunus_posts->have_posts() ) : $hopeareunus_posts->the_post(); ?>
 				
-					<article id="post-<?php the_ID(); ?>" class="<?php hybrid_entry_class(); ?><?php if ( get_theme_mod( 'portfolio_layout' ) ) echo ' hopeareunus-front-page-latest hopeareunus-latest-layout-' . get_theme_mod( 'portfolio_layout' ); ?>">
+					<article id="post-<?php the_ID(); ?>" class="<?php hybrid_entry_class(); ?><?php echo ' hopeareunus-front-page-latest hopeareunus-latest-layout-', ( get_theme_mod( 'portfolio_layout' ) ? esc_attr( get_theme_mod( 'portfolio_layout' ) ) : '3' ); ?>">
 
 					<?php do_atomic( 'open_entry' ); // hopeareunus_open_entry ?>
 	
@@ -95,7 +95,7 @@ get_header(); // Loads the header.php template. ?>
 
 				<?php while ( $hopeareunus_portfolios->have_posts() ) : $hopeareunus_portfolios->the_post(); ?>
 				
-					<article id="post-<?php the_ID(); ?>" class="<?php hybrid_entry_class(); ?><?php if ( get_theme_mod( 'portfolio_layout' ) ) echo ' hopeareunus-front-page-latest hopeareunus-latest-layout-' . get_theme_mod( 'portfolio_layout' ); ?>">
+					<article id="post-<?php the_ID(); ?>" class="<?php hybrid_entry_class(); ?><?php echo ' hopeareunus-front-page-latest hopeareunus-latest-layout-', ( get_theme_mod( 'portfolio_layout' ) ? esc_attr( get_theme_mod( 'portfolio_layout' ) ) : '3' ); ?>">
 
 					<?php do_atomic( 'open_entry' ); // hopeareunus_open_entry ?>
 	
