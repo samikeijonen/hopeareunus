@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Hopeareunus WordPress Theme\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-02-21 16:37+0200\n"
-"PO-Revision-Date: 2013-02-21 16:37+0200\n"
+"PO-Revision-Date: 2013-02-24 19:10+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Foxnet Themes <sami.keijonen@foxnet.fi>\n"
 "Language: fi\n"
@@ -211,7 +211,7 @@ msgstr "&#8764;"
 
 #: loop-error.php:17
 msgid "Apologies, but no entries were found."
-msgstr "Pahoittelu, mutta yhtään artikkelia ei löytynyt."
+msgstr "Pahoittelut, mutta yhtään artikkelia ei löytynyt."
 
 #: loop-meta.php:124
 #, php-format
@@ -449,7 +449,7 @@ msgstr "Ikoni  4x"
 
 #: includes/theme-customize.php:294
 msgid "Front Page Callout"
-msgstr "Etusivun 'Callout'."
+msgstr "Etusivun Callout-teksti"
 
 #: includes/theme-customize.php:316
 msgid "Callout text"
