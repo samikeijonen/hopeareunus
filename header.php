@@ -41,7 +41,13 @@
 		<div id="site-description-social-wrap">
 			<div class="wrap">
 				<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
+				
+				<?php do_atomic( 'before_social_links' ); // hopeareunus_before_social_links ?>
+				
 				<?php echo hopeareunus_social_links(); // Echo social icons. ?>
+				
+				<?php do_atomic( 'after_social_links' ); // hopeareunus_after_social_links ?>
+				
 			</div>
 		</div>
 
