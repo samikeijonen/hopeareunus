@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Hopeareunus WordPress Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-21 16:37+0200\n"
-"PO-Revision-Date: 2013-02-24 19:10+0200\n"
+"POT-Creation-Date: 2013-02-24 21:13+0200\n"
+"PO-Revision-Date: 2013-02-24 21:13+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Foxnet Themes <sami.keijonen@foxnet.fi>\n"
 "Language: fi\n"
@@ -99,15 +99,15 @@ msgstr "Kommentointi on suljettu."
 
 #: content-aside.php:23 content-audio.php:23 content-chat.php:23
 #: content-gallery.php:23 content-image.php:23 content-link.php:23
-#: content-video.php:23
+#: content-quote.php:23 content-video.php:23
 msgid ""
-"[hopeareunus-post-format-link] [post-format-link] published on [entry-"
-"published] [entry-comments-link before=\" | \"] [entry-edit-link before=\" | "
-"\"]"
+"[hopeareunus-post-format-link] [post-format-link] <i class=\"icon-time\"></"
+"i> [entry-published] [hopeareunus-comments-link] [entry-edit-link before=\" "
+"| \"]"
 msgstr ""
-"[hopeareunus-post-format-link] [post-format-link] published on [entry-"
-"published] [entry-comments-link before=\" | \"] [entry-edit-link before=\" | "
-"\"]"
+"[hopeareunus-post-format-link] [post-format-link] <i class=\"icon-time\"></"
+"i> [entry-published] [hopeareunus-comments-link] [entry-edit-link before=\" "
+"| \"]"
 
 #: content-aside.php:32 content-audio.php:32 content-chat.php:32
 #: content-gallery.php:32 content-image.php:32 content-link.php:32
@@ -142,16 +142,6 @@ msgstr[1] "Tämä kuvagalleria sisältää %s kuvaa."
 msgid "Work:"
 msgstr "Tehdyt työt:"
 
-#: content-quote.php:23
-msgid ""
-"[hopeareunus-post-format-link] [post-format-link] published on [entry-"
-"published] [entry-comments-link before=\" | \"] [entry-edit-link before=\"| "
-"\"]"
-msgstr ""
-"[hopeareunus-post-format-link] [post-format-link] published on [entry-"
-"published] [entry-comments-link before=\" | \"] [entry-edit-link before=\"| "
-"\"]"
-
 #: content-quote.php:38
 msgid "Read more &rarr;"
 msgstr "Lue lisää &rarr;"
@@ -182,12 +172,10 @@ msgstr ""
 #: content.php:27
 msgid ""
 "<i class=\"icon-time\"></i> [entry-published] <i class=\"icon-user\"></i> "
-"[entry-author] <i class=\"icon-comment-alt\"></i> [entry-comments-link] "
-"[entry-edit-link before=\" | \"]"
+"[entry-author] [hopeareunus-comments-link] [entry-edit-link before=\" | \"]"
 msgstr ""
 "<i class=\"icon-time\"></i> [entry-published] <i class=\"icon-user\"></i> "
-"[entry-author] <i class=\"icon-comment-alt\"></i> [entry-comments-link] "
-"[entry-edit-link before=\" | \"]"
+"[entry-author] [hopeareunus-comments-link] [entry-edit-link before=\" | \"]"
 
 #: functions.php:483
 msgid "Front Page"
@@ -201,11 +189,11 @@ msgstr "Etusivun vimpainalue."
 msgid "Visit site"
 msgstr "Vieraile sivulla"
 
-#: header.php:101
+#: header.php:107
 msgid "You are here:"
 msgstr "Olet täällä:"
 
-#: header.php:101
+#: header.php:107
 msgid "&#8764;"
 msgstr "&#8764;"
 
@@ -370,6 +358,27 @@ msgstr ""
 "<strong>%1$s %2$s</strong> on saatavilla. <a href=\"%3$s\" class=\"thickbox"
 "\" title=\"%4s\">Katso muutosloki</a> tai <a href=\"%5$s\"%6$s>päivitä nyt</"
 "a>."
+
+#: includes/shortcodes.php:69 library/functions/shortcodes.php:234
+msgid "Leave a response"
+msgstr "Jätä kommentti"
+
+#: includes/shortcodes.php:69 library/functions/shortcodes.php:234
+#, php-format
+msgid "%1$s Response"
+msgstr "%1$s Kommentti"
+
+#: includes/shortcodes.php:69 library/functions/shortcodes.php:234
+#, php-format
+msgid "%1$s Responses"
+msgstr "%1$s Kommenttia"
+
+#: includes/shortcodes.php:76 includes/shortcodes.php:78
+#: includes/shortcodes.php:80 library/functions/shortcodes.php:241
+#: library/functions/shortcodes.php:243 library/functions/shortcodes.php:245
+#, php-format
+msgid "Comment on %1$s"
+msgstr "Kommentti %1$s"
 
 #: includes/theme-customize.php:24
 msgid "Logo Upload"
@@ -1324,26 +1333,6 @@ msgstr ""
 msgid "Edit %1$s"
 msgstr "Editoi %1$s"
 
-#: library/functions/shortcodes.php:234
-msgid "Leave a response"
-msgstr "Jätä kommentti"
-
-#: library/functions/shortcodes.php:234
-#, php-format
-msgid "%1$s Response"
-msgstr "%1$s Kommentti"
-
-#: library/functions/shortcodes.php:234
-#, php-format
-msgid "%1$s Responses"
-msgstr "%1$s Kommenttia"
-
-#: library/functions/shortcodes.php:241 library/functions/shortcodes.php:243
-#: library/functions/shortcodes.php:245
-#, php-format
-msgid "Comment on %1$s"
-msgstr "Kommentti %1$s"
-
 #: library/functions/shortcodes.php:310
 msgid "(Untitled)"
 msgstr "(Ei otsikkoa)"
@@ -1455,6 +1444,15 @@ msgstr "%1$s"
 #: page-templates/front-page.php:88
 msgid "Latest Portfolios"
 msgstr "Uusimmat referenssit"
+
+#~ msgid ""
+#~ "[hopeareunus-post-format-link] [post-format-link] published on [entry-"
+#~ "published] [entry-comments-link before=\" | \"] [entry-edit-link before="
+#~ "\"| \"]"
+#~ msgstr ""
+#~ "[hopeareunus-post-format-link] [post-format-link] published on [entry-"
+#~ "published] [entry-comments-link before=\" | \"] [entry-edit-link before="
+#~ "\"| \"]"
 
 #~ msgid "Previous"
 #~ msgstr "Edellinen"
