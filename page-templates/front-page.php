@@ -26,7 +26,7 @@ get_header(); // Loads the header.php template. ?>
 			/* Set custom query to show latest posts. */
 			$hopeareunus_posts_args = apply_filters( 'hopeareunus_front_page_post_arguments', array(
 				'post_type' => 'post',
-				'posts_per_page' => get_theme_mod( 'portfolio_layout' ),
+				'posts_per_page' => ( get_theme_mod( 'portfolio_layout' ) ? esc_attr( get_theme_mod( 'portfolio_layout' ) ) : '3' ),
 				'ignore_sticky_posts' => 1
 			) );
 			
@@ -79,7 +79,7 @@ get_header(); // Loads the header.php template. ?>
 			/* Set custom query to show portfolio items. */
 			$hopeareunus_portfolio_args = apply_filters( 'hopeareunus_front_page_portfolio_arguments', array(
 				'post_type' => 'portfolio_item',
-				'posts_per_page' => get_theme_mod( 'portfolio_layout' )
+				'posts_per_page' => ( get_theme_mod( 'portfolio_layout' ) ? esc_attr( get_theme_mod( 'portfolio_layout' ) ) : '3' )
 			) );
 			
 			$hopeareunus_portfolios = new WP_Query( $hopeareunus_portfolio_args );
