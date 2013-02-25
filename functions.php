@@ -110,7 +110,7 @@ function hopeareunus_theme_setup() {
 	
 	// load our custom theme updater
 	if( !class_exists( 'EDD_SL_Theme_Updater' ) )
-		include( dirname( __FILE__ ) . '/includes/EDD_SL_Theme_Updater.php' );
+		require_once( trailingslashit( get_template_directory() ) . 'includes/EDD_SL_Theme_Updater.php' );
 	
 	/* Get license key from database. */
 	$hopeareunus_get_license = get_option( $prefix . '_theme_settings' ); // This is array.
@@ -262,8 +262,6 @@ function hopeareunus_add_image_sizes() {
  * @since 0.1.0
  */
 function hopeareunus_scripts_styles() {
-
-	if ( !is_admin() ) {
 	
 		/* Adds JavaScript for handling the navigation menu hide-and-show behavior. */
 		wp_enqueue_script( 'hopeareunus-navigation',  trailingslashit( get_template_directory_uri() ) . 'js/navigation/navigation.js', array(), '20130209', true );
@@ -288,7 +286,6 @@ function hopeareunus_scripts_styles() {
 			wp_enqueue_style( 'hopeareunus-flexslider-styles', trailingslashit( get_template_directory_uri() ) . 'css/flexslider/flexslider.min.css', false, '20130215', 'all' );
 	
 		}
-	}	
 	
 }
 
@@ -451,7 +448,7 @@ function hopeareunus_customize_preview_js() {
 function hopeareunus_customize_preview_css() {
 	global $wp_customize;
 
-	if ( isset( $wp_customize ) )
+	if ( is_object( $wp_customize ) )
 		wp_enqueue_style( 'hopeareunus-customizer-stylesheet', trailingslashit( get_template_directory_uri() ) . 'css/customize/hopeareunus-customizer.css', false, '20130209', 'all' );
 }
 
@@ -482,8 +479,8 @@ function hopeareunus_register_sidebars() {
 			'id' => 'front-page',
 			'name' => __( 'Front Page', 'hopeareunus' ),
 			'description' => __( 'Front Page widget area.', 'hopeareunus' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s widget-%2$s">',
-			'after_widget' => '</section>',
+			'before_widget' => '<section id="%1$s" class="widget %2$s widget-%2$s"><div class="widget-wrap widget-inside">',
+			'after_widget' => '</div></section>',
 			'before_title' => '<h3 class="widget-title">',
 			'after_title' => '</h3>'
 		)
