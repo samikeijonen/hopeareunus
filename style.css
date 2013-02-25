@@ -2,7 +2,7 @@
  * Theme Name: Hopeareunus
  * Theme URI: https://foxnet-themes.fi/downloads/hopeareunus
  * Description: Hopeareunus is designed for business and portfolio sites. But blogging features are pretty cool too.
- * Version: 0.0.5
+ * Version: 0.0.6
  * Author: Sami Keijonen
  * Author URI: https://foxnet-themes.fi
  * Tags: sticky-post, theme-options, threaded-comments, translation-ready, one-column, two-columns, flexible-width, left-sidebar, right-sidebar, custom-background, custom-header, featured-images, editor-style, orange, white, light
@@ -664,6 +664,14 @@ div.menu li, nav.menu li {
 #hopeareunus-social-links {
 	text-align: center;
 }
+ul#hopeareunus-social-link-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+ul#hopeareunus-social-link-list li {
+	display: inline;
+}
 #hopeareunus-social-links a.hopeareunus-social-link {
 	padding: 0 8px;
 	padding: 0 0.57142857142rem;
@@ -717,6 +725,11 @@ div.menu li, nav.menu li {
 	margin-bottom: 28px;
 	margin-bottom: 2rem;
 }
+.singular-post .hentry {
+	border-top: 1px dashed #e6e6e6;
+	padding-top: 14px;
+	padding-top: 1rem;
+}
 .singular-attachment .hentry {
 	text-align: center;
 }
@@ -738,12 +751,48 @@ div.menu li, nav.menu li {
 	margin-bottom: 14px;
 	margin-bottom: 1rem;
 }
+.singular .byline {
+	border-bottom: 1px dashed #e6e6e6;
+	margin-top: 14px;
+	margin-top: 1rem;
+	padding-bottom: 14px;
+	padding-bottom: 1rem;
+}
+.byline .published-date:before {
+	content: "\f017";
+	font-family: FontAwesome;
+	margin-right: 3px;
+	margin-right: 0.21428571428rem;
+}
+.byline .author:before {
+	content: "\f007";
+	font-family: FontAwesome;
+	margin-right: 3px;
+	margin-right: 0.21428571428rem;
+}
+.byline .hopeareunus-comments-link:before {
+	content: "\f0e5";
+	font-family: FontAwesome;
+	margin-right: 3px;
+	margin-right: 0.21428571428rem;
+}
+.byline .edit:before {
+	content: "\f044";
+	font-family: FontAwesome;
+	margin-right: 3px;
+	margin-right: 0.21428571428rem;
+}
+
+/* Entry footer. */
+.entry-footer {
+	clear: both;
+}
 	
 /* Entry meta. */
 .entry-meta {
+	color: #777;
 	padding: 7px 0;
 	padding: 0.5rem 0;
-	color: #777;
 }
 .entry-meta .category,
 .entry-meta .post_tag {
@@ -787,9 +836,6 @@ div.menu li, nav.menu li {
 a.post-format-link .hopeareunus-post-format-icon:hover {
 	text-decoration: none;
 } 
-.format-status .entry-footer {
-	clear: both;
-}
 .format-chat .chat-author {
 	font-weight: bold;
 }
@@ -802,6 +848,61 @@ a.post-format-link .hopeareunus-post-format-icon:hover {
 }
 
 /* Icons. */
+.format-chat .post-format-link:before {
+	content: "\f086";
+	font-family: FontAwesome;
+	margin-right: 3px;
+	margin-right: 0.21428571428rem;
+}
+.format-gallery .post-format-link:before {
+	content: "\f03e";
+	font-family: FontAwesome;
+	margin-right: 3px;
+	margin-right: 0.21428571428rem;
+}
+.format-status .post-format-link:before {
+	content: "\f007";
+	font-family: FontAwesome;
+	margin-right: 3px;
+	margin-right: 0.21428571428rem;
+}
+.format-audio .post-format-link:before {
+	content: "\f01d";
+	font-family: FontAwesome;
+	margin-right: 3px;
+	margin-right: 0.21428571428rem;
+}
+.format-aside .post-format-link:before {
+	content: "\f06e";
+	font-family: FontAwesome;
+	margin-right: 3px;
+	margin-right: 0.21428571428rem;
+}
+.format-link .post-format-link:before {
+	content: "\f0c1";
+	font-family: FontAwesome;
+	margin-right: 3px;
+	margin-right: 0.21428571428rem;
+}
+.format-quote .post-format-link:before {
+	content: "\f10e";
+	font-family: FontAwesome;
+	margin-right: 3px;
+	margin-right: 0.21428571428rem;
+}
+.format-video .post-format-link:before {
+	content: "\f008";
+	font-family: FontAwesome;
+	margin-right: 3px;
+	margin-right: 0.21428571428rem;
+}
+.format-image .post-format-link:before {
+	content: "\f030";
+	font-family: FontAwesome;
+	margin-right: 3px;
+	margin-right: 0.21428571428rem;
+}
+
 .hentry  .entry-header .published,
 .hentry  .entry-header .author,
 .hentry .entry-header .comments-link,
@@ -958,7 +1059,7 @@ input[type="email"]:focus {
 -------------------------------------------------------------- */
 
 #comments-number {
-	border-bottom: 1px solid #f2f2f2;
+	border-bottom: 1px dashed #e6e6e6;
 	padding-bottom: 14px;
 	padding-bottom: 1rem;
 }
@@ -1008,7 +1109,7 @@ ol.comment-list dl dl {
 .comment-list li.comment,
 .comment-list li.pingback,
 .comment-list li.trackback {
-	border-bottom: 1px solid #f2f2f2;
+	border-bottom: 1px dashed #e6e6e6;
 	clear: both;
 	margin-bottom: 20px;
 	margin-bottom: 1.42857143rem;
