@@ -20,7 +20,7 @@ do_atomic( 'before_entry' ); // hopeareunus_before_entry ?>
 			
 		<header class="entry-header">
 			<?php echo apply_atomic_shortcode( 'entry_title', '[entry-title]' ); ?>
-			<?php echo apply_atomic_shortcode( 'byline', '<div class="byline">' . __( '[hopeareunus-post-format-link] [post-format-link] <i class="icon-time"></i> [entry-published] [hopeareunus-comments-link] [entry-edit-link before=" | "]', 'hopeareunus' ) . '</div>' ); ?>
+			<?php echo apply_atomic_shortcode( 'byline', '<div class="byline">' . sprintf( __( '<span class="hopeareunus-post-format-link">[post-format-link]</span> <span class="published-date">[entry-published]</span> %s [entry-edit-link]', 'hopeareunus' ), hybrid_entry_comments_link_shortcode( array( 'before' => '<span class="hopeareunus-comments-link">', 'after' => '</span>' ) ) ) . '</div>' ); ?>
 		</header><!-- .entry-header -->
 			
 		<div class="entry-content">
@@ -51,7 +51,7 @@ do_atomic( 'before_entry' ); // hopeareunus_before_entry ?>
 		<?php } ?>
 
 		<footer class="entry-footer">
-			<?php echo apply_atomic_shortcode( 'entry_meta', '<div class="entry-meta">' . __( '[hopeareunus-post-format-link] [post-format-link] published on [entry-published] [entry-permalink before="| "] [entry-comments-link before="| "] [entry-edit-link before="| "]', 'hopeareunus' ) . '</div>' ); ?>
+			<?php echo apply_atomic_shortcode( 'entry_meta', '<div class="entry-meta">' . __( '<span class="hopeareunus-post-format-link">[post-format-link]</span> published on [entry-published] [entry-permalink before="| "] [entry-comments-link before="| "] [entry-edit-link before="| "]', 'hopeareunus' ) . '</div>' ); ?>
 		</footer><!-- .entry-footer -->
 		
 	<?php } ?>
