@@ -38,9 +38,6 @@ function hopeareunus_theme_setup() {
 	/* Include theme customize: logo upload. */
 	require_once( trailingslashit( get_template_directory() ) . 'includes/theme-customize.php' );
 
-	/* Include theme shortcodes. */
-	require_once( trailingslashit( get_template_directory() ) . 'includes/shortcodes.php' );
-
 	/* Add theme support for core framework features. */
 	add_theme_support( 'hybrid-core-menus', array( 'primary', 'subsidiary' ) );
 	add_theme_support( 'hybrid-core-sidebars', array( 'header', 'primary', 'subsidiary' ) );
