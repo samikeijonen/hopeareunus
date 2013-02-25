@@ -58,7 +58,7 @@ function hopeareunus_customize_register_logo( $wp_customize ) {
 			'default'           => '3',
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'sanitize_html_class',
+			'sanitize_callback' => 'absint',
 			//'transport'         => 'postMessage'
 		)
 	);
@@ -385,29 +385,31 @@ function hopeareunus_social_links() {
 		$hopeareunus_output_links = '';
 		
 		$hopeareunus_output_links .= '<div id="hopeareunus-social-links">';
+		
+		$hopeareunus_output_links .= '<ul id="hopeareunus-social-link-list">';
 
 		if ( get_theme_mod( 'twitter_link' ) )
-			$hopeareunus_output_links .= '<span class="hopeareunus-social-links"><a class="hopeareunus-social-link" href="' . esc_url( get_theme_mod( 'twitter_link' ) ) . '"><i class="' . esc_attr( apply_filters( 'hopeareunus_link_twitter', 'icon-twitter' ) ) . ' ' . get_theme_mod( 'icon_size' ) . '"></i></a></span>';
+			$hopeareunus_output_links .= '<li class="hopeareunus-social-links"><a class="hopeareunus-social-link" href="' . esc_url( get_theme_mod( 'twitter_link' ) ) . '"><i class="' . esc_attr( apply_filters( 'hopeareunus_link_twitter', 'icon-twitter' ) ) . ' ' . get_theme_mod( 'icon_size' ) . '"></i></a></li>';
 		
 		if ( get_theme_mod( 'facebook_link' ) )
-			$hopeareunus_output_links .= '<span class="hopeareunus-social-links"><a class="hopeareunus-social-link" href="' . esc_url( get_theme_mod( 'facebook_link' ) ) . '"><i class="' . esc_attr( apply_filters( 'hopeareunus_link_facebook', 'icon-facebook' ) ) . ' ' . get_theme_mod( 'icon_size' ) . '"></i></a></span>';
+			$hopeareunus_output_links .= '<li class="hopeareunus-social-links"><a class="hopeareunus-social-link" href="' . esc_url( get_theme_mod( 'facebook_link' ) ) . '"><i class="' . esc_attr( apply_filters( 'hopeareunus_link_facebook', 'icon-facebook' ) ) . ' ' . get_theme_mod( 'icon_size' ) . '"></i></a></li>';
 			
 		if ( get_theme_mod( 'rss_link' ) )
-			$hopeareunus_output_links .= '<span class="hopeareunus-social-links"><a class="hopeareunus-social-link" href="' . esc_url( get_theme_mod( 'rss_link' ) ) . '"><i class="' . esc_attr( apply_filters( 'hopeareunus_link_rss', 'icon-rss' ) ) . ' ' . get_theme_mod( 'icon_size' ) . '"></i></a></span>';
+			$hopeareunus_output_links .= '<li class="hopeareunus-social-links"><a class="hopeareunus-social-link" href="' . esc_url( get_theme_mod( 'rss_link' ) ) . '"><i class="' . esc_attr( apply_filters( 'hopeareunus_link_rss', 'icon-rss' ) ) . ' ' . get_theme_mod( 'icon_size' ) . '"></i></a></li>';
 		
 		if ( get_theme_mod( 'linkedin_link' ) )
-			$hopeareunus_output_links .= '<span class="hopeareunus-social-links"><a class="hopeareunus-social-link" href="' . esc_url( get_theme_mod( 'linkedin_link' ) ) . '"><i class="' . esc_attr( apply_filters( 'hopeareunus_link_linkedin', 'icon-linkedin' ) ) . ' ' . get_theme_mod( 'icon_size' ) . '"></i></a></span>';
+			$hopeareunus_output_links .= '<li class="hopeareunus-social-links"><a class="hopeareunus-social-link" href="' . esc_url( get_theme_mod( 'linkedin_link' ) ) . '"><i class="' . esc_attr( apply_filters( 'hopeareunus_link_linkedin', 'icon-linkedin' ) ) . ' ' . get_theme_mod( 'icon_size' ) . '"></i></a></li>';
 
 		if ( get_theme_mod( 'google_plus_link' ) )
-			$hopeareunus_output_links .= '<span class="hopeareunus-social-links"><a class="hopeareunus-social-link" href="' . esc_url( get_theme_mod( 'google_plus_link' ) ) . '"><i class="' . esc_attr( apply_filters( 'hopeareunus_link_google_plus', 'icon-google-plus' ) ) . ' ' . get_theme_mod( 'icon_size' ) . '"></i></a></span>';
+			$hopeareunus_output_links .= '<li class="hopeareunus-social-links"><a class="hopeareunus-social-link" href="' . esc_url( get_theme_mod( 'google_plus_link' ) ) . '"><i class="' . esc_attr( apply_filters( 'hopeareunus_link_google_plus', 'icon-google-plus' ) ) . ' ' . get_theme_mod( 'icon_size' ) . '"></i></a></li>';
 
 		if ( get_theme_mod( 'github_link' ) )
-			$hopeareunus_output_links .= '<span class="hopeareunus-social-links"><a class="hopeareunus-social-link" href="' . esc_url( get_theme_mod( 'github_link' ) ) . '"><i class="' . esc_attr( apply_filters( 'hopeareunus_link_github', 'icon-github' ) ) . ' ' . get_theme_mod( 'icon_size' ) . '"></i></a></span>';
+			$hopeareunus_output_links .= '<li class="hopeareunus-social-links"><a class="hopeareunus-social-link" href="' . esc_url( get_theme_mod( 'github_link' ) ) . '"><i class="' . esc_attr( apply_filters( 'hopeareunus_link_github', 'icon-github' ) ) . ' ' . get_theme_mod( 'icon_size' ) . '"></i></a></li>';
 	
 		if ( get_theme_mod( 'pinterest_link' ) )
-			$hopeareunus_output_links .= '<span class="hopeareunus-social-links"><a class="hopeareunus-social-link" href="' . esc_url( get_theme_mod( 'pinterest_link' ) ) . '"><i class="' . esc_attr( apply_filters( 'hopeareunus_link_pinterest', 'icon-pinterest' ) ) . ' ' . get_theme_mod( 'icon_size' ) . '"></i></a></span>';
+			$hopeareunus_output_links .= '<li class="hopeareunus-social-links"><a class="hopeareunus-social-link" href="' . esc_url( get_theme_mod( 'pinterest_link' ) ) . '"><i class="' . esc_attr( apply_filters( 'hopeareunus_link_pinterest', 'icon-pinterest' ) ) . ' ' . get_theme_mod( 'icon_size' ) . '"></i></a></li>';
 		
-		$hopeareunus_output_links .= '</div>';
+		$hopeareunus_output_links .= '</ul></div>';
 		
 	return $hopeareunus_output_links;
 	
