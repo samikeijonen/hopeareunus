@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Hopeareunus WordPress Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-25 22:17+0200\n"
-"PO-Revision-Date: 2013-02-25 22:20+0200\n"
+"POT-Creation-Date: 2013-02-26 22:15+0200\n"
+"PO-Revision-Date: 2013-02-26 22:15+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Foxnet Themes <sami.keijonen@foxnet.fi>\n"
 "Language: fi\n"
@@ -166,15 +166,15 @@ msgstr ""
 "<span class=\"published-date\">[entry-published]</span> [entry-author] %s "
 "[entry-edit-link]"
 
-#: functions.php:480
+#: functions.php:477
 msgid "Front Page"
 msgstr "Etusivu"
 
-#: functions.php:481
+#: functions.php:478
 msgid "Front Page widget area."
 msgstr "Etusivun vimpainalue."
 
-#: functions.php:521
+#: functions.php:518
 msgid "Visit site"
 msgstr "Vieraile sivulla"
 
@@ -290,7 +290,7 @@ msgid ""
 "\"%s\">Go to Appearance &gt;&gt; Customize</a>. "
 msgstr ""
 "Haluatko asettaa globaalin ulkoasun, logon, sosiaalisen median linkkejä  ja "
-"muita asetuksia? <a href=\"%s\">Go to Appearance &gt;&gt; Kustomoi</a>. "
+"muita asetuksia? <a href=\"%s\">Mene kohtaan ulkoasu &gt;&gt; Kustomoi</a>. "
 
 #: admin/functions-admin.php:156
 msgid "Custom Header:"
@@ -1420,16 +1420,16 @@ msgstr ""
 "Ladataan yksittäisen sivun (artikkelin, kuvasivun jne.) jälkeen ennen "
 "kommenttialuetta."
 
-#: page-templates/front-page.php:36
+#: page-templates/front-page.php:51
 msgid "Latest News"
 msgstr "Tuoreimmat uutiset"
 
-#: page-templates/front-page.php:38 page-templates/front-page.php:90
+#: page-templates/front-page.php:53 page-templates/front-page.php:105
 #, php-format
 msgid "%1$s"
 msgstr "%1$s"
 
-#: page-templates/front-page.php:88
+#: page-templates/front-page.php:103
 msgid "Latest Portfolios"
 msgstr "Uusimmat referenssit"
 
