@@ -27,7 +27,22 @@ get_header(); // Loads the header.php template. ?>
 			$hopeareunus_posts_args = apply_filters( 'hopeareunus_front_page_post_arguments', array(
 				'post_type' => 'post',
 				'posts_per_page' => ( get_theme_mod( 'portfolio_layout' ) ? esc_attr( get_theme_mod( 'portfolio_layout' ) ) : '3' ),
-				'ignore_sticky_posts' => 1
+				'ignore_sticky_posts' => 1,
+				'tax_query' => array(
+					array(
+						'taxonomy' => 'post_format',
+						'field' => 'slug',
+						'terms' => array( 
+							'post-format-aside',
+							'post-format-audio',
+							'post-format-chat',
+							'post-format-link',
+							'post-format-quote',
+							'post-format-status',
+						),
+						'operator' => 'NOT IN'
+					) 
+				)
 			) );
 			
 			$hopeareunus_posts = new WP_Query( $hopeareunus_posts_args );
