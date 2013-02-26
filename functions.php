@@ -94,7 +94,7 @@ function hopeareunus_theme_setup() {
 	/* Set up Licence key for this theme. URL: https://easydigitaldownloads.com/docs/activating-license-keys-in-wp-plugins-and-themes */
  
 	// this is the URL our updater / license checker pings. This should be the URL of the site with EDD installed.
-	define( 'HOPEAREUNUS_SL_STORE_URL', 'http://localhost/foxnet-themes/shop' ); // add your own unique prefix to prevent conflicts
+	define( 'HOPEAREUNUS_SL_STORE_URL', 'http://foxnet-themes.fi' ); // add your own unique prefix to prevent conflicts
 
 	// the name of your product. This should match the download name in EDD exactly.
 	define( 'HOPEAREUNUS_SL_THEME_NAME', 'Hopeareunus' ); // add your own unique prefix to prevent conflicts
