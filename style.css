@@ -1383,9 +1383,10 @@ ol.comment-list dl dl {
 	font-family: FontAwesome;
 	font-size: 28px;
 	font-size: 2rem;
+	line-height: 0.85714285714;
 	float: left;
-	margin: -4px 14px 14px 0;
-	margin: -0.28571428571rem 1rem 1rem 0;
+	margin: 7px 14px 14px 0;
+	margin: 0.5rem 1rem 1rem 0;
 }
 .hopeareunus-message:after {
 	clear: both;
@@ -1418,8 +1419,22 @@ ol.comment-list dl dl {
 	border: 1px solid #d0eeac;
 }
 .hopeareunus-success:before {
+	content: "\f087";
+	color: #72b423;
+}
+
+/* Ok list. */
+ul.hopeareunus-ok-list {
+	list-style-type: none;
+	padding: 0 0 0 14px;
+	padding: 0 0 0 1rem;
+}
+ul.hopeareunus-ok-list li:before {
 	content: "\f00c";
 	color: #72b423;
+	font-family: FontAwesome;
+	margin-right: 4px;
+	margin-right: 0.28571428571rem;
 }
 
 
