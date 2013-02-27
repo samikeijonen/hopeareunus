@@ -283,6 +283,9 @@ function hopeareunus_scripts_styles() {
 			wp_enqueue_style( 'hopeareunus-flexslider-styles', trailingslashit( get_template_directory_uri() ) . 'css/flexslider/flexslider.min.css', false, '20130215', 'all' );
 	
 		}
+		
+		/* Dequeue Grid Columns CSS and roll your own. */
+		wp_dequeue_style( 'grid-columns' );
 	
 }
 
