@@ -2,7 +2,7 @@
  * Theme Name: Hopeareunus
  * Theme URI: https://foxnet-themes.fi/downloads/hopeareunus
  * Description: Hopeareunus is designed for business and portfolio sites. But blogging features are pretty cool too.
- * Version: 0.0.6
+ * Version: 0.0.7
  * Author: Sami Keijonen
  * Author URI: https://foxnet-themes.fi
  * Tags: sticky-post, theme-options, threaded-comments, translation-ready, one-column, two-columns, flexible-width, left-sidebar, right-sidebar, custom-background, custom-header, featured-images, editor-style, orange, white, light
@@ -1302,6 +1302,127 @@ ol.comment-list dl dl {
 }
 
 
+/* =Portfolio and Front Page Layouts
+-------------------------------------------------------------- */
+
+.archive-portfolio_item .hopeareunus-portfolio .hentry,
+.taxonomy-portfolio .hopeareunus-portfolio .hentry,
+.page-template-front-page .hentry {
+	text-align: center;
+}
+
+.archive-portfolio_item .hopeareunus-portfolio .hentry,
+.taxonomy-portfolio .hopeareunus-portfolio .hentry,
+.page-template-front-page .hentry {
+	border-bottom: none;
+	padding-bottom: 0;
+	position: relative;
+}
+.page-template-front-page .hentry  .entry-title {
+	font-size: 16px;
+	font-size: 1.14285714286rem;
+	margin: 3px 0 7px;
+	margin: 0.21428571428rem 0 0.5rem;
+	text-shadow: none;
+}
+.page-template-front-page .hentry  .entry-title  a {
+	text-shadow: none;
+}
+.archive-portfolio_item .hopeareunus-portfolio .hentry  .entry-title,
+.taxonomy-portfolio .hopeareunus-portfolio .hentry  .entry-title {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	font-size: 1rem;
+	text-shadow: none;
+}
+
+.archive-portfolio_item .hopeareunus-portfolio .hentry .hopeareunus-portfolio-image-info,
+.taxonomy-portfolio .hopeareunus-portfolio .hentry .hopeareunus-portfolio-image-info {
+	padding: 0 4%;
+	position: absolute;
+	top: 30%;
+	text-align: center;
+	width: 100%;
+	opacity: 0;
+}
+.archive-portfolio_item .hopeareunus-portfolio .hentry .hopeareunus-portfolio-image-info p,
+.taxonomy-portfolio .hopeareunus-portfolio .hentry .hopeareunus-portfolio-image-info p {
+	margin: 7px 0;
+}
+.archive-portfolio_item .hopeareunus-portfolio .hentry:hover .hopeareunus-portfolio-image-info,
+.archive-portfolio_item .hopeareunus-portfolio .hentry:focus .hopeareunus-portfolio-image-info,
+.taxonomy-portfolio .hopeareunus-portfolio .hentry:hover .hopeareunus-portfolio-image-info,
+.taxonomy-portfolio .hopeareunus-portfolio .hentry:focus .hopeareunus-portfolio-image-info {
+	opacity: 1;
+}
+.archive-portfolio_item .hopeareunus-portfolio .hentry  img,
+.taxonomy-portfolio .hopeareunus-portfolio .hentry  img {
+	position: relative;
+	z-index: 10;
+}
+.archive-portfolio_item .hopeareunus-portfolio .hentry  img:hover,
+.archive-portfolio_item .hopeareunus-portfolio .hentry  img:focus,
+.taxonomy-portfolio .hopeareunus-portfolio .hentry  img:hover,
+.taxonomy-portfolio .hopeareunus-portfolio .hentry  img:focus {
+	opacity: 0.20;
+}
+
+
+/* =Messages: alert, note, success	
+-------------------------------------------------------------- */
+
+.hopeareunus-message {
+	padding: 3%;
+	margin-bottom: 21px;
+	margin-bottom: 1.5rem;
+}
+.hopeareunus-message p {
+	margin-top: 0;
+}
+.hopeareunus-message:before {
+	font-family: FontAwesome;
+	font-size: 28px;
+	font-size: 2rem;
+	float: left;
+	margin: -4px 14px 14px 0;
+	margin: -0.28571428571rem 1rem 1rem 0;
+}
+.hopeareunus-message:after {
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+.hopeareunus-alert {
+	background: #fff7f7;
+	border: 1px solid #fddcdc;
+}
+.hopeareunus-alert:before {
+	content: "\f00d";
+	color: #c74343;
+}
+
+.hopeareunus-note {
+	background: #fcfbe4;
+	border: 1px solid #efebbc;
+}
+.hopeareunus-note:before {
+	content: "\f071";
+	color: #efdf23;
+}
+
+.hopeareunus-success {
+	background: #f1f9ea;
+	border: 1px solid #d0eeac;
+}
+.hopeareunus-success:before {
+	content: "\f00c";
+	color: #72b423;
+}
+
+
 /* =Gravity Forms CSS. @link: http://www.rocketgenius.com/gravity-forms-css-targeting-specific-elements/
 -------------------------------------------------------------- */
 
@@ -1428,70 +1549,20 @@ body #ui-datepicker-div {
 }
 
 
-/* =Portfolio and Front Page Layouts
+/* =Grid Columns Plugin CSS
 -------------------------------------------------------------- */
 
-.archive-portfolio_item .hopeareunus-portfolio .hentry,
-.taxonomy-portfolio .hopeareunus-portfolio .hentry,
-.page-template-front-page .hentry {
-	text-align: center;
+.column-grid {
+	clear: both;
+}
+.column-grid:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
 }
 
-.archive-portfolio_item .hopeareunus-portfolio .hentry,
-.taxonomy-portfolio .hopeareunus-portfolio .hentry,
-.page-template-front-page .hentry {
-	border-bottom: none;
-	padding-bottom: 0;
-	position: relative;
-}
-.page-template-front-page .hentry  .entry-title {
-	font-size: 16px;
-	font-size: 1.14285714286rem;
-	margin: 3px 0 7px;
-	margin: 0.21428571428rem 0 0.5rem;
-	text-shadow: none;
-}
-.page-template-front-page .hentry  .entry-title  a {
-	text-shadow: none;
-}
-.archive-portfolio_item .hopeareunus-portfolio .hentry  .entry-title,
-.taxonomy-portfolio .hopeareunus-portfolio .hentry  .entry-title {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 14px;
-	font-size: 1rem;
-	text-shadow: none;
-}
-
-.archive-portfolio_item .hopeareunus-portfolio .hentry .hopeareunus-portfolio-image-info,
-.taxonomy-portfolio .hopeareunus-portfolio .hentry .hopeareunus-portfolio-image-info {
-	padding: 0 4%;
-	position: absolute;
-	top: 30%;
-	text-align: center;
-	width: 100%;
-	opacity: 0;
-}
-.archive-portfolio_item .hopeareunus-portfolio .hentry .hopeareunus-portfolio-image-info p,
-.taxonomy-portfolio .hopeareunus-portfolio .hentry .hopeareunus-portfolio-image-info p {
-	margin: 7px 0;
-}
-.archive-portfolio_item .hopeareunus-portfolio .hentry:hover .hopeareunus-portfolio-image-info,
-.archive-portfolio_item .hopeareunus-portfolio .hentry:focus .hopeareunus-portfolio-image-info,
-.taxonomy-portfolio .hopeareunus-portfolio .hentry:hover .hopeareunus-portfolio-image-info,
-.taxonomy-portfolio .hopeareunus-portfolio .hentry:focus .hopeareunus-portfolio-image-info {
-	opacity: 1;
-}
-.archive-portfolio_item .hopeareunus-portfolio .hentry  img,
-.taxonomy-portfolio .hopeareunus-portfolio .hentry  img {
-	position: relative;
-	z-index: 10;
-}
-.archive-portfolio_item .hopeareunus-portfolio .hentry  img:hover,
-.archive-portfolio_item .hopeareunus-portfolio .hentry  img:focus,
-.taxonomy-portfolio .hopeareunus-portfolio .hentry  img:hover,
-.taxonomy-portfolio .hopeareunus-portfolio .hentry  img:focus {
-	opacity: 0.20;
-}
 
 /* =Media queries
 -------------------------------------------------------------- */
@@ -1525,6 +1596,102 @@ body #ui-datepicker-div {
 .page-template-front-page .hopeareunus-latest-layout-3 {
 	width: 33.33333333333%;
 }
+
+
+/* =Grid Columns Plugin CSS
+-------------------------------------------------------------- */
+
+.column-grid .column {
+	float: left;
+	margin-right: 3%;
+	margin-left: 0;
+}
+.column-grid .column-first {
+	margin-left: 0;
+}
+.column-grid .column-last {
+	float: right;
+	margin-right: 0;
+	margin-left: 0;
+}
+
+/**
+ * Formula for getting the width of each column.
+ *	$width = ( 100 + $margin-right ) / ( $grid ) * ( $span ) - ( $margin_right )
+ *	$x     = ( 100 + $margin_right ) / $grid
+ */
+
+/* === 2 columns === */
+
+/* $x = 51.5 */
+.column-grid-2 .column-span-2 { width: 100%;  }
+.column-grid-2 .column-span-1 { width: 48.5%; }
+
+.column-grid-2 .column-push-1 { margin-left: 51.5%; }
+
+/* === 3 columns === */
+
+/* $x = 34.333333333333 */
+.column-grid-3 .column-span-3 { width: 100%; }
+.column-grid-3 .column-span-2 { width: 65.666666666666%;  }
+.column-grid-3 .column-span-1 { width: 31.333333333333%;  }
+
+.column-grid-3 .column-push-2 { margin-left: 68.666666666666%; }
+.column-grid-3 .column-push-1 { margin-left: 34.333333333333%; }
+
+/* === 4 columns === */
+
+/* $x = 25.75 */
+.column-grid-4 .column-span-4 { width: 100%;   }
+.column-grid-4 .column-span-3 { width: 74.25%; }
+.column-grid-4 .column-span-2 { width: 48.5%;  }
+.column-grid-4 .column-span-1 { width: 22.75%; }
+
+.column-grid-4 .column-push-3 { margin-left: 77.25%; }
+.column-grid-4 .column-push-2 { margin-left: 51.5%;  }
+.column-grid-4 .column-push-1 { margin-left: 25.75%; }
+
+/* === 5 columns === */
+
+/* $x = 20.6 */
+.column-grid-5 .column-span-5 { width: 100%; }
+.column-grid-5 .column-span-4 { width: 79.4%;  }
+.column-grid-5 .column-span-3 { width: 58.8%;  }
+.column-grid-5 .column-span-2 { width: 38.2%;  }
+.column-grid-5 .column-span-1 { width: 17.6%;  }
+
+.column-grid-5 .column-push-4 { margin-left: 82.4%; }
+.column-grid-5 .column-push-3 { margin-left: 61.8%; }
+.column-grid-5 .column-push-2 { margin-left: 41.2%; }
+.column-grid-5 .column-push-1 { margin-left: 20.6%; }
+
+/* === 12 columns === */
+
+/* $x = 8.58333333333 */
+.column-grid-12 .column-span-12 { width: 100%;           }
+.column-grid-12 .column-span-11 { width: 91.4166666667%; }
+.column-grid-12 .column-span-10 { width: 82.8333333333%; }
+.column-grid-12 .column-span-9  { width: 74.25%;          }
+.column-grid-12 .column-span-8  { width: 65.6666666667%;  }
+.column-grid-12 .column-span-7  { width: 57.0833333333%;  }
+.column-grid-12 .column-span-6  { width: 48.5%;           }
+.column-grid-12 .column-span-5  { width: 39.9166666667%;  }
+.column-grid-12 .column-span-4  { width: 31.3333333333%;  }
+.column-grid-12 .column-span-3  { width: 22.75%;          }
+.column-grid-12 .column-span-2  { width: 14.1666666667%;  }
+.column-grid-12 .column-span-1  { width: 5.58333333333%;  }
+
+.column-grid-12 .column-push-11 { margin-left: 94.4166666666%; }
+.column-grid-12 .column-push-10 { margin-left: 85.8333333333%; }
+.column-grid-12 .column-push-9  { margin-left: 77.25%;          }
+.column-grid-12 .column-push-8  { margin-left: 68.6666666666%;  }
+.column-grid-12 .column-push-7  { margin-left: 60.0833333333%;  }
+.column-grid-12 .column-push-6  { margin-left: 51.5%;           }
+.column-grid-12 .column-push-5  { margin-left: 42.9166666667%;  }
+.column-grid-12 .column-push-4  { margin-left: 34.3333333333%;  }
+.column-grid-12 .column-push-3  { margin-left: 25.75%;          }
+.column-grid-12 .column-push-2  { margin-left: 17.1666666667%;  }
+.column-grid-12 .column-push-1  { margin-left: 8.58333333333%;  }
 	
 }
 
