@@ -35,7 +35,7 @@ function hopeareunus_theme_setup() {
 	if ( is_admin() )
 	    require_once( trailingslashit ( get_template_directory() ) . 'admin/functions-admin.php' );
 		
-	/* Include theme customize: logo upload. */
+	/* Include theme customize. */
 	require_once( trailingslashit( get_template_directory() ) . 'includes/theme-customize.php' );
 
 	/* Add theme support for core framework features. */
