@@ -1,3 +1,8 @@
+March 2, 2013 - version 0.1.1
+
+* Default Header image updated.
+* Add link styles to excerpt.
+
 February 26, 2013 - version 0.1
 
 * Everything is brand new.
