@@ -102,10 +102,21 @@ a:visited {
 	color: #d0551a;
 	text-decoration: none;
 }
+#hopeareunus-header-title a,
+#hopeareunus-header-title a:visited {
+	color: #31424e;
+	text-decoration: none;
+}
 a:focus,
 a:active,
 a:hover {
 	color: #b94d19;
+	text-decoration: underline;
+}
+#hopeareunus-header-title a:focus,
+#hopeareunus-header-title a:active,
+#hopeareunus-header-title a:hover {
+	color: #253038;
 	text-decoration: underline;
 }
 :focus {
@@ -948,13 +959,13 @@ a.more-link,
 a.hopeareunus-portfolio-item-link {
 	margin-left: 0;
 }
-a.hopeareunus-button {
+#hopeareunus-header-title a.hopeareunus-button {
 	color: #fff;
 	background: #31424e;
 	margin: 0;
 }
-a.hopeareunus-button:hover,
-a.hopeareunus-button:focus {
+#hopeareunus-header-title a.hopeareunus-button:hover,
+#hopeareunus-header-title a.hopeareunus-button:focus {
 	background: #253038;
 	text-decoration: none;
 }
