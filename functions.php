@@ -105,22 +105,8 @@ function hopeareunus_theme_setup() {
 		define( 'HOPEAREUNUS_VERSION', $hopeareunus_theme->Version ); // Get parent theme hopeareunus version
 	}
 	
-	// load our custom theme updater
-	if( !class_exists( 'EDD_SL_Theme_Updater' ) )
-		require_once( trailingslashit( get_template_directory() ) . 'includes/EDD_SL_Theme_Updater.php' );
-	
-	/* Get license key from database. */
-	$hopeareunus_get_license = get_option( $prefix . '_theme_settings' ); // This is array.
-	$hopeareunus_license = isset( $hopeareunus_get_license['hopeareunus_license_key'] ) ? $hopeareunus_get_license['hopeareunus_license_key'] : '';
-
-	$edd_updater = new EDD_SL_Theme_Updater( array( 
-		'remote_api_url' 	=> HOPEAREUNUS_SL_STORE_URL, 	// our store URL that is running EDD
-		'version' 			=> HOPEAREUNUS_VERSION, 		// the current theme version we are running
-		'license' 			=> $hopeareunus_license, 		// the license key (used get_option above to retrieve from DB)
-		'item_name' 		=> HOPEAREUNUS_SL_THEME_NAME,	// the name of this theme
-		'author'			=> 'Sami Keijonen'	            // the author's name
-		)
-	);
+	/* Setup updater. */
+	add_action( 'admin_init', 'hopeareunus_theme_updater' );
 	
 	/* Set content width. */
 	hybrid_set_content_width( 604 );
@@ -166,6 +152,36 @@ function hopeareunus_theme_setup() {
 	
 	/* Add new body class if there is attachments. */
 	add_filter( 'body_class', 'hopeareunus_add_body_attachments' );
+
+}
+
+/**
+ * Setup theme updater. @link https://gist.github.com/pippinsplugins/3ab7c0a01d5a9d8005ed
+ *
+ * @since  0.1.2
+ */
+function hopeareunus_theme_updater() {
+
+	/* If there is no valid license key status, don't let updates. */
+	if( get_option( 'hopeareunus_license_key_status' ) != 'valid' )
+		return;
+
+	/* load our custom theme updater. */
+	if( !class_exists( 'EDD_SL_Theme_Updater' ) )
+		require_once( trailingslashit( get_template_directory() ) . 'includes/EDD_SL_Theme_Updater.php' );
+	
+	/* Get license key from database. */
+	$hopeareunus_get_license = get_option( $prefix . '_theme_settings' ); // This is array.
+	$hopeareunus_license = isset( $hopeareunus_get_license['hopeareunus_license_key'] ) ? $hopeareunus_get_license['hopeareunus_license_key'] : '';
+
+	$edd_updater = new EDD_SL_Theme_Updater( array( 
+		'remote_api_url' 	=> HOPEAREUNUS_SL_STORE_URL, 	// our store URL that is running EDD
+		'version' 			=> HOPEAREUNUS_VERSION, 		// the current theme version we are running
+		'license' 			=> $hopeareunus_license, 		// the license key (used get_option above to retrieve from DB)
+		'item_name' 		=> HOPEAREUNUS_SL_THEME_NAME,	// the name of this theme
+		'author'			=> 'Sami Keijonen'	            // the author's name
+		)
+	);
 
 }
 

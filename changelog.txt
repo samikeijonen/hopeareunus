@@ -1,4 +1,8 @@
-March 2, 2013 - version 0.1.1
+March 15, 2013 - version 0.1.2
+
+* Fixed a bug in theme automatic updater.
+
+March 3, 2013 - version 0.1.1
 
 * Default Header image updated.
 * Add link styles to excerpt.
