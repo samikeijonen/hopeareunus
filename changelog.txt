@@ -1,3 +1,7 @@
+March 15, 2013 - version 0.1.2.1
+
+* There was still a small bug in theme automatic updater.
+
 March 15, 2013 - version 0.1.2
 
 * Fixed a bug in theme automatic updater.
