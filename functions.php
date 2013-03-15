@@ -169,6 +169,9 @@ function hopeareunus_theme_updater() {
 	/* load our custom theme updater. */
 	if( !class_exists( 'EDD_SL_Theme_Updater' ) )
 		require_once( trailingslashit( get_template_directory() ) . 'includes/EDD_SL_Theme_Updater.php' );
+		
+	/* Get action/filter hook prefix. */
+	$prefix = hybrid_get_prefix();
 	
 	/* Get license key from database. */
 	$hopeareunus_get_license = get_option( $prefix . '_theme_settings' ); // This is array.
