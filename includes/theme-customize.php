@@ -63,7 +63,7 @@ function hopeareunus_customize_register_logo( $wp_customize ) {
 		)
 	);
 	
-	/*Add the layout control. */
+	/* Add the portfolio layout control. */
 	$wp_customize->add_control(
 		'portfolio-layout-control',
 		array(
