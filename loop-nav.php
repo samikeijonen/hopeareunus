@@ -18,7 +18,7 @@
 			<?php previous_post_link( '%link', '<span class="previous">' . __( '<span class="meta-nav">&larr;</span> Return to entry', 'hopeareunus' ) . '</span>' ); ?>
 		</div><!-- .loop-nav -->
 
-	<?php elseif ( is_singular( array( 'post', 'portfolio_item' ) ) ) : ?>
+	<?php elseif ( is_singular( apply_filters( 'hopeareunus_singular_loop_nav', array( 'post', 'portfolio_item' ) ) ) ) : ?>
 
 		<div class="loop-nav">
 			<?php previous_post_link( '%link', '<span class="previous"><i class="' . apply_filters( 'hopeareunus_icon_previous', 'icon-chevron-left' ) . '"></i></span>' ); ?>
