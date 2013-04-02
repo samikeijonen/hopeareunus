@@ -78,6 +78,7 @@ function hopeareunus_theme_setup() {
 	);
 	
 	/* Add support for flexible headers. @link http://make.wordpress.org/themes/2012/04/06/updating-custom-backgrounds-and-custom-headers-for-wordpress-3-4/ */
+	
 	$hopeareunus_header_args = array(
 		'flex-height' => true,
 		'height' => apply_filters( 'hopeareunus_header_height', 379 ),
@@ -146,6 +147,9 @@ function hopeareunus_theme_setup() {
 	
 	/* Register additional sidebar to 'front page' page template. */
 	add_action( 'widgets_init', 'hopeareunus_register_sidebars' );
+	
+	/* Add menu-item-parent class to parent menu items.  */
+	add_filter( 'wp_nav_menu_objects', 'hopeareunus_add_menu_parent_class' );
 	
 	/* Use some early Hybrid Core 1.6 proposed HTML5 changes. */
 	add_filter( "{$prefix}_sidebar_defaults", 'hopeareunus_sidebar_defaults' );
@@ -504,6 +508,33 @@ function hopeareunus_register_sidebars() {
 			'after_title' => '</h3>'
 		)
 	);
+
+}
+
+/**
+ * Add menu-item-parent class to parent menu items. Thanks to Chip Bennett.
+ *
+ * @since 0.1.2.3
+ */
+function hopeareunus_add_menu_parent_class( $items ) {
+
+	$parents = array();
+
+	foreach ( $items as $item ) {
+
+		if ( $item->menu_item_parent && $item->menu_item_parent > 0 )
+			$parents[] = $item->menu_item_parent;
+		
+	}
+
+	foreach ( $items as $item ) {
+
+		if ( in_array( $item->ID, $parents ) )
+			$item->classes[] = 'menu-item-parent';
+
+	}
+
+	return $items;    
 
 }
 
