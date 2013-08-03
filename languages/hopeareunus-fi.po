@@ -3,16 +3,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Hopeareunus WordPress Theme\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-24 23:47+0200\n"
-"PO-Revision-Date: 2013-03-24 23:51+0200\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/hopeareunus\n"
+"POT-Creation-Date: 2013-08-03 21:00:48+00:00\n"
+"PO-Revision-Date: 2013-08-04 00:10+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Foxnet Themes <sami.keijonen@foxnet.fi>\n"
 "Language: fi_FI\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.5.7\n"
 "X-Poedit-KeywordsList: __;_e;esc_attr__;esc_attr_e;esc_html__;esc_html_e;_n;"
 "_x;_x:1,2c;_n:1,2\n"
 "X-Poedit-Basepath: ../\n"
@@ -24,226 +24,17 @@ msgid "What happened!?"
 msgstr "Mitä tapahtui?"
 
 #: 404.php:34
-#, php-format
 msgid ""
 "You tried going to %s, which doesn't exist. You can try navigate or search."
 msgstr ""
 "Yritit mennä sivulle %s, mutta sitä ei ole olemassa. Voit koittaa navigoida "
 "tai käyttää hakutoimintoa."
 
-#: attachment-image.php:40 content-aside.php:38 content-audio.php:50
-#: content-chat.php:50 content-portfolio_item.php:41 content-status.php:41
-#: content-video.php:59 content.php:31
-msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Jatka lukemista <span class=\"meta-nav\">&rarr;</span>"
-
-#: attachment-image.php:41 content-aside.php:28 content-aside.php:39
-#: content-audio.php:28 content-audio.php:51 content-chat.php:28
-#: content-chat.php:51 content-gallery.php:28 content-gallery.php:47
-#: content-image.php:28 content-link.php:28 content-link.php:48
-#: content-page.php:31 content-portfolio_item.php:42 content-quote.php:28
-#: content-quote.php:39 content-status.php:27 content-status.php:42
-#: content-video.php:28 content-video.php:60 content.php:32
-msgid "Pages:"
-msgstr "Sivut:"
-
-#: attachment-image.php:46
-msgid "Published on [entry-published] [entry-edit-link before=\"| \"]"
-msgstr "Julkaistu [entry-published] [entry-edit-link before=\"| \"]"
-
-#: attachment-image.php:61
-msgid "Gallery"
-msgstr "Kuvagalleria"
-
-#: comment.php:32
-msgid "Your comment is awaiting moderation."
-msgstr "Kommenttisi odottaa moderointia."
-
-#: comments.php:27
-msgid "No Responses"
-msgstr "Ei kommentteja"
-
-#: comments.php:27
-msgid "One Response"
-msgstr "Yksi kommentti"
-
-#: comments.php:27
-msgid "% Responses"
-msgstr "%  Kommenttia"
-
-#: comments.php:40
-msgid "&larr; Previous"
-msgstr "&larr; Edellinen"
-
-#: comments.php:41
-#, php-format
-msgid "Page %1$s of %2$s"
-msgstr "Sivu %1$s / %2$s"
-
-#: comments.php:42
-msgid "Next &rarr;"
-msgstr "Seuraava &rarr;"
-
-#: comments.php:52
-#, php-format
-msgid ""
-"Comments are closed, but <a href=\"%s\" title=\"Trackback URL for this post"
-"\">trackbacks</a> and pingbacks are open."
-msgstr ""
-"Kommentointi on suljettu, mutta <a href=\"%s\" title=\"Paluuviitteen URL "
-"tähän artikkeliin\">paluuviitteet</a> ja päivitysilmoitukset ovat avoinna."
-
-#: comments.php:58
-msgid "Comments are closed."
-msgstr "Kommentointi on suljettu."
-
-#: content-aside.php:23 content-audio.php:23 content-chat.php:23
-#: content-gallery.php:23 content-image.php:23 content-link.php:23
-#: content-quote.php:23 content-video.php:23
-#, php-format
-msgid ""
-"<span class=\"hopeareunus-post-format-link\">[post-format-link]</span> <span "
-"class=\"published-date\">[entry-published]</span> %s [entry-edit-link]"
-msgstr ""
-"<span class=\"hopeareunus-post-format-link\">[post-format-link]</span> <span "
-"class=\"published-date\">[entry-published]</span> %s [entry-edit-link]"
-
-#: content-aside.php:32 content-audio.php:32 content-chat.php:32
-#: content-gallery.php:32 content-image.php:32 content-link.php:32
-#: content-quote.php:32 content-video.php:32 content.php:36
-msgid ""
-"[entry-terms taxonomy=\"category\" before=\"Posted in \"] [entry-terms "
-"before=\"Tagged \"]"
-msgstr ""
-"[entry-terms taxonomy=\"category\" before=\"Artikkeli kategoriassa \"] "
-"[entry-terms before=\"Avainsanat \"]"
-
-#: content-audio.php:57 content-chat.php:57 content-gallery.php:55
-#: content-image.php:50 content-link.php:54 content-quote.php:43
-#: content-status.php:46 content-video.php:66
-msgid ""
-"<span class=\"hopeareunus-post-format-link\">[post-format-link]</span> "
-"published on [entry-published] [entry-permalink before=\"| \"] [entry-"
-"comments-link before=\"| \"] [entry-edit-link before=\"| \"]"
-msgstr ""
-"<span class=\"hopeareunus-post-format-link\">[post-format-link]</span> "
-"julkaistu [entry-published] [entry-permalink before=\"| \"] [entry-comments-"
-"link before=\"| \"] [entry-edit-link before=\"| \"]"
-
-#: content-gallery.php:50
-#, php-format
-msgid "This gallery contains %s image."
-msgid_plural "This gallery contains %s images."
-msgstr[0] "Tämä kuvagalleria sisältää %s kuvan."
-msgstr[1] "Tämä kuvagalleria sisältää %s kuvaa."
-
-#: content-portfolio_item.php:35
-msgid "Work:"
-msgstr "Tehdyt työt:"
-
-#: content-quote.php:38
-msgid "Read more &rarr;"
-msgstr "Lue lisää &rarr;"
-
-#: content-status.php:31
-msgid ""
-"<span class=\"hopeareunus-post-format-link\">[post-format-link]</span> "
-"updated on [entry-published] [entry-edit-link before=\"| \"]<br />[entry-"
-"terms taxonomy=\"category\" before=\"Posted in \"] [entry-terms before="
-"\"Tagged \"]"
-msgstr ""
-"<span class=\"hopeareunus-post-format-link\">[post-format-link]</span> "
-"päivitetty [entry-published] [entry-edit-link before=\"| \"]<br />[entry-"
-"terms taxonomy=\"category\" before=\"Artikkeli kategoriassa \"] [entry-terms "
-"before=\"Avainsanat \"]"
-
-#: content.php:27
-#, php-format
-msgid ""
-"<span class=\"published-date\">[entry-published]</span> [entry-author] %s "
-"[entry-edit-link]"
-msgstr ""
-"<span class=\"published-date\">[entry-published]</span> [entry-author] %s "
-"[entry-edit-link]"
-
-#: functions.php:500
-msgid "Front Page"
-msgstr "Etusivu"
-
-#: functions.php:501
-msgid "Front Page widget area."
-msgstr "Etusivun vimpainalue."
-
-#: functions.php:541
-msgid "Visit site"
-msgstr "Vieraile sivulla"
-
-#: header.php:107
-msgid "You are here:"
-msgstr "Olet täällä:"
-
-#: header.php:107
-msgid "&#8764;"
-msgstr "&#8764;"
-
-#: loop-error.php:17
-msgid "Apologies, but no entries were found."
-msgstr "Pahoittelut, mutta yhtään artikkelia ei löytynyt."
-
-#: loop-meta.php:124
-#, php-format
-msgid "You are browsing the search results for &quot;%1$s&quot;"
-msgstr "Hakutulokset haulle: &quot;%1$s&quot;"
-
-#: loop-meta.php:139
-msgid "Archives by date"
-msgstr "Arkistot"
-
-#: loop-meta.php:143
-msgid "You are browsing the site archives by date."
-msgstr "Selaat päiväkohtaista arkistoa."
-
-#: loop-meta.php:179 library/classes/widget-archives.php:44
-#: library/classes/widget-archives.php:142 library/functions/context.php:452
-msgid "Archives"
-msgstr "Arkistot"
-
-#: loop-meta.php:183
-msgid "You are browsing the site archives."
-msgstr "Selaat sivun arkistoa."
-
-#: loop-nav.php:18
-msgid "<span class=\"meta-nav\">&larr;</span> Return to entry"
-msgstr "<span class=\"meta-nav\">&larr;</span> Palaa takaisin"
-
-#: menu-primary.php:19
-msgid "Skip to content"
-msgstr "Hyppää sisältöön"
-
-#: menu-primary.php:25
-msgid "Menu"
-msgstr "Navigointi"
-
-#: search.php:43
-#, php-format
-msgid "[entry-published] &mdash; <code>%s</code>"
-msgstr "[entry-published] &mdash; <code>%s</code>"
-
-#: searchform.php:17
-msgid "Search..."
-msgstr "Etsi..."
-
-#: searchform.php:18 library/classes/widget-search.php:45
-#: library/classes/widget-search.php:132
-msgid "Search"
-msgstr "Etsi"
-
 #: admin/functions-admin.php:43
 msgid "Theme License Key"
 msgstr "Teeman lisenssiavain"
 
-#: admin/functions-admin.php:53 library/admin/admin.php:37
-#: library/admin/admin.php:38 library/admin/theme-settings.php:172
+#: admin/functions-admin.php:53 library/admin/theme-settings.php:172
 msgid "Customize"
 msgstr "Kustomoi"
 
@@ -284,7 +75,6 @@ msgid "Customize:"
 msgstr "Kustomoi:"
 
 #: admin/functions-admin.php:139
-#, php-format
 msgid ""
 "Want to set Global layout, logo, social links and other features? <a href="
 "\"%s\">Go to Appearance &gt;&gt; Customize</a>. "
@@ -294,10 +84,9 @@ msgstr ""
 
 #: admin/functions-admin.php:156
 msgid "Custom Header:"
-msgstr "Yläpalkin kuvai:"
+msgstr "Yläpalkin kuva:"
 
 #: admin/functions-admin.php:159
-#, php-format
 msgid ""
 "Want to replace or remove default Header? <a href=\"%s\">Go to Appearance "
 "&gt;&gt; Header</a>. "
@@ -320,13 +109,161 @@ msgid "Custom background:"
 msgstr "Taustakuva:"
 
 #: admin/functions-admin.php:180
-#, php-format
 msgid ""
 "Want to replace or remove default Background? <a href=\"%s\">Go to "
 "Appearance &gt;&gt; Background</a>. "
 msgstr ""
 "Halutatko vaihtaa tai poistaa oletustaustakuvan? <a href=\"%s\">Mene kohtaan "
 "ulkoasu &gt;&gt; Tausta</a>. "
+
+#: attachment-image.php:40 content-aside.php:38 content-chat.php:50
+#: content-portfolio_item.php:41 content-status.php:41 content.php:31
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Jatka lukemista <span class=\"meta-nav\">&rarr;</span>"
+
+#: attachment-image.php:41 content-aside.php:28 content-aside.php:39
+#: content-audio.php:28 content-chat.php:28 content-chat.php:51
+#: content-gallery.php:28 content-gallery.php:47 content-image.php:28
+#: content-link.php:28 content-link.php:48 content-page.php:31
+#: content-portfolio_item.php:42 content-quote.php:28 content-quote.php:39
+#: content-status.php:27 content-status.php:42 content-video.php:28
+#: content.php:32
+msgid "Pages:"
+msgstr "Sivut:"
+
+#: attachment-image.php:46
+msgid "Published on [entry-published] [entry-edit-link before=\"| \"]"
+msgstr "Julkaistu [entry-published] [entry-edit-link before=\"| \"]"
+
+#: attachment-image.php:61
+msgid "Gallery"
+msgstr "Kuvagalleria"
+
+#: comment.php:32
+msgid "Your comment is awaiting moderation."
+msgstr "Kommenttisi odottaa moderointia."
+
+#: comments.php:27
+msgid "No Responses"
+msgstr "Ei kommentteja"
+
+#: comments.php:27
+msgid "One Response"
+msgstr "Yksi kommentti"
+
+#: comments.php:27
+msgid "% Responses"
+msgstr "%  Kommenttia"
+
+#: comments.php:40
+msgid "&larr; Previous"
+msgstr "&larr; Edellinen"
+
+#: comments.php:41
+msgid "Page %1$s of %2$s"
+msgstr "Sivu %1$s / %2$s"
+
+#: comments.php:42
+msgid "Next &rarr;"
+msgstr "Seuraava &rarr;"
+
+#: comments.php:52
+msgid ""
+"Comments are closed, but <a href=\"%s\" title=\"Trackback URL for this post"
+"\">trackbacks</a> and pingbacks are open."
+msgstr ""
+"Kommentointi on suljettu, mutta <a href=\"%s\" title=\"Paluuviitteen URL "
+"tähän artikkeliin\">paluuviitteet</a> ja päivitysilmoitukset ovat avoinna."
+
+#: comments.php:58
+msgid "Comments are closed."
+msgstr "Kommentointi on suljettu."
+
+#: content-aside.php:23 content-audio.php:23 content-chat.php:23
+#: content-gallery.php:23 content-image.php:23 content-link.php:23
+#: content-quote.php:23 content-video.php:23
+msgid ""
+"<span class=\"hopeareunus-post-format-link\">[post-format-link]</span> <span "
+"class=\"published-date\">[entry-published]</span> %s [entry-edit-link]"
+msgstr ""
+"<span class=\"hopeareunus-post-format-link\">[post-format-link]</span> <span "
+"class=\"published-date\">[entry-published]</span> %s [entry-edit-link]"
+
+#: content-aside.php:32 content-audio.php:32 content-chat.php:32
+#: content-gallery.php:32 content-image.php:32 content-link.php:32
+#: content-quote.php:32 content-video.php:32 content.php:36
+msgid ""
+"[entry-terms taxonomy=\"category\" before=\"Posted in \"] [entry-terms "
+"before=\"Tagged \"]"
+msgstr ""
+"[entry-terms taxonomy=\"category\" before=\"Artikkeli kategoriassa \"] "
+"[entry-terms before=\"Avainsanat \"]"
+
+#: content-audio.php:56 content-chat.php:57 content-gallery.php:55
+#: content-image.php:50 content-link.php:54 content-quote.php:43
+#: content-status.php:46 content-video.php:54
+msgid ""
+"<span class=\"hopeareunus-post-format-link\">[post-format-link]</span> "
+"published on [entry-published] [entry-permalink before=\"| \"] [entry-"
+"comments-link before=\"| \"] [entry-edit-link before=\"| \"]"
+msgstr ""
+"<span class=\"hopeareunus-post-format-link\">[post-format-link]</span> "
+"julkaistu [entry-published] [entry-permalink before=\"| \"] [entry-comments-"
+"link before=\"| \"] [entry-edit-link before=\"| \"]"
+
+#: content-gallery.php:50
+msgid "This gallery contains %s image."
+msgid_plural "This gallery contains %s images."
+msgstr[0] "Tämä kuvagalleria sisältää %s kuvan."
+msgstr[1] "Tämä kuvagalleria sisältää %s kuvaa."
+
+#: content-portfolio_item.php:35
+msgid "Work:"
+msgstr "Tehdyt työt:"
+
+#: content-quote.php:38
+msgid "Read more &rarr;"
+msgstr "Lue lisää &rarr;"
+
+#: content-status.php:31
+msgid ""
+"<span class=\"hopeareunus-post-format-link\">[post-format-link]</span> "
+"updated on [entry-published] [entry-edit-link before=\"| \"]<br />[entry-"
+"terms taxonomy=\"category\" before=\"Posted in \"] [entry-terms before="
+"\"Tagged \"]"
+msgstr ""
+"<span class=\"hopeareunus-post-format-link\">[post-format-link]</span> "
+"päivitetty [entry-published] [entry-edit-link before=\"| \"]<br />[entry-"
+"terms taxonomy=\"category\" before=\"Artikkeli kategoriassa \"] [entry-terms "
+"before=\"Avainsanat \"]"
+
+#: content.php:27
+msgid ""
+"<span class=\"published-date\">[entry-published]</span> [entry-author] %s "
+"[entry-edit-link]"
+msgstr ""
+"<span class=\"published-date\">[entry-published]</span> [entry-author] %s "
+"[entry-edit-link]"
+
+#: functions.php:484
+msgid "Front Page Widget"
+msgstr "Etusivun vimpainalue."
+
+#: functions.php:485
+msgid "Front Page widget area."
+msgstr "Etusivun vimpainalue."
+
+#: functions.php:532
+msgid "Visit site"
+msgstr "Vieraile sivulla"
+
+#: header.php:107
+msgid "You are here:"
+msgstr "Olet täällä:"
+
+#: header.php:107
+msgid "&#8764;"
+msgstr "&#8764;"
 
 #: includes/EDD_SL_Theme_Updater.php:53
 msgid ""
@@ -338,7 +275,6 @@ msgstr ""
 "päivitykseen."
 
 #: includes/EDD_SL_Theme_Updater.php:58
-#, php-format
 msgid ""
 "<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" class=\"thickbox\" "
 "title=\"%4s\">Check out what's new</a> or <a href=\"%5$s\"%6$s>update now</"
@@ -456,17 +392,12 @@ msgstr "Meta kuvaus:"
 msgid "Meta Keywords:"
 msgstr "Meta avainsanat:"
 
-#: library/admin/meta-box-post-template.php:38
+#: library/admin/meta-box-post-template.php:45
 msgid "Template"
 msgstr "Sivupohja"
 
-#: library/admin/meta-box-post-template.php:89
-msgid "No templates exist for this post type."
-msgstr "Tälle artikkelityypille ei löytynyt sivupohjaa."
-
 #: library/admin/meta-box-theme-about.php:31
 #: library/admin/meta-box-theme-about.php:36
-#, php-format
 msgid "About %s"
 msgstr "Tiedot %s"
 
@@ -500,7 +431,6 @@ msgstr ""
 "acronym> ja/tai lyhytkoodeja, jotka lisätään automaattisesti teemaan."
 
 #: library/admin/theme-settings.php:47 library/admin/theme-settings.php:171
-#, php-format
 msgid "%s Theme Settings"
 msgstr "%s Teeman asetukset"
 
@@ -508,15 +438,15 @@ msgstr "%s Teeman asetukset"
 msgid "Theme Settings"
 msgstr "Teeman asetukset"
 
-#: library/admin/theme-settings.php:198
+#: library/admin/theme-settings.php:205
 msgid "Update Settings"
 msgstr "Päivitä asetukset"
 
-#: library/admin/theme-settings.php:255
+#: library/admin/theme-settings.php:262
 msgid "Documentation"
 msgstr "Dokumentaatio"
 
-#: library/admin/theme-settings.php:259
+#: library/admin/theme-settings.php:266
 msgid "Support"
 msgstr "Tuki"
 
@@ -525,6 +455,13 @@ msgid ""
 "An advanced widget that gives you total control over the output of your "
 "archives."
 msgstr "Vimpain, jolla hallitaan arkistoja."
+
+#: library/classes/widget-archives.php:44
+#: library/classes/widget-archives.php:142
+#: library/extensions/breadcrumb-trail.php:180
+#: library/functions/context.php:576 loop-meta.php:179
+msgid "Archives"
+msgstr "Arkistot"
 
 #: library/classes/widget-archives.php:79
 msgid "Select Year"
@@ -907,6 +844,11 @@ msgid ""
 "search form."
 msgstr "Vimpain, jolla hallitaan hakulomaketta."
 
+#: library/classes/widget-search.php:45 library/classes/widget-search.php:132
+#: searchform.php:18
+msgid "Search"
+msgstr "Etsi"
+
 #: library/classes/widget-search.php:148
 msgid "Search Label:"
 msgstr "Etsi nimike:"
@@ -937,11 +879,11 @@ msgid "View"
 msgstr "Näkymä"
 
 #: library/classes/widget-tags.php:177
-#: library/extensions/breadcrumb-trail.php:540
-#: library/extensions/breadcrumb-trail.php:573
-#: library/extensions/breadcrumb-trail.php:588
-#: library/extensions/breadcrumb-trail.php:616
-#: library/functions/shortcodes.php:204 library/functions/shortcodes.php:448
+#: library/extensions/breadcrumb-trail.php:1122
+#: library/extensions/breadcrumb-trail.php:1158
+#: library/extensions/breadcrumb-trail.php:1175
+#: library/extensions/breadcrumb-trail.php:1206
+#: library/functions/shortcodes.php:205 library/functions/shortcodes.php:527
 msgid "Edit"
 msgstr "Editoi"
 
@@ -953,104 +895,77 @@ msgstr "Tyhjä"
 msgid "Pad counts?"
 msgstr "Pad lukumäärä?"
 
-#: library/extensions/breadcrumb-trail.php:44
+#: library/extensions/breadcrumb-trail.php:175
 msgid "Browse:"
 msgstr "Navigointi:"
 
-#: library/extensions/breadcrumb-trail.php:47
+#: library/extensions/breadcrumb-trail.php:176
 msgid "Home"
 msgstr "Etusivu"
 
-#: library/extensions/breadcrumb-trail.php:424
-#: library/functions/context.php:429
+#: library/extensions/breadcrumb-trail.php:177
+#: library/functions/context.php:582
+msgid "Search results for \"%s\""
+msgstr "Hakutulokset haulle: \"%s\""
+
+#: library/extensions/breadcrumb-trail.php:178
+#: library/functions/context.php:586
+msgid "404 Not Found"
+msgstr "404 Sivua ei löytynyt"
+
+#: library/extensions/breadcrumb-trail.php:179
+msgid "Page %d"
+msgstr "Sivu %d"
+
+#: library/extensions/breadcrumb-trail.php:181
+#: library/functions/context.php:553
 msgid "g:i a"
 msgstr "G:i"
 
-#: library/extensions/breadcrumb-trail.php:427
-#, php-format
-msgid "Minute %1$s"
-msgstr "Minuutti %1$s"
+#: library/extensions/breadcrumb-trail.php:182
+msgid "Minute %d"
+msgstr "Minuutti %d"
 
-#: library/extensions/breadcrumb-trail.php:427
-#: library/functions/context.php:432
-msgid "i"
-msgstr "i"
-
-#: library/extensions/breadcrumb-trail.php:430
-#: library/functions/context.php:435
+#: library/extensions/breadcrumb-trail.php:183
+#: library/functions/context.php:559
 msgid "g a"
 msgstr "g a"
 
-#: library/extensions/breadcrumb-trail.php:441
-#: library/extensions/breadcrumb-trail.php:451
-#: library/extensions/breadcrumb-trail.php:460
-#: library/extensions/breadcrumb-trail.php:471
-#: library/extensions/breadcrumb-trail.php:473
-#: library/extensions/breadcrumb-trail.php:672
-#: library/functions/context.php:441 library/functions/context.php:447
+#: library/extensions/breadcrumb-trail.php:184
+msgid "d"
+msgstr "d"
+
+#: library/extensions/breadcrumb-trail.php:185
+msgid "Week %d"
+msgstr "Viikko %d"
+
+#: library/extensions/breadcrumb-trail.php:186
+msgid "F"
+msgstr "F"
+
+#: library/extensions/breadcrumb-trail.php:187
+#: library/extensions/breadcrumb-trail.php:1027
+#: library/functions/context.php:565 library/functions/context.php:571
 #: library/functions/core-seo.php:94 library/functions/shortcodes.php:70
 msgid "Y"
 msgstr "Y"
 
-#: library/extensions/breadcrumb-trail.php:442
-#: library/extensions/breadcrumb-trail.php:463
-#: library/extensions/breadcrumb-trail.php:465
-#: library/extensions/breadcrumb-trail.php:676
-msgid "F"
-msgstr "F"
-
-#: library/extensions/breadcrumb-trail.php:445
-#: library/extensions/breadcrumb-trail.php:447
-#: library/extensions/breadcrumb-trail.php:680
-msgid "d"
-msgstr "d"
-
-#: library/extensions/breadcrumb-trail.php:454
-#: library/extensions/breadcrumb-trail.php:456
-#, php-format
-msgid "Week %1$s"
-msgstr "Viikko %1$s"
-
-#: library/extensions/breadcrumb-trail.php:454
-#: library/extensions/breadcrumb-trail.php:456
-#: library/functions/context.php:441
-msgid "W"
-msgstr "W"
-
-#: library/extensions/breadcrumb-trail.php:482
-#: library/extensions/breadcrumb-trail.php:484
-#: library/functions/context.php:458
-#, php-format
-msgid "Search results for &quot;%1$s&quot;"
-msgstr "Hakutulokset haulle: &quot;%1$s&quot;"
-
-#: library/extensions/breadcrumb-trail.php:489
-#: library/functions/context.php:462
-msgid "404 Not Found"
-msgstr "404 Sivua ei löytynyt"
-
-#: library/extensions/breadcrumb-trail.php:494
-#: library/extensions/breadcrumb-trail.php:496
-#, php-format
-msgid "Page %d"
-msgstr "Sivu %d"
-
-#: library/extensions/breadcrumb-trail.php:565
-msgid "Split"
-msgstr "Jaa"
-
-#: library/extensions/breadcrumb-trail.php:569
-msgid "Merge"
-msgstr "Yhdistä"
-
-#: library/extensions/breadcrumb-trail.php:676
+#: library/extensions/breadcrumb-trail.php:1031
 #: library/functions/core-seo.php:90
 msgid "F Y"
 msgstr "F Y"
 
-#: library/extensions/breadcrumb-trail.php:680
+#: library/extensions/breadcrumb-trail.php:1035
 msgid "F j, Y"
 msgstr "j.m.Y"
+
+#: library/extensions/breadcrumb-trail.php:1150
+msgid "Split"
+msgstr "Jaa"
+
+#: library/extensions/breadcrumb-trail.php:1154
+msgid "Merge"
+msgstr "Yhdistä"
 
 #: library/extensions/custom-field-series.php:86
 msgid "Articles in this series"
@@ -1060,45 +975,13 @@ msgstr "Samaan aihepiiriin liittyvät artikkelit"
 msgid "Series"
 msgstr "Tähän liittyvät artikkelit"
 
-#: library/extensions/post-format-tools.php:96
-msgid "Asides"
-msgstr "Sivuhuomautukset"
-
-#: library/extensions/post-format-tools.php:97
-msgid "Audio"
-msgstr "Audio"
-
-#: library/extensions/post-format-tools.php:98
-msgid "Chats"
-msgstr "Keskustelut"
-
-#: library/extensions/post-format-tools.php:99
-msgid "Images"
-msgstr "Kuvat"
-
-#: library/extensions/post-format-tools.php:100
-msgid "Galleries"
-msgstr "Galleriat"
-
-#: library/extensions/post-format-tools.php:101
-msgid "Links"
-msgstr "Linkit"
-
-#: library/extensions/post-format-tools.php:102
-msgid "Quotes"
-msgstr "Lainaukset"
-
-#: library/extensions/post-format-tools.php:103
-msgid "Status Updates"
-msgstr "Tilapäivitykset"
-
-#: library/extensions/post-format-tools.php:104
-msgid "Videos"
-msgstr "Videot"
-
-#: library/extensions/post-stylesheets.php:279
+#: library/extensions/post-stylesheets.php:286
 msgid "Stylesheet"
 msgstr "Tyylitiedosto"
+
+#: library/extensions/theme-fonts.php:401
+msgid "Fonts"
+msgstr "Fontit"
 
 #: library/extensions/theme-layouts.php:337
 msgid "Default"
@@ -1128,17 +1011,17 @@ msgstr "Kolme  saraketta, sisältö oikealla"
 msgid "Three Columns, Center"
 msgstr "Kolme saraketta, sisältö keskellä"
 
-#: library/extensions/theme-layouts.php:421
-#: library/extensions/theme-layouts.php:531
-#: library/extensions/theme-layouts.php:616
+#: library/extensions/theme-layouts.php:428
+#: library/extensions/theme-layouts.php:538
+#: library/extensions/theme-layouts.php:623
 msgid "Layout"
 msgstr "Ulkoasu"
 
-#: library/extensions/theme-layouts.php:447
+#: library/extensions/theme-layouts.php:454
 msgid "Layout is a theme-specific structure for the single view of the post."
 msgstr "Tällä voi vaihtaa yksittäisen sivun tai artikkelin ulkoasua."
 
-#: library/extensions/theme-layouts.php:649
+#: library/extensions/theme-layouts.php:656
 msgid "Global Layout"
 msgstr "Globaali ulkoasu"
 
@@ -1155,7 +1038,6 @@ msgid "Comment"
 msgstr "Kommentti"
 
 #: library/functions/comments.php:196
-#, php-format
 msgid ""
 "You must be <a href=\"%1$s\" title=\"Log in\">logged in</a> to post a "
 "comment."
@@ -1164,7 +1046,6 @@ msgstr ""
 "kirjoittaaksesi kommentin."
 
 #: library/functions/comments.php:197
-#, php-format
 msgid "Logged in as <a href=\"%1$s\" title=\"%2$s\">%2$s</a>."
 msgstr "Kirjautuneena nimellä <a href=\"%1$s\" title=\"%2$s\">%2$s</a>."
 
@@ -1181,7 +1062,6 @@ msgid "Leave a Reply"
 msgstr "Jätä kommentti"
 
 #: library/functions/comments.php:203
-#, php-format
 msgid "Leave a Reply to %s"
 msgstr "Jätä kommentti %s"
 
@@ -1193,39 +1073,42 @@ msgstr "Klikkaa tästä peruuttaaksesi vastauksen."
 msgid "Post Comment"
 msgstr "Lähetä  kommentti"
 
-#: library/functions/context.php:429 library/functions/context.php:435
-#: library/functions/context.php:438 library/functions/context.php:444
-#: library/functions/context.php:447
-#, php-format
-msgid "Archive for %1$s"
-msgstr "Arkisto: %1$s"
+#: library/functions/context.php:553 library/functions/context.php:559
+#: library/functions/context.php:562 library/functions/context.php:568
+#: library/functions/context.php:571
+msgid "Archive for %s"
+msgstr "Arkisto: %s"
 
-#: library/functions/context.php:432
-#, php-format
-msgid "Archive for minute %1$s"
-msgstr "Minuuttiarkisto %1$s"
+#: library/functions/context.php:556
+msgid "Archive for minute %s"
+msgstr "Minuuttiarkisto %s"
 
-#: library/functions/context.php:438
+#: library/functions/context.php:556
+msgid "i"
+msgstr "i"
+
+#: library/functions/context.php:562
 msgid "F jS, Y"
 msgstr "F jS, Y"
 
-#: library/functions/context.php:441
-#, php-format
-msgid "Archive for week %1$s of %2$s"
-msgstr "Viikkoarkisto %1$s of %2$s"
+#: library/functions/context.php:565
+msgid "Archive for week %s of %s"
+msgstr "Viikkoarkisto %s / %s"
 
-#: library/functions/context.php:466
-#, php-format
+#: library/functions/context.php:565
+msgid "W"
+msgstr "W"
+
+#: library/functions/context.php:590
 msgid "%1$s Page %2$s"
 msgstr "%1$s Sivu %2$s"
 
 #: library/functions/core-seo.php:97
-#, php-format
 msgid "Copyright (c) %1$s"
 msgstr "Copyright (c) %1$s"
 
-#: library/functions/core-seo.php:116 library/functions/shortcodes.php:218
-#: library/functions/shortcodes.php:378
+#: library/functions/core-seo.php:116 library/functions/shortcodes.php:237
+#: library/functions/shortcodes.php:451 library/functions/shortcodes.php:455
 msgid "l, F jS, Y, g:i a"
 msgstr "l j.m.Y, G:i"
 
@@ -1233,8 +1116,7 @@ msgstr "l j.m.Y, G:i"
 msgid "Footer"
 msgstr "Alapalkki"
 
-#: library/functions/deprecated.php:587
-#, php-format
+#: library/functions/deprecated.php:684
 msgid ""
 "<code>%1$s</code> &mdash; This function has been removed or replaced by "
 "another function."
@@ -1257,15 +1139,51 @@ msgctxt "nav menu location"
 msgid "Subsidiary"
 msgstr "Kolmas menu"
 
-#: library/functions/settings.php:76 library/functions/settings.php:80
+#: library/functions/post-formats.php:111
+msgid "Asides"
+msgstr "Sivuhuomautukset"
+
+#: library/functions/post-formats.php:112
+msgid "Audio"
+msgstr "Audio"
+
+#: library/functions/post-formats.php:113
+msgid "Chats"
+msgstr "Keskustelut"
+
+#: library/functions/post-formats.php:114
+msgid "Images"
+msgstr "Kuvat"
+
+#: library/functions/post-formats.php:115
+msgid "Galleries"
+msgstr "Galleriat"
+
+#: library/functions/post-formats.php:116
+msgid "Links"
+msgstr "Linkit"
+
+#: library/functions/post-formats.php:117
+msgid "Quotes"
+msgstr "Lainaukset"
+
+#: library/functions/post-formats.php:118
+msgid "Status Updates"
+msgstr "Tilapäivitykset"
+
+#: library/functions/post-formats.php:119
+msgid "Videos"
+msgstr "Videot"
+
+#: library/functions/settings.php:83 library/functions/settings.php:87
 msgid "Copyright &#169; [the-year] [site-link]."
 msgstr "Copyright &#169; [the-year] [site-link]."
 
-#: library/functions/settings.php:76
+#: library/functions/settings.php:83
 msgid "Powered by [wp-link], [theme-link], and [child-link]."
 msgstr "Alustana [wp-link], [theme-link] ja [child-link]."
 
-#: library/functions/settings.php:80
+#: library/functions/settings.php:87
 msgid "Powered by [wp-link] and [theme-link]."
 msgstr "Alustana [wp-link] ja [theme-link]."
 
@@ -1278,7 +1196,6 @@ msgid "WordPress"
 msgstr "WordPress"
 
 #: library/functions/shortcodes.php:106
-#, php-format
 msgid "%s WordPress Theme"
 msgstr "%s WordPress teema"
 
@@ -1291,63 +1208,52 @@ msgid "Log in"
 msgstr "Kirjaudu sisään"
 
 #: library/functions/shortcodes.php:151
-#, php-format
 msgid "This page loaded in %1$s seconds with %2$s database queries."
 msgstr ""
 "Sivu ladattiin %1$s sekunnissa, aikaa meni %2$s tietokannan kyselyihin."
 
-#: library/functions/shortcodes.php:204 library/functions/shortcodes.php:448
-#, php-format
+#: library/functions/shortcodes.php:205 library/functions/shortcodes.php:527
 msgid "Edit %1$s"
 msgstr "Editoi %1$s"
 
-#: library/functions/shortcodes.php:234
+#: library/functions/shortcodes.php:257
 msgid "Leave a response"
 msgstr "Jätä kommentti"
 
-#: library/functions/shortcodes.php:234
-#, php-format
+#: library/functions/shortcodes.php:258
 msgid "%1$s Response"
 msgstr "%1$s Kommentti"
 
-#: library/functions/shortcodes.php:234
-#, php-format
+#: library/functions/shortcodes.php:259
 msgid "%1$s Responses"
 msgstr "%1$s Kommenttia"
 
-#: library/functions/shortcodes.php:241 library/functions/shortcodes.php:243
-#: library/functions/shortcodes.php:245
-#, php-format
+#: library/functions/shortcodes.php:274 library/functions/shortcodes.php:276
+#: library/functions/shortcodes.php:278
 msgid "Comment on %1$s"
 msgstr "Kommentti %1$s"
 
-#: library/functions/shortcodes.php:310
-msgid "(Untitled)"
-msgstr "(Ei otsikkoa)"
-
-#: library/functions/shortcodes.php:326
+#: library/functions/shortcodes.php:385
 msgid "Shortlink"
 msgstr "Pikalinkki"
 
-#: library/functions/shortcodes.php:350 library/functions/shortcodes.php:427
+#: library/functions/shortcodes.php:410 library/functions/shortcodes.php:506
 msgid "Permalink"
 msgstr "Pikalinkki"
 
-#: library/functions/shortcodes.php:378
-#, php-format
+#: library/functions/shortcodes.php:455
 msgid "%1$s at %2$s"
 msgstr "%1$s / %2$s"
 
-#: library/functions/shortcodes.php:427
-#, php-format
+#: library/functions/shortcodes.php:506
 msgid "Permalink to comment %1$s"
 msgstr "Pikalinkki kommenttiin %1$s"
 
-#: library/functions/shortcodes.php:467
+#: library/functions/shortcodes.php:546
 msgid "Reply"
 msgstr "Vastaa"
 
-#: library/functions/shortcodes.php:468
+#: library/functions/shortcodes.php:547
 msgid "Log in to reply."
 msgstr "Kirjaudu sisään vastataksesi."
 
@@ -1420,18 +1326,95 @@ msgstr ""
 "Ladataan yksittäisen sivun (artikkelin, kuvasivun jne.) jälkeen ennen "
 "kommenttialuetta."
 
+#: library/functions/utility.php:197
+msgid "(Untitled)"
+msgstr "(Ei otsikkoa)"
+
+#: loop-error.php:17
+msgid "Apologies, but no entries were found."
+msgstr "Pahoittelut, mutta yhtään artikkelia ei löytynyt."
+
+#: loop-meta.php:124
+msgid "You are browsing the search results for &quot;%1$s&quot;"
+msgstr "Hakutulokset haulle: &quot;%1$s&quot;"
+
+#: loop-meta.php:139
+msgid "Archives by date"
+msgstr "Arkistot"
+
+#: loop-meta.php:143
+msgid "You are browsing the site archives by date."
+msgstr "Selaat päiväkohtaista arkistoa."
+
+#: loop-meta.php:183
+msgid "You are browsing the site archives."
+msgstr "Selaat sivun arkistoa."
+
+#: loop-nav.php:18
+msgid "<span class=\"meta-nav\">&larr;</span> Return to entry"
+msgstr "<span class=\"meta-nav\">&larr;</span> Palaa takaisin"
+
+#: menu-primary.php:19
+msgid "Skip to content"
+msgstr "Hyppää sisältöön"
+
+#: menu-primary.php:25
+msgid "Menu"
+msgstr "Navigointi"
+
 #: page-templates/front-page.php:51
 msgid "Latest News"
 msgstr "Tuoreimmat uutiset"
 
 #: page-templates/front-page.php:53 page-templates/front-page.php:105
-#, php-format
 msgid "%1$s"
 msgstr "%1$s"
 
 #: page-templates/front-page.php:103
 msgid "Latest Portfolios"
 msgstr "Uusimmat referenssit"
+
+#: search.php:43
+msgid "[entry-published] &mdash; <code>%s</code>"
+msgstr "[entry-published] &mdash; <code>%s</code>"
+
+#: searchform.php:17
+msgid "Search..."
+msgstr "Etsi..."
+
+#. Theme Name of the plugin/theme
+msgid "Hopeareunus"
+msgstr "Hopeareunus"
+
+#. Theme URI of the plugin/theme
+msgid "https://foxnet-themes.fi/downloads/hopeareunus"
+msgstr "https://foxnet-themes.fi/downloads/hopeareunus"
+
+#. Description of the plugin/theme
+msgid ""
+"Hopeareunus is designed for business and portfolio sites. But blogging "
+"features are pretty cool too."
+msgstr ""
+"Hopeareunus on suunniteltu yritys -ja portfolio sivustojen teemaksi. "
+"Kuitenkaan blogitoimintoja unohtamatta."
+
+#. Author of the plugin/theme
+msgid "Sami Keijonen"
+msgstr "Sami Keijonen"
+
+#. Author URI of the plugin/theme
+msgid "https://foxnet-themes.fi"
+msgstr "https://foxnet-themes.fi"
+
+#. Template Name of the plugin/theme
+msgid "Front Page"
+msgstr "Etusivu"
+
+#~ msgid "Search results for &quot;%1$s&quot;"
+#~ msgstr "Hakutulokset haulle: &quot;%1$s&quot;"
+
+#~ msgid "No templates exist for this post type."
+#~ msgstr "Tälle artikkelityypille ei löytynyt sivupohjaa."
 
 #~ msgid ""
 #~ "<span class=\"hopeareunus-post-format-link\">[post-format-link]</span> "
