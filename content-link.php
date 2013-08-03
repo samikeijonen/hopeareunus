@@ -19,7 +19,7 @@ do_atomic( 'before_entry' ); // hopeareunus_before_entry ?>
 	<?php if ( is_singular() && is_main_query() ) { ?>
 			
 		<header class="entry-header">
-			<?php echo apply_atomic_shortcode( 'entry_title', '[entry-title]' ); ?>
+			<h1 class="entry-title"><a href="<?php echo esc_url( hopeareunus_get_link_url() ); ?>"><?php single_post_title(); ?> <span class="meta-nav">&rarr;</span></a></h1>
 			<?php echo apply_atomic_shortcode( 'byline', '<div class="byline">' . sprintf( __( '<span class="hopeareunus-post-format-link">[post-format-link]</span> <span class="published-date">[entry-published]</span> %s [entry-edit-link]', 'hopeareunus' ), hybrid_entry_comments_link_shortcode( array( 'before' => '<span class="hopeareunus-comments-link">', 'after' => '</span>' ) ) ) . '</div>' ); ?>
 		</header><!-- .entry-header -->
 			
@@ -38,7 +38,7 @@ do_atomic( 'before_entry' ); // hopeareunus_before_entry ?>
 
 			<header class="entry-header">
 				<?php if ( current_theme_supports( 'get-the-image' ) ) get_the_image( array( 'meta_key' => 'Thumbnail', 'size' => 'thumbnail' ) ); ?>
-				<?php the_title( '<h2 class="entry-title"><a href="' . esc_url( post_format_tools_url_grabber() ) . '" title="' . the_title_attribute( array( 'echo' => false ) ) . '">', '<span class="meta-nav">&rarr;</span></a></h2>' ); ?>
+				<?php the_title( '<h2 class="entry-title"><a href="' . esc_url( hopeareunus_get_link_url() ) . '" title="' . the_title_attribute( array( 'echo' => false ) ) . '">', '<span class="meta-nav">&rarr;</span></a></h2>' ); ?>
 			</header><!-- .entry-header -->
 			
 		<?php } else { ?>

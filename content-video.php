@@ -34,14 +34,9 @@ do_atomic( 'before_entry' ); // hopeareunus_before_entry ?>
 
 	<?php } else { ?>
 	
-		<?php
-		/* Get video from content. */
-		$hopeareunus_video = post_format_tools_get_video();
-		?>
-	
-		<?php if( !empty( $hopeareunus_video ) ) { ?>
-			<div class="hopeareunus-video"><?php echo $hopeareunus_video; ?></div>
-		<?php } ?>
+		<div class="hopeareunus-video">
+			<?php echo hybrid_media_grabber( array( 'type' => 'video' ) ); ?>
+		</div>
 
 		<header class="entry-header">
 			<?php echo apply_atomic_shortcode( 'entry_title', '[entry-title]' ); ?>
@@ -52,13 +47,6 @@ do_atomic( 'before_entry' ); // hopeareunus_before_entry ?>
 				<div class="entry-summary">
 					<?php the_excerpt(); ?>
 				</div><!-- .entry-summary -->
-
-			<?php } elseif ( empty( $hopeareunus_video ) ) { ?>
-
-				<div class="entry-content">
-					<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'hopeareunus' ) ); ?>
-					<?php wp_link_pages( array( 'before' => '<p class="page-links">' . __( 'Pages:', 'hopeareunus' ), 'after' => '</p>' ) ); ?>
-				</div><!-- .entry-content -->
 
 			<?php } ?>
 

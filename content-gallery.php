@@ -46,7 +46,7 @@ do_atomic( 'before_entry' ); // hopeareunus_before_entry ?>
 			<?php the_excerpt(); ?>
 			<?php wp_link_pages( array( 'before' => '<p class="page-links">' . __( 'Pages:', 'hopeareunus' ), 'after' => '</p>' ) ); ?>
 		
-			<?php $hopeareunus_image_count = post_format_tools_get_image_attachment_count(); ?>
+			<?php $hopeareunus_image_count = hybrid_get_gallery_image_count(); ?>
 			<p class="image-count"><?php printf( _n( 'This gallery contains %s image.', 'This gallery contains %s images.', $hopeareunus_image_count, 'hopeareunus' ), $hopeareunus_image_count ); ?></p>
 		
 		</div><!-- .entry-summary -->

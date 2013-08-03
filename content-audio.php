@@ -37,19 +37,18 @@ do_atomic( 'before_entry' ); // hopeareunus_before_entry ?>
 		<header class="entry-header">
 			<?php echo apply_atomic_shortcode( 'entry_title', '[entry-title]' ); ?>
 		</header><!-- .entry-header -->
+		
+		<div class="entry-media">
+			<div class="audio-content">
+				<?php echo hybrid_media_grabber( array( 'type' => 'audio' ) ); ?>
+			</div><!-- .audio-content -->
+		</div><!-- .entry-media -->
 
 		<?php if ( has_excerpt() ) { ?>
 
 			<div class="entry-summary">
 				<?php the_excerpt(); ?>
 			</div><!-- .entry-summary -->
-
-		<?php } else { ?>
-
-			<div class="entry-content">
-				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'hopeareunus' ) ); ?>
-				<?php wp_link_pages( array( 'before' => '<p class="page-links">' . __( 'Pages:', 'hopeareunus' ), 'after' => '</p>' ) ); ?>
-			</div><!-- .entry-content -->
 
 		<?php } ?>
 
