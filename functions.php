@@ -481,7 +481,7 @@ function hopeareunus_register_sidebars() {
 	register_sidebar(
 		array(
 			'id' => 'front-page',
-			'name' => __( 'Front Page', 'hopeareunus' ),
+			'name' => __( 'Front Page Widget', 'hopeareunus' ),
 			'description' => __( 'Front Page widget area.', 'hopeareunus' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s widget-%2$s"><div class="widget-wrap widget-inside">',
 			'after_widget' => '</div></section>',
