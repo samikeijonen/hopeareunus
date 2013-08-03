@@ -58,6 +58,9 @@ function hopeareunus_theme_setup() {
 	add_theme_support( 'cleaner-caption' );
 	add_theme_support( 'featured-header' );
 	
+	/* Add theme support for media grabber. */
+	add_theme_support( 'hybrid-core-media-grabber' );
+	
 	/* Add theme support for WordPress features. */
 	
 	/* Add content editor styles. */
@@ -67,7 +70,8 @@ function hopeareunus_theme_setup() {
 	add_theme_support( 'automatic-feed-links' );
 
 	/* Add theme support for post formats. */
-	add_theme_support( 'post-formats', array( 'aside', 'audio', 'chat', 'image', 'gallery', 'link', 'quote', 'status', 'video' ) );
+	add_theme_support( 'structured-post-formats', array( 'link' ) );
+	add_theme_support( 'post-formats', array( 'aside', 'audio', 'chat', 'image', 'gallery', 'quote', 'status', 'video' ) );
 	
 	/* Add custom background feature. */
 	add_theme_support( 
@@ -130,9 +134,6 @@ function hopeareunus_theme_setup() {
 	add_filter( 'body_class', 'hopeareunus_subsidiary_classes' );
 	add_filter( 'body_class', 'hopeareunus_front_page_classes' );
 	
-	/* Add infinity symbol to aside post format. */
-	add_filter( 'the_content', 'hopeareunus_aside_infinity', 9 );
-	
 	/* Set customizer transport. */
 	add_action( 'customize_register', 'hopeareunus_customize_register' );
 	
@@ -150,9 +151,6 @@ function hopeareunus_theme_setup() {
 	
 	/* Add menu-item-parent class to parent menu items.  */
 	add_filter( 'wp_nav_menu_objects', 'hopeareunus_add_menu_parent_class' );
-	
-	/* Use some early Hybrid Core 1.6 proposed HTML5 changes. */
-	add_filter( "{$prefix}_sidebar_defaults", 'hopeareunus_sidebar_defaults' );
 	
 	/* Add new body class if there is attachments. */
 	add_filter( 'body_class', 'hopeareunus_add_body_attachments' );
@@ -418,23 +416,6 @@ function hopeareunus_front_page_classes( $classes ) {
 }
 
 /**
- * Add infinity symbol to aside post format.
- * @author Justin Tadlock <justin@justintadlock.com>
- * @copyright Copyright (c) 2012
- * @link http://justintadlock.com/archives/2012/09/06/post-formats-aside
- * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
- * @since 0.1.0
- */
-function hopeareunus_aside_infinity( $content ) {
-	
-	if ( has_post_format( 'aside' ) && !is_singular() )
-		$content .= ' <a href="' . get_permalink() . '">&#8734;</a>';
-
-	return $content;
-	
-}
-
-/**
  * Add postMessage support for site title and description for the Theme Customizer.
  * @since 0.1.0
  * @note: credit goes to TwentyTwelwe theme.
@@ -539,26 +520,6 @@ function hopeareunus_add_menu_parent_class( $items ) {
 }
 
 /**
- * Use HTML5 markup in sidebars.
- *
- * @todo Remember to take of when Hybric Core 1.6 is released.
- * 
- * @since 0.1.0
- */
-function hopeareunus_sidebar_defaults( $defaults ) {
-
-	$defaults = array(
-		'before_widget' => '<section id="%1$s" class="widget %2$s widget-%2$s">',
-		'after_widget' => '</section>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>'
-	);
-
-	return $defaults;
-	
-}
-
-/**
 * Returns a link to the porfolio item URL if it has been set.
 *
 * @since  0.1.0
@@ -655,6 +616,30 @@ function hopeareunus_check_attachments() {
 
 	}
 	
+}
+
+/**
+ * Returns the URL from the post.
+ *
+ * @uses get_url_in_content() to get the URL in the post meta (if it exists) or
+ * the first link found in the post content.
+ *
+ * Falls back to the post permalink if no URL is found in the post.
+ *
+ * @note This idea is taken from Twenty Thirteen theme.
+ * @author wordpressdotorg
+ * @copyright Copyright (c) 2011, wordpressdotorg
+ *
+ * @since 0.2.0
+ */
+function hopeareunus_get_link_url() {
+
+	$hopeareunus_content = get_the_content();
+
+	$hopeareunus_url = get_url_in_content( $hopeareunus_content );
+
+	return ( $hopeareunus_url ) ? $hopeareunus_url : apply_filters( 'the_permalink', get_permalink() );
+
 }
 
 ?>
