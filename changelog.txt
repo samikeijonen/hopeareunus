@@ -1,9 +1,16 @@
+August 9, 2013 - version 0.1.3.1
+
+* style.min.css updated.
+
+August 9, 2013 - version 0.1.3
+
+* Hybrid Core update to version 1.6.
+* Language files updated.
+
 April 2, 2013 - version 0.1.2.3
 
 * Add hopeareunus_singular_loop_nav filter to loop-nav.php.
-
 * Add menu parent class using filter wp_nav_menu_objects and remove it from js.
-
 * Removed .sub-indicator and added #menu-primary .menu-item-parent > a to styles.
 
 March 15, 2013 - version 0.1.2.2
