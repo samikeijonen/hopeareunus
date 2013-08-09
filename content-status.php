@@ -12,7 +12,7 @@
  
 do_atomic( 'before_entry' ); // hopeareunus_before_entry ?>
 
-<article id="post-<?php the_ID(); ?>" class="<?php hybrid_entry_class(); ?>">
+<article <?php hybrid_post_attributes(); ?>>
 
 	<?php do_atomic( 'open_entry' ); // hopeareunus_open_entry ?>
 	
