@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Hopeareunus WordPress Theme\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/hopeareunus\n"
-"POT-Creation-Date: 2013-08-03 21:00:48+00:00\n"
-"PO-Revision-Date: 2013-08-04 00:27+0200\n"
+"POT-Creation-Date: 2013-08-09 10:14:31+00:00\n"
+"PO-Revision-Date: 2013-08-09 13:14+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Foxnet Themes <sami.keijonen@foxnet.fi>\n"
 "Language: fi_FI\n"
@@ -974,6 +974,10 @@ msgstr "Samaan aihepiiriin liittyvät artikkelit"
 #: library/extensions/custom-field-series.php:212
 msgid "Series"
 msgstr "Tähän liittyvät artikkelit"
+
+#: library/extensions/featured-header.php:202
+msgid "Featured Header"
+msgstr "Otsake-kuva"
 
 #: library/extensions/post-stylesheets.php:286
 msgid "Stylesheet"
