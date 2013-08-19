@@ -104,4 +104,4 @@
 
 			<?php do_atomic( 'open_main' ); // hopeareunus_open_main ?>
 
-			<?php if ( current_theme_supports( 'breadcrumb-trail' ) ) breadcrumb_trail( array( 'container' => 'nav', 'before' => __( 'You are here:', 'hopeareunus' ), 'separator'  => __( '&#8764;', 'hopeareunus' ), 'show_on_front' => false ) ); ?>
+			<?php if ( current_theme_supports( 'breadcrumb-trail' ) ) breadcrumb_trail( array( 'container' => 'nav', 'before' => __( 'You are here:', 'hopeareunus' ), 'show_browse' => false, 'separator'  => __( '&#8764;', 'hopeareunus' ), 'show_on_front' => false ) ); ?>

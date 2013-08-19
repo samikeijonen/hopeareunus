@@ -1,3 +1,7 @@
+August 19, 2013 - version 0.1.3.2
+
+* Remove extra Browse from breadcrumb trail
+
 August 9, 2013 - version 0.1.3.1
 
 * style.min.css updated.
