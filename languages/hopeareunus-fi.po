@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Hopeareunus WordPress Theme\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/hopeareunus\n"
-"POT-Creation-Date: 2013-08-09 10:14:31+00:00\n"
-"PO-Revision-Date: 2013-08-09 13:14+0200\n"
+"POT-Creation-Date: 2013-10-30 18:42:30+00:00\n"
+"PO-Revision-Date: 2013-10-30 20:44+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Foxnet Themes <sami.keijonen@foxnet.fi>\n"
 "Language: fi_FI\n"
@@ -245,15 +245,15 @@ msgstr ""
 "<span class=\"published-date\">[entry-published]</span> [entry-author] %s "
 "[entry-edit-link]"
 
-#: functions.php:484
+#: functions.php:483
 msgid "Front Page Widget"
 msgstr "Etusivun vimpainalue."
 
-#: functions.php:485
+#: functions.php:484
 msgid "Front Page widget area."
 msgstr "Etusivun vimpainalue."
 
-#: functions.php:532
+#: functions.php:531
 msgid "Visit site"
 msgstr "Vieraile sivulla"
 
@@ -459,7 +459,7 @@ msgstr "Vimpain, jolla hallitaan arkistoja."
 #: library/classes/widget-archives.php:44
 #: library/classes/widget-archives.php:142
 #: library/extensions/breadcrumb-trail.php:180
-#: library/functions/context.php:576 loop-meta.php:179
+#: library/functions/context.php:576 loop-meta.php:186
 msgid "Archives"
 msgstr "Arkistot"
 
@@ -1342,15 +1342,25 @@ msgstr "Pahoittelut, mutta yhtään artikkelia ei löytynyt."
 msgid "You are browsing the search results for &quot;%1$s&quot;"
 msgstr "Hakutulokset haulle: &quot;%1$s&quot;"
 
-#: loop-meta.php:139
+#: loop-meta.php:137
+msgctxt "daily archives date format"
+msgid "F d, Y"
+msgstr "j.n.Y"
+
+#: loop-meta.php:141
+msgctxt "year archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: loop-meta.php:148
 msgid "Archives by date"
 msgstr "Arkistot"
 
-#: loop-meta.php:143
-msgid "You are browsing the site archives by date."
-msgstr "Selaat päiväkohtaista arkistoa."
+#: loop-meta.php:151
+msgid "You are browsing the site archives for %s."
+msgstr "Selaat arkistoa ajankohdalle %s."
 
-#: loop-meta.php:183
+#: loop-meta.php:190
 msgid "You are browsing the site archives."
 msgstr "Selaat sivun arkistoa."
 
@@ -1413,6 +1423,9 @@ msgstr "https://foxnet-themes.fi"
 #. Template Name of the plugin/theme
 msgid "Front Page"
 msgstr "Etusivu"
+
+#~ msgid "You are browsing the site archives by date."
+#~ msgstr "Selaat päiväkohtaista arkistoa."
 
 #~ msgid "Search results for &quot;%1$s&quot;"
 #~ msgstr "Hakutulokset haulle: &quot;%1$s&quot;"

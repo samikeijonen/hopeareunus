@@ -130,7 +130,16 @@
 			</div><!-- .wrap -->
 		</div><!-- #hopeareunus-header-title -->
 
-	<?php elseif ( is_date() ) : ?>
+	<?php elseif ( is_day() || is_month() || is_year() ) : ?>
+	
+		<?php
+		if ( is_day() )
+			$date = get_the_time( _x( 'F d, Y', 'daily archives date format', 'hopeareunus' ) );
+		elseif ( is_month() )
+			$date = single_month_title( ' ', false );
+		elseif ( is_year() )
+			$date = get_the_time( _x( 'Y', 'year archives date format', 'hopeareunus' ) );
+		?>
 	
 		<div id="hopeareunus-header-title">
 			<div class="wrap">
@@ -139,9 +148,7 @@
 					<h1 class="loop-title"><?php _e( 'Archives by date', 'hopeareunus' ); ?></h1>
 
 					<div class="loop-description">
-						<p>
-						<?php _e( 'You are browsing the site archives by date.', 'hopeareunus' ); ?>
-						</p>
+						<?php echo wpautop( sprintf( __( 'You are browsing the site archives for %s.', 'hopeareunus' ), $date ) ); ?>
 					</div><!-- .loop-description -->
 
 				</div><!-- .loop-meta -->
