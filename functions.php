@@ -70,8 +70,7 @@ function hopeareunus_theme_setup() {
 	add_theme_support( 'automatic-feed-links' );
 
 	/* Add theme support for post formats. */
-	add_theme_support( 'structured-post-formats', array( 'link' ) );
-	add_theme_support( 'post-formats', array( 'aside', 'audio', 'chat', 'image', 'gallery', 'quote', 'status', 'video' ) );
+	add_theme_support( 'post-formats', array( 'aside', 'audio', 'chat', 'image', 'gallery', 'link', 'quote', 'status', 'video' ) );
 	
 	/* Add custom background feature. */
 	add_theme_support( 
