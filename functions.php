@@ -8,7 +8,7 @@
  * @subpackage  Functions
  * @version     0.1.0
  * @author      Sami Keijonen <sami.keijonen@foxnet.fi>
- * @copyright   Copyright (c) 2012, Sami Keijonen
+ * @copyright   Copyright (c) 2014, Sami Keijonen
  * @link        https://foxnet-themes.fi
  * @license     http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
@@ -19,6 +19,9 @@ new Hybrid();
 
 /* Theme setup function using 'after_setup_theme' hook. */
 add_action( 'after_setup_theme', 'hopeareunus_theme_setup' );
+
+/* Add support for a custom header image. */
+require trailingslashit( get_template_directory() ) . 'includes/custom-header.php';
 
 /**
  * Theme setup function. This function adds support for theme features and defines the default theme
@@ -79,21 +82,6 @@ function hopeareunus_theme_setup() {
 			'default-color' => 'ffffff' // Background default color
 		)
 	);
-	
-	/* Add support for flexible headers. @link http://make.wordpress.org/themes/2012/04/06/updating-custom-backgrounds-and-custom-headers-for-wordpress-3-4/ */
-	
-	$hopeareunus_header_args = array(
-		'flex-height' => true,
-		'height' => apply_filters( 'hopeareunus_header_height', 379 ),
-		'flex-width' => true,
-		'width' => apply_filters( 'hopeareunus_header_width', 1920 ),
-		'default-image' => trailingslashit( get_template_directory_uri() ) . 'images/hopeareunus_header_default.jpg',
-		'header-text' => false,
-		'admin-head-callback' => 'hopeareunus_admin_header_style',
-		'admin-preview-callback' => 'hopeareunus_admin_header_image',
-	);
-	
-	add_theme_support( 'custom-header', $hopeareunus_header_args );
 	
 	/* Set up Licence key for this theme. URL: https://easydigitaldownloads.com/docs/activating-license-keys-in-wp-plugins-and-themes */
  
@@ -188,42 +176,6 @@ function hopeareunus_theme_updater() {
 	);
 
 }
-
-/**
- * Styles the header image displayed on the Appearance > Header admin panel.
- *
- * @since  0.1.0
- */
-function hopeareunus_admin_header_style() {
-?>
-	<style type="text/css">
-	.appearance_page_custom-header #headimg {
-		border: none;
-		max-width: 60%;
-	}
-	#headimg img {
-		max-width: 90%;
-		height: auto;
-	}
-	</style>
-<?php
-}
-
-/**
- * Outputs markup to be displayed on the Appearance > Header admin panel.
- * This callback overrides the default markup displayed there.
- *
- * @since  0.1.0
- */
-function hopeareunus_admin_header_image() {
-	?>
-	<div id="headimg">
-		<?php $header_image = get_header_image();
-		if ( ! empty( $header_image ) ) : ?>
-			<img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" />
-		<?php endif; ?>
-	</div>
-<?php }
 
 /**
  * Overwrites the default widths for embeds. This function overwrites what the $content_width variable handles
