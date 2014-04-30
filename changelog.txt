@@ -1,3 +1,9 @@
+April 30, 2014 - version 0.1.4
+
+* Update Hybrid Core to 1.6.3
+* Fix default header image code and move it in it's own function.
+* Update translation files.
+
 October 30, 2013 - version 0.1.3.3
 
 * Update Hybrid Core to 1.6.1
