@@ -13,6 +13,20 @@
  * @license     http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
  
+/**
+ * The current version of the theme.
+ */
+define( 'HOPEAREUNUS_VERSION', '1.1.0' );
+
+/**
+ * The suffix to use for scripts.
+ */
+if ( ( defined( 'SCRIPT_DEBUG' ) && true === SCRIPT_DEBUG ) ) {
+	define( 'HOPEAREUNUS_SUFFIX', '' );
+} else {
+	define( 'HOPEAREUNUS_SUFFIX', '.min' );
+}
+ 
 /* Load Hybrid Core theme framework. */
 require_once( trailingslashit( get_template_directory() ) . 'library/hybrid.php' );
 new Hybrid();
@@ -83,22 +97,8 @@ function hopeareunus_theme_setup() {
 		)
 	);
 	
-	/* Set up Licence key for this theme. URL: https://easydigitaldownloads.com/docs/activating-license-keys-in-wp-plugins-and-themes */
- 
-	// this is the URL our updater / license checker pings. This should be the URL of the site with EDD installed.
-	define( 'HOPEAREUNUS_SL_STORE_URL', 'http://foxnet-themes.fi' ); // add your own unique prefix to prevent conflicts
-
-	// the name of your product. This should match the download name in EDD exactly.
-	define( 'HOPEAREUNUS_SL_THEME_NAME', 'Hopeareunus' ); // add your own unique prefix to prevent conflicts
-	
-	/* Define current version of hopeareunus. Get it from parent theme style.css. */
-	$hopeareunus_theme = wp_get_theme( 'hopeareunus' );
-	if ( $hopeareunus_theme->exists() ) {
-		define( 'HOPEAREUNUS_VERSION', $hopeareunus_theme->Version ); // Get parent theme hopeareunus version
-	}
-	
-	/* Setup updater. */
-	add_action( 'admin_init', 'hopeareunus_theme_updater' );
+	/* Set up theme updater for this theme. */
+	require( get_template_directory() . '/theme-updater/theme-updater.php' );
 	
 	/* Set content width. */
 	hybrid_set_content_width( 604 );
@@ -145,39 +145,6 @@ function hopeareunus_theme_setup() {
 }
 
 /**
- * Setup theme updater. @link https://gist.github.com/pippinsplugins/3ab7c0a01d5a9d8005ed
- *
- * @since  0.1.2
- */
-function hopeareunus_theme_updater() {
-
-	/* If there is no valid license key status, don't let updates. */
-	if( get_option( 'hopeareunus_license_key_status' ) != 'valid' )
-		return;
-
-	/* load our custom theme updater. */
-	if( !class_exists( 'EDD_SL_Theme_Updater' ) )
-		require_once( trailingslashit( get_template_directory() ) . 'includes/EDD_SL_Theme_Updater.php' );
-		
-	/* Get action/filter hook prefix. */
-	$prefix = hybrid_get_prefix();
-	
-	/* Get license key from database. */
-	$hopeareunus_get_license = get_option( $prefix . '_theme_settings' ); // This is array.
-	$hopeareunus_license = isset( $hopeareunus_get_license['hopeareunus_license_key'] ) ? $hopeareunus_get_license['hopeareunus_license_key'] : '';
-
-	$edd_updater = new EDD_SL_Theme_Updater( array( 
-		'remote_api_url' 	=> HOPEAREUNUS_SL_STORE_URL, 	// our store URL that is running EDD
-		'version' 			=> HOPEAREUNUS_VERSION, 		// the current theme version we are running
-		'license' 			=> $hopeareunus_license, 		// the license key (used get_option above to retrieve from DB)
-		'item_name' 		=> HOPEAREUNUS_SL_THEME_NAME,	// the name of this theme
-		'author'			=> 'Sami Keijonen'	            // the author's name
-		)
-	);
-
-}
-
-/**
  * Overwrites the default widths for embeds. This function overwrites what the $content_width variable handles
  * with context-based widths.
  *
@@ -205,7 +172,7 @@ function hopeareunus_respond_html5shiv() {
 	<!-- Enables media queries and html5 in some unsupported browsers. -->
 	<!--[if (lt IE 9) & (!IEMobile)]>
 	<script type="text/javascript" src="<?php echo trailingslashit( get_template_directory_uri() ); ?>js/respond/respond.min.js"></script>
-	<script type="text/javascript" src="<?php echo trailingslashit( get_template_directory_uri() ); ?>js/html5shiv/html5shiv.js"></script>
+	<script type="text/javascript" src="<?php echo trailingslashit( get_template_directory_uri() ); ?>js/html5shiv/html5shiv.min.js"></script>
 	<![endif]-->
 	
 	<?php
@@ -233,26 +200,26 @@ function hopeareunus_add_image_sizes() {
 function hopeareunus_scripts_styles() {
 	
 		/* Adds JavaScript for handling the navigation menu hide-and-show behavior. */
-		wp_enqueue_script( 'hopeareunus-navigation',  trailingslashit( get_template_directory_uri() ) . 'js/navigation/navigation.js', array(), '20130209', true );
+		wp_enqueue_script( 'hopeareunus-navigation',  trailingslashit( get_template_directory_uri() ) . 'js/navigation/navigation' . HOPEAREUNUS_SUFFIX . '.js', array(), HOPEAREUNUS_VERSION, true );
 	
 		/* Enqueue FitVids. */
-		wp_enqueue_script( 'hopeareunus-fitvids', trailingslashit( get_template_directory_uri() ) . 'js/fitvids/jquery.fitvids.min.js', array( 'jquery' ), '20130219', true );
+		wp_enqueue_script( 'hopeareunus-fitvids', trailingslashit( get_template_directory_uri() ) . 'js/fitvids/fitvids' . HOPEAREUNUS_SUFFIX . '.js', array( 'jquery' ), HOPEAREUNUS_VERSION, true );
 		
 		/* Enqueue Hopeareunus settings. */
-		wp_enqueue_script( 'hopeareunus-settings', trailingslashit( get_template_directory_uri() ) . 'js/settings/hopeareunus-settings.js', array( 'jquery', 'hopeareunus-fitvids' ), '20130219', true );
+		wp_enqueue_script( 'hopeareunus-settings', trailingslashit( get_template_directory_uri() ) . 'js/settings/settings' . HOPEAREUNUS_SUFFIX . '.js', array( 'jquery', 'hopeareunus-fitvids' ), HOPEAREUNUS_VERSION, true );
 	
 		/* Add google font. */
 		wp_enqueue_style( 'hopeareunus-fonts', 'http://fonts.googleapis.com/css?family=PT+Sans:400,700', false, '20130212', 'all' );
 		
 		/* Add Font Awesome fonts. */
-		wp_enqueue_style( 'hopeareunus-font-awesome', trailingslashit( get_template_directory_uri() ) . 'css/fontawesome/font-awesome.min.css', false, '20130212', 'all' );
+		wp_enqueue_style( 'hopeareunus-font-awesome', trailingslashit( get_template_directory_uri() ) . 'css/fontawesome/font-awesome.min.css', false, HOPEAREUNUS_VERSION, 'all' );
 		
 		/* Add flexslider js and css to singular portfolio page. */
 		if ( is_singular( 'portfolio_item' ) ) {
 			
-			wp_enqueue_script( 'hopeareunus-flexslider',  trailingslashit( get_template_directory_uri() ) . 'js/flexslider/jquery.flexslider-min.js', array( 'jquery' ), '20130215', true );
-			wp_enqueue_script( 'hopeareunus-flexslider-settings', trailingslashit( get_template_directory_uri() ) . 'js/flexslider/settings.flexslider.js', array( 'hopeareunus-flexslider' ), '20130215', true );
-			wp_enqueue_style( 'hopeareunus-flexslider-styles', trailingslashit( get_template_directory_uri() ) . 'css/flexslider/flexslider.min.css', false, '20130215', 'all' );
+			wp_enqueue_script( 'hopeareunus-flexslider',  trailingslashit( get_template_directory_uri() ) . 'js/flexslider/jquery.flexslider-min.js', array( 'jquery' ), HOPEAREUNUS_VERSION, true );
+			wp_enqueue_script( 'hopeareunus-flexslider-settings', trailingslashit( get_template_directory_uri() ) . 'js/flexslider/settings.flexslider.js', array( 'hopeareunus-flexslider' ), HOPEAREUNUS_VERSION, true );
+			wp_enqueue_style( 'hopeareunus-flexslider-styles', trailingslashit( get_template_directory_uri() ) . 'css/flexslider/flexslider.min.css', false, HOPEAREUNUS_VERSION, 'all' );
 	
 		}
 		
