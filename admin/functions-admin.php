@@ -37,16 +37,6 @@ function hopeareunus_theme_admin_setup() {
 /* Adds custom meta boxes to the theme settings page. */
 function hopeareunus_theme_settings_meta_boxes() {
 
-	/* Add a custom meta box for license key. */
-	add_meta_box(
-		'hopeareunus-theme-meta-box-license-key',    // Name/ID
-		__( 'Theme License Key', 'hopeareunus' ),    // Label
-		'hopeareunus_theme_meta_box_license_key',    // Callback function
-		'appearance_page_theme-settings',            // Page to load on, leave as is
-		'normal',                                    // Which meta box holder?
-		'high'                                       // High/low within the meta box holder
-	);
-
 	/* Add a custom meta box for customize. */
 	add_meta_box(
 		'hopeareunus-theme-meta-box-customomize',    // Name/ID
@@ -78,51 +68,6 @@ function hopeareunus_theme_settings_meta_boxes() {
 	);
 
 	/* Add additional add_meta_box() calls here. */
-}
-
-/* Function for displaying the license key meta box. */
-function hopeareunus_theme_meta_box_license_key() { 
-
-	$hopeareunus_license = hybrid_get_setting( 'hopeareunus_license_key' );
-	$hopeareunus_status = get_option( 'hopeareunus_license_key_status' ); // Save status in different option.
-	
-	?>
-
-	<table class="form-table">
-
-		<!-- License key -->
-		<tr>
-			<th>
-				<label for="<?php echo hybrid_settings_field_id( 'hopeareunus_license_key' ); ?>"><?php _e( 'License key:', 'hopeareunus' ); ?></label>
-			</th>
-			<td>
-				<p><input class="widefat" type="text" id="<?php echo hybrid_settings_field_id( 'hopeareunus_license_key' ); ?>" name="<?php echo hybrid_settings_field_name( 'hopeareunus_license_key' ); ?>" value="<?php echo esc_attr( hybrid_get_setting( 'hopeareunus_license_key' ) ); ?>" /></p>
-				<p><?php _e( 'Enter your license key here.', 'hopeareunus' ); ?></p>
-			</td>
-		</tr>
-		
-		<?php if( false !== $hopeareunus_license ) { ?>
-		<tr>	
-			<th scope="row" valign="top">
-				<label for="<?php echo hybrid_settings_field_id( 'hopeareunus_activate_license' ); ?>"><?php _e( 'Activate License:', 'hopeareunus' ); ?></label>
-			</th>
-			<td>
-			<?php if( false !== $hopeareunus_status && 'valid' == $hopeareunus_status ) { ?>
-				<span style="color:green;"><?php _e( 'Active', 'hopeareunus' ); ?></span>
-				<?php wp_nonce_field( 'hopeareunus_license_nonce', 'hopeareunus_license_nonce' ); ?>
-				<input type="submit" class="button-secondary" name="hopeareunus_theme_license_deactivate" value="<?php esc_attr_e( 'Deactivate License', 'hopeareunus' ); ?>" />
-				<?php } else {
-					wp_nonce_field( 'hopeareunus_license_nonce', 'hopeareunus_license_nonce' ); ?>
-					<input type="submit" class="button-secondary" name="hopeareunus_theme_license_activate" value="<?php esc_attr_e( 'Activate License', 'hopeareunus' ); ?>" />
-					
-				<?php } ?>
-			</td>
-		</tr>
-		<?php } ?>
-
-		<!-- End custom form elements. -->
-	</table><!-- .form-table --><?php
-	
 }
 
 /* Function for displaying the customize meta box. */
