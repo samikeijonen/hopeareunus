@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2.0.
 msgid ""
 msgstr ""
-"Project-Id-Version: Hopeareunus 0.1.4\n"
+"Project-Id-Version: Hopeareunus 1.1.0\n"
 "Report-Msgid-Bugs-To: https://foxland.fi/contact/\n"
-"POT-Creation-Date: 2014-12-30 09:23:44+00:00\n"
+"POT-Creation-Date: 2014-12-30 09:48:06+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1346,7 +1346,7 @@ msgid "Hopeareunus"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "https://foxnet-themes.fi/downloads/hopeareunus"
+msgid "https://foxland.fi/downloads/hopeareunus"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -1360,7 +1360,7 @@ msgid "Sami Keijonen"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "https://foxnet-themes.fi"
+msgid "https://foxland.fi"
 msgstr ""
 
 #. Template Name of the plugin/theme
