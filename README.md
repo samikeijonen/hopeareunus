@@ -1,85 +1,81 @@
-# Mina olen
+# Hopeareunus
 
 Cool WordPress theme for business sites.
 
 ## Commercial Theme
 
-Mina Olen is a commercial Theme available in my site [Foxland](https://foxland.fi/downloads/mina-olen/). The theme is hosted here
+Hopeareunus is a commercial Theme available in my site [Foxland](https://foxland.fi/downloads/hopeareunus/). The theme is hosted here
 on a public Github repository in order to better faciliate community contributions from developers and users alike.
 If you have a suggestion, a bug report, or a patch for an issue, you can submit it here.
 
-If you are using the theme on a live site it would be cool that you purchase a valid license from [Theme page](https://foxland.fi/downloads/mina-olen/).
+If you are using the theme on a live site it would be cool that you purchase a valid license from [Theme page](https://foxland.fi/downloads/hopeareunus/).
 After that you get support and automatic updates.
 
 ## Description
 
-Mina olen WordPress Theme is made for cool business type of sites.
+Hopeareunus WordPress Theme is made for cool business type of sites.
 And in the same time blogging features looks great also.
 
 ## Installation
 
-1. Upload `mina-olen` to the `/wp-content/themes/` directory.
+1. Upload `hopeareunus` to the `/wp-content/themes/` directory.
 1. Activate the theme through the 'Themes' menu in WordPress.
 
 ## Changelog
 
-### Version 1.1.0
+### December 30, 2014 - version 0.1.4
 
-* Add account page template.
-* Add after singular download sidebar.
-* Add new menu for Easy Digital Downloads.
-* Add some new hooks and filters.
-* Update Hybrid Core to version 2.0.4.
+* Better updater class
+* Minify js and css files
+* Update language files
 
-### Version 1.0.8
+### April 30, 2014 - version 0.1.4
 
-* Change updater url to foxland.fi.
-* Update Hybrid Core to version 2.0.2.
-
-### Version 1.0.7
-
-* Update Hybrid Core to version 2.0.0.
-* Update Genericons to version 3.1 and load them via functions.php.
-* Fix top search form on focus issue.
-
-### Version 1.0.6
-
-* Fixes a lot's of accebility issues. Now theme works a lot better using screen readers or just keyboard.
-* Minify also JS files for better performance.
-* Update .pot file.
-* Add French translations.
-* Update Hybrid Core to latest version.
-
-### Version 1.0.5
-
-* Make theme WPML compatible by adding wpml-config.xml file.
-* It's now possible to add WPML flags to menu under Customizer >> Navigation.
-* Update Hybrid Core to latest version.
-
-### Version 1.0.4
-
-* Update Hybrid Core to latest version.
-* Small CSS tweaks for Webshare Plugin and now it works also in Safari.
+* Update Hybrid Core to 1.6.3
+* Fix default header image code and move it in it's own function.
 * Update translation files.
 
-### Version 1.0.3
+### October 30, 2013 - version 0.1.3.3
 
-* Added sanitaze functions for better security.
-* Added support for Webshare Plugin.
-* Remove repetitive title attributes for better accessibility.
-* Update translation files.
+* Update Hybrid Core to 1.6.1
+* Update loop meta archive date.
 
-### Version 1.0.2
+### August 19, 2013 - version 0.1.3.2
 
-* Update FitVids to version 1.1.
-* Better CSS for header callout.
-* Show random portfolios and testimonials on front page template.
+* Remove extra Browse from breadcrumb trail
 
-### Version 1.0.1
+### August 9, 2013 - version 0.1.3.1
 
-* Small CSS tweak for IE9 in primary menu.
-* Sanitaze filter in theme customize.
+* style.min.css updated.
 
-### Version 1.0.0
+### August 9, 2013 - version 0.1.3
 
-* Initial release
+* Hybrid Core update to version 1.6.
+* Language files updated.
+
+### April 2, 2013 - version 0.1.2.3
+
+* Add hopeareunus_singular_loop_nav filter to loop-nav.php.
+* Add menu parent class using filter wp_nav_menu_objects and remove it from js.
+* Removed .sub-indicator and added #menu-primary .menu-item-parent > a to styles.
+
+### March 15, 2013 - version 0.1.2.2
+
+* This is only for testing automatic updater.
+
+### March 15, 2013 - version 0.1.2.1
+
+* There was still a small bug in theme automatic updater.
+
+### March 15, 2013 - version 0.1.2
+
+* Fixed a bug in theme automatic updater.
+
+### March 3, 2013 - version 0.1.1
+
+* Default Header image updated.
+* Add link styles to excerpt.
+
+### February 26, 2013 - version 0.1
+
+* Everything is brand new.
